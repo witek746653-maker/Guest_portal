@@ -43,8 +43,11 @@
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5 px-4 pt-12 pb-4">
 <div class="flex items-center justify-between">
-<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-gray-900 dark:text-white">
-<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+<button
+  onclick="history.length > 1 ? history.back() : window.location.href='index.html'"
+  class="flex size-10 items-center justify-center rounded-full bg-black/60"
+>
+  <span class="material-symbols-outlined">arrow_back_ios_new</span>
 </button>
 <h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Пакеты мероприятий</h2>
 </div>
