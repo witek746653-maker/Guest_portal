@@ -1,628 +1,205 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sabor de la Vida — Гостевой портал для банкетов</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#0b0b0c">
-  <link rel="apple-touch-icon" href="icons/Sabor_icon_180.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Sabor Banquet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0b0c;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-strong: rgba(255, 255, 255, 0.12);
-      --text: #f6f7fb;
-      --muted: #cfd3df;
-      --accent: #ffcc70;
-      --accent-2: #ff7c5d;
-      --stroke: rgba(255,255,255,0.14);
-      --shadow: 0 20px 60px rgba(0,0,0,0.45);
-      --glow: 0 20px 40px rgba(255, 194, 120, 0.24);
-      scroll-behavior: smooth;
-    }
-    * { box-sizing: border-box; }
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Главный экран портала</title>
+<!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                        "text-secondary": "#baab9c",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
     body {
-      margin: 0;
-      font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(12px);
-      background: rgba(11, 11, 12, 0.8);
-      border-bottom: 1px solid var(--panel-strong);
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 26px;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 16px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    .logo-img {
-      height: 60px;
-      width: auto;
-      display: block;
-}
-  
-    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-    nav a { padding: 10px 12px; border-radius: 999px; font-weight: 600; color: var(--muted); transition: color .2s, background .2s, transform .2s; }
-    nav a:hover, nav a:focus-visible { color: var(--text); background: var(--panel); }
-    nav a:active { transform: translateY(1px); }
-
-    .cta {
-      background: linear-gradient(120deg, var(--accent), var(--accent-2));
-      color: #0b0b0c;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 18px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: var(--glow);
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .cta:hover { transform: translateY(-1px); box-shadow: 0 16px 40px rgba(255, 194, 120, 0.35); }
-    .cta:active { transform: translateY(1px); }
-
-    .hero {
-      position: relative;
-      min-height: 80vh;
-      display: grid;
-      align-items: center;
-      overflow: hidden;
-      padding: 80px 26px 120px;
-      isolation: isolate;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.85));
-      z-index: 0;
-    }
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      background: url('images/Head.jpg') center/cover no-repeat fixed;
-      transform: translateY(0);
-      transition: transform .25s ease-out;
-      z-index: -2;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .badge {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--panel);
-      border: 1px solid var(--panel-strong);
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-    h1 { margin: 18px 0 14px; font-size: clamp(32px, 6vw, 48px); letter-spacing: -0.5px; }
-    h2 { font-size: clamp(26px, 4vw, 32px); margin: 0 0 14px; }
-
-    .hero p { margin: 0 0 24px; color: var(--muted); font-size: 18px; }
-
-    .pill-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-    .ghost { background: var(--panel); color: var(--text); border: 1px solid var(--panel-strong); }
-
-    .section {
-      padding: 80px 26px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section header { background: none; border: none; position: relative; padding: 0; margin-bottom: 32px; }
-    .section header .eyebrow { letter-spacing: 1px; font-weight: 700; color: var(--accent); text-transform: uppercase; font-size: 12px; }
-    .section header h2 { margin: 6px 0 10px; }
-    .section header p { margin: 0; color: var(--muted); max-width: 760px; }
-
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .card {
-      padding: 20px;
-      background: var(--panel);
-      border: 1px solid var(--panel-strong);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); }
-
-    .chip {
-      display: inline-flex;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-weight: 600;
-      font-size: 13px;
-      margin-right: 8px;
-      margin-bottom: 6px;
-    }
-
-    .hall-photo {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      border-radius: 14px;
-      overflow: hidden;
-      margin-bottom: 14px;
-      border: 1px solid var(--panel-strong);
-      background: #111;
-      position: relative;
-      box-shadow: var(--shadow);
-    }
-    .hall-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-    .hall-meta { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0; color: var(--muted); font-weight: 600; }
-    .hall-meta span { display: inline-flex; gap: 6px; align-items: center; padding: 8px 10px; background: rgba(255,255,255,0.06); border-radius: 10px; }
-
-    .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .package { padding: 20px; border-radius: 18px; border: 1px solid var(--panel-strong); background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); box-shadow: var(--shadow); position: relative; overflow: hidden; }
-    .package::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 20% 20%, rgba(255,204,112,0.18), transparent 40%); pointer-events: none; }
-    .package h3 { margin: 8px 0; }
-    .package strong { font-size: 20px; color: var(--accent); }
-    .package ul { padding-left: 18px; margin: 10px 0; color: var(--muted); }
-
-    .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px; }
-    .filter-btn {
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--panel-strong);
-      background: var(--panel);
-      color: var(--text);
-      cursor: pointer;
-      font-weight: 700;
-      transition: background .2s ease, transform .2s ease, border-color .2s ease;
-    }
-    .filter-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0b0c; border-color: transparent; box-shadow: var(--glow); }
-    .filter-btn:active { transform: translateY(1px); }
-
-    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-    .menu-card { border: 1px solid var(--panel-strong); background: var(--panel); border-radius: 16px; padding: 14px; box-shadow: var(--shadow); position: relative; }
-    .menu-card .tagline { color: var(--muted); font-size: 13px; margin: 4px 0; }
-    .menu-card .price { font-weight: 800; color: var(--accent); font-size: 18px; }
-    .menu-card .badge { background: rgba(255,255,255,0.08); border: none; color: var(--muted); padding: 6px 10px; }
-    .menu-card .status { position: absolute; top: 12px; right: 12px; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 12px; background: rgba(255, 124, 93, 0.16); color: #ffb9aa; border: 1px solid rgba(255,124,93,0.4); }
-
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-    .service { display: grid; gap: 8px; padding: 18px; border-radius: 14px; border: 1px solid var(--panel-strong); background: var(--panel); box-shadow: var(--shadow); }
-
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-    .gallery figure { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--panel-strong); position: relative; box-shadow: var(--shadow); }
-    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
-    .gallery figure:hover img { transform: scale(1.05); }
-    .gallery figcaption { position: absolute; inset: auto 0 0; padding: 12px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7)); font-weight: 700; }
-
-    .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 16px; }
-    .review { padding: 18px; border-radius: 14px; border: 1px solid var(--panel-strong); background: var(--panel); box-shadow: var(--shadow); color: var(--muted); }
-    .review strong { color: var(--text); }
-
-    details { border: 1px solid var(--panel-strong); border-radius: 12px; padding: 14px 16px; background: var(--panel); box-shadow: var(--shadow); }
-    details + details { margin-top: 12px; }
-    summary { cursor: pointer; font-weight: 700; }
-    summary::-webkit-details-marker { display: none; }
-
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      align-items: start;
-    }
-
-    .contact-card { padding: 20px; border-radius: 16px; border: 1px solid var(--panel-strong); background: var(--panel); box-shadow: var(--shadow); display: grid; gap: 10px; }
-    .contact-card a { color: var(--accent); font-weight: 700; }
-    .contact-grid { display: grid; gap: 10px; }
-
-    .map { min-height: 260px; border-radius: 16px; overflow: hidden; border: 1px solid var(--panel-strong); box-shadow: var(--shadow); }
-
-    .floating-cta {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #0b0b0c;
-      font-weight: 800;
-      box-shadow: var(--glow);
-      border: none;
-      cursor: pointer;
-      z-index: 12;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .section.parallax {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--panel-strong);
-      border-radius: 24px;
-      background: linear-gradient(160deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-    }
-
-    .section.parallax .parallax-bg {
-      position: absolute;
-      inset: 0;
-      background: url('images/bar_head.jpg') center/cover fixed;
-      opacity: 0.18;
-      z-index: 0;
-      transform: translateY(0);
-      transition: transform .25s ease;
-    }
-
-    .section.parallax > * { position: relative; z-index: 1; }
-
-    .animate { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-    .animate.in-view { opacity: 1; transform: translateY(0); }
-     @media (max-width: 900px) {
-      nav ul { display: none; }
-      header { position: static; }
-      .hero { padding-top: 40px; }
+      min-height: max(884px, 100dvh);
     }
   </style>
-</head>
-<body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-  <img src="images/sun_sabor_de_la_vida_icon.png" alt="Sabor de la Vida" class="logo-img">
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Top Navigation (Sticky) -->
+<header class="sticky top-0 z-50 flex items-center bg-background-dark/95 backdrop-blur-sm p-4 pb-3 justify-between border-b border-white/5">
+<button class="text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<h1 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center uppercase">Banquet Hall</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="text-primary text-sm font-bold leading-normal tracking-[0.015em] shrink-0 hover:text-primary/80 transition-colors">
+                    Войти
+                </button>
 </div>
-      <nav aria-label="Основная навигация">
-        <ul>
-          <li><a href="#halls">Залы</a></li>
-          <li><a href="#packages">Пакеты</a></li>
-          <li><a href="#menu">Меню</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#gallery">Галерея</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-      <a class="cta" href="#contacts">Запросить предложение</a>
-    </div>
-    </header>
-
-  <section class="hero" id="top">
-    <div class="hero-media" data-parallax></div>
-    <div class="hero-content animate">
-      <div class="badge">Банкеты, свадьбы, корпоративы</div>
-      <h1>Гостевой портал, который отвечает на вопросы до звонка менеджеру</h1>
-      <p>Подберите зал, выберите формат банкета, изучите меню и услуги за пару минут — прямо в телефоне или на компьютере.</p>
-      <div class="pill-row">
-        <a class="cta" href="#contacts">Запросить предложение</a>
-        <a class="cta ghost" href="#packages">Смотреть пакеты</a>
-      </div>
-    </div>
-    </section>
-
-  <section class="section" id="halls">
-    <header class="animate">
-      <div class="eyebrow">Залы</div>
-      <h2>Выберите атмосферу, которая подходит вашему событию</h2>
-      <p>Вместительные залы с готовыми схемами рассадки, актуальными условиями аренды и возможностью оформить всё под ваш стиль.</p>
-    </header>
-    <div class="card-grid">
-      <article class="card animate">
-        <div class="hall-photo"><img src="images/zaglushka_in_the_pipeline.png" alt="Панорамный зал"></div>
-        <h3>Панорамный зал</h3>
-        <div class="hall-meta"><span>до 120 гостей</span><span>Фуршет / Банкет</span><span>Экран 4K</span></div>
-        <p>Светлый зал с панорамой на город и сценой для ведущего. В комплекте — проектор, звуковой пульт и гримёрная.</p>
-        <div class="chip">Минимальный чек: 250 000 ₽</div>
-        <div class="chip">Аренда зала включена</div>
-        <div class="chip">Декор в фирменном стиле</div>
-      </article>
-      <article class="card animate">
-        <div class="hall-photo"><img src="images/bar_head.jpg" alt="Камерный зал"></div>
-        <h3>Камерный зал</h3>
-        <div class="hall-meta"><span>до 60 гостей</span><span>Ужин / Воркшоп</span><span>Свет dimmable</span></div>
-        <p>Уютное пространство с мягким светом и отдельным баром. Подходит для свадебных ужинов и приватных встреч.</p>
-        <div class="chip">Минимальный чек: 140 000 ₽</div>
-        <div class="chip">Танцевальная зона</div>
-        <div class="chip">Бесплатная парковка</div>
-      </article>
-      <article class="card animate">
-        <div class="hall-photo"><img src="images/head_zavtraki.jpg" alt="Зимний сад"></div>
-        <h3>Зимний сад</h3>
-        <div class="hall-meta"><span>до 35 гостей</span><span>Кофе-брейк / Детский праздник</span><span>Терраса</span></div>
-        <p>Живые растения и стеклянная крыша создают лёгкую атмосферу. Отлично подойдёт для камерных вечеров и семейных событий.</p>
-        <div class="chip">Минимальный чек: 80 000 ₽</div>
-        <div class="chip">Фото-зоны готовы</div>
-        <div class="chip">Возможна своя музыка</div>
-      </article>
-    </div>
-    </section>
-
-  <section class="section parallax" id="packages">
-    <div class="parallax-bg" data-parallax></div>
-    <header class="animate">
-      <div class="eyebrow">Пакеты</div>
-      <h2>Прозрачные форматы под свадьбы, корпоративы и семейные праздники</h2>
-      <p>Каждый пакет включает сервис, мебель, декор и техническое оснащение. Выбирайте основу и дополняйте индивидуальными опциями.</p>
-    </header>
-    <div class="packages">
-      <article class="package animate">
-        <div class="chip">Свадьбы</div>
-        <h3>Elegant</h3>
-        <div class="tagline">Для камерных церемоний и стильных ужинов</div>
-        <strong>от 4 500 ₽/гость</strong>
-        <ul>
-          <li>Сет из 6 блюд + вино-пейринг</li>
-          <li>Декор в выбранной палитре</li>
-          <li>Свадебная арка и фотозона</li>
-          <li>Персональный координатор</li>
-        </ul>
-      </article>
-      <article class="package animate">
-        <div class="chip">Корпоративы</div>
-        <h3>Business Lounge</h3>
-        <div class="tagline">Для презентаций, награждений и вечеринок</div>
-        <strong>от 3 900 ₽/гость</strong>
-        <ul>
-          <li>Фуршет + горячее на выбор</li>
-          <li>LED-экран, звук, микрофоны</li>
-          <li>Брендирование площадки</li>
-          <li>Трансфер для гостей</li>
-        </ul>
-      </article>
-      <article class="package animate">
-        <div class="chip">Семейные события</div>
-        <h3>Family & Kids</h3>
-        <div class="tagline">Дни рождения, крещения, выпускные</div>
-        <strong>от 2 900 ₽/гость</strong>
-        <ul>
-          <li>Детское меню и аниматоры</li>
-          <li>Фотограф на 2 часа</li>
-          <li>Сладкий стол и кенди-бар</li>
-          <li>Игровая зона с няней</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="menu">
-    <header class="animate">
-      <div class="eyebrow">Меню и напитки</div>
-      <h2>Гибкие подборки блюд с учётом аллергий и предпочтений</h2>
-      <p>Отмечайте категории, смотрите доступность и ориентируйтесь по бюджету. Полное меню можно открыть в новом окне или запросить на e‑mail.</p>
-    </header>
-    <div class="filters animate" aria-label="Фильтры меню">
-      <button class="filter-btn active" data-filter="all">Все позиции</button>
-      <button class="filter-btn" data-filter="signature">Фирменные</button>
-      <button class="filter-btn" data-filter="seafood">Море</button>
-      <button class="filter-btn" data-filter="vegan">Vegan</button>
-      <button class="filter-btn" data-filter="kids">Детям</button>
-    </div>
-    <div class="menu-grid" id="menuList">
-      <article class="menu-card animate" data-category="signature" data-allergens="gluten">
-        <div class="status">Временно нет</div>
-        <div class="badge">Хит</div>
-        <h3>Филе миньон с трюфелем</h3>
-        <p class="tagline">Соус демиглас, запечённые коренья</p>
-        <div class="price">1 850 ₽</div>
-      </article>
-      <article class="menu-card animate" data-category="seafood">
-        <div class="badge">Низкие аллергены</div>
-        <h3>Стейк из сибаса</h3>
-        <p class="tagline">Шпинат на сливках, цитрусовый соус</p>
-        <div class="price">1 420 ₽</div>
-      </article>
-      <article class="menu-card animate" data-category="vegan">
-        <div class="badge">Vegan</div>
-        <h3>Ризотто с зелёным горошком</h3>
-        <p class="tagline">Овощной бульон, миндальное молоко</p>
-        <div class="price">1 150 ₽</div>
-      </article>
-      <article class="menu-card animate" data-category="signature">
-        <div class="badge">Пармезан 24 мес.</div>
-        <h3>Тартар из тунца</h3>
-        <p class="tagline">Авокадо, лайм, соус понзу</p>
-        <div class="price">980 ₽</div>
-      </article>
-      <article class="menu-card animate" data-category="kids">
-        <div class="badge">Детям</div>
-        <h3>Мини-бургер с индейкой</h3>
-        <p class="tagline">Подача без острых соусов</p>
-        <div class="price">520 ₽</div>
-      </article>
-      <article class="menu-card animate" data-category="signature">
-        <div class="badge">Gluten free</div>
-        <h3>Осминог на гриле</h3>
-        <p class="tagline">Тыквенное пюре, соус из копчёной паприки</p>
-        <div class="price">1 780 ₽</div>
-      </article>
-    </div>
-    <div class="pill-row" style="margin-top:20px" aria-label="Доступ к меню">
-      <a class="cta" href="menus/osnovnoe-menu.html" target="_blank" rel="noopener">Открыть полное меню</a>
-      <a class="cta ghost" href="mailto:banquet@sabor.ru?subject=Запрос меню&body=Пришлите актуальное банкетное меню">Получить на e‑mail</a>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <header class="animate">
-      <div class="eyebrow">Дополнительные услуги</div>
-      <h2>Организация под ключ или выбор отдельных опций</h2>
-      <p>Команда ресторана закрывает декор, технику, шоу-программу и логистику. Все цены фиксируем в смете до согласования.</p>
-    </header>
-    <div class="services">
-      <div class="service animate">
-        <h3>Декор и флористика</h3>
-        <p>Арки, президиум, фотозоны, бренд-стойки. Работаем с палитрой вашего события.</p>
-        <div class="chip">Согласование за 48 часов</div>
-      </div>
-      <div class="service animate">
-        <h3>Шоу и ведущие</h3>
-        <p>DJ, кавер-бэнд, ведущие, детские аниматоры. Подбор под формат и возраст гостей.</p>
-        <div class="chip">Тестовые плейлисты</div>
-      </div>
-      <div class="service animate">
-        <h3>Техника и свет</h3>
-        <p>Звук JBL, сценический свет, микрофоны, экраны и видеотрансляция. Техник на площадке весь вечер.</p>
-        <div class="chip">Репетиция за день</div>
-      </div>
-      <div class="service animate">
-        <h3>Аренда и логистика</h3>
-        <p>Парковка, гардероб, трансфер гостей, детские стульчики и пеленальные зоны.</p>
-        <div class="chip">Шаттл по расписанию</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="gallery">
-    <header class="animate">
-      <div class="eyebrow">Галерея и отзывы</div>
-      <h2>Посмотрите атмосферу прошлых банкетов</h2>
-      <p>Мы регулярно обновляем фотографии и отзывы, чтобы вы видели актуальный уровень сервиса.</p>
-    </header>
-    <div class="gallery">
-      <figure class="animate">
-        <img src="images/zimnee-menyu_head.jpeg" alt="Зал с зимним декором">
-        <figcaption>Зимний банкет — 90 гостей</figcaption>
-      </figure>
-      <figure class="animate">
-        <img src="images/vino_head.jpg" alt="Винный сет">
-        <figcaption>Винный сет к юбилею</figcaption>
-      </figure>
-      <figure class="animate">
-        <img src="images/barnoe-menu_card_avgust_v_bolone_malinovyy_spritz.jpg" alt="Авторские напитки">
-        <figcaption>Авторские напитки</figcaption>
-      </figure>
-      <figure class="animate">
-        <img src="images/Deserty_Anna_Pavlova.jpg" alt="Свадебный десерт">
-        <figcaption>Свадебный десерт</figcaption>
-      </figure>
-    </div>
-    <div class="reviews">
-      <article class="review animate">
-        <strong>Анна и Павел</strong>
-        <p>«Собрали 80 гостей, менеджер прислал смету и план рассадки за день. Гости в восторге от кухни и света на танцполе!»</p>
-      </article>
-      <article class="review animate">
-        <strong>IT‑компания</strong>
-        <p>«Корпоратив прошёл без единой задержки: звук, сцена и бренд-панели были готовы заранее. Сервис на уровне пятизвёздочного отеля.»</p>
-      </article>
-      <article class="review animate">
-        <strong>Марина</strong>
-        <p>«Детский день рождения со своим тортом, аниматоры и отдельная детская станция — менеджер учёл все нюансы аллергенов.»</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <header class="animate">
-      <div class="eyebrow">FAQ и условия</div>
-      <h2>Частые вопросы о бронировании и оплате</h2>
-      <p>Если не нашли ответ, отправьте заявку или позвоните — мы ответим в течение 15 минут в рабочее время.</p>
-    </header>
-    <details class="animate">
-      <summary>Как забронировать дату?</summary>
-      <p>Выберите зал и пакет, оставьте заявку. Мы подтверждаем дату после предоплаты 20% и подписания договора.</p>
-    </details>
-    <details class="animate">
-      <summary>Можно ли привезти свой торт?</summary>
-      <p>Да, без пробкового сбора. Сообщите вес и состав — подготовим холодильник и сервировку.</p>
-    </details>
-    <details class="animate">
-      <summary>Что с отменой?</summary>
-      <p>Бесплатная отмена за 14 дней до даты. При переносе сохраняем цены и условия в течение 6 месяцев.</p>
-    </details>
-    <details class="animate">
-      <summary>Как работает рассадка?</summary>
-      <p>Мы предложим готовые схемы или адаптируем под вас. План размещения и список гостей согласовываем за 5 дней.</p>
-    </details>
-  </section>
-
-  <section class="section" id="contacts">
-    <header class="animate">
-      <div class="eyebrow">Контакты</div>
-      <h2>Свяжитесь с банкетным менеджером</h2>
-      <p>Пишите, звоните или оставляйте заявку — отправим индивидуальное предложение и актуальное меню.</p>
-    </header>
-    <div class="contact">
-      <div class="contact-card animate">
-        <h3>Заявка онлайн</h3>
-        <p>Ответим в течение 15 минут в часы работы.</p>
-        <a class="cta" href="mailto:banquet@sabor.ru?subject=Запрос банкетного предложения">Отправить письмо</a>
-        <a class="cta ghost" href="tel:+74951234567">Позвонить +7 (495) 123-45-67</a>
-        <div class="contact-grid">
-          <div><strong>Адрес:</strong><br> Москва, Большая Никитская, 12</div>
-          <div><strong>Время работы:</strong><br> Ежедневно 10:00–23:00</div>
-          <div><strong>Соцсети:</strong> <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me" target="_blank" rel="noopener">Telegram</a></div>
-        </div>
-      </div>
-      <div class="map animate" aria-label="Карта проезда">
-        <iframe title="Карта ресторана" src="https://www.openstreetmap.org/export/embed.html?bbox=37.597%2C55.75%2C37.607%2C55.76&layer=mapnik" style="border:0; width:100%; height:100%;"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <button class="floating-cta" onclick="document.getElementById('contacts').scrollIntoView({behavior:'smooth'})">Запросить дату</button>
-
-  <script>
-    // Простой параллакс и анимации при прокрутке
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('in-view');
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
-    window.addEventListener('scroll', () => {
-      const offset = window.scrollY * 0.18;
-      parallaxElements.forEach(el => {
-        el.style.transform = `translateY(${offset * 0.45}px)`;
-      });
-      });
-
-    // Фильтр по категориям меню
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const menuCards = document.querySelectorAll('.menu-card');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const category = btn.dataset.filter;
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        menuCards.forEach(card => {
-          const visible = category === 'all' || card.dataset.category === category;
-          card.style.display = visible ? 'block' : 'none';
-        });
-      });
-    });
-  </script>
-</body>
-</html>
-
+</header>
+<!-- Hero Section -->
+<div class="relative w-full">
+<div class="relative flex min-h-[65vh] flex-col items-center justify-end p-6 pb-12 text-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 hover:scale-105" data-alt="Luxury restaurant banquet hall with warm lighting and set tables" style='background-image: linear-gradient(to bottom, rgba(34, 25, 16, 0.2) 0%, rgba(34, 25, 16, 0.4) 50%, rgba(34, 25, 16, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr2EYgjEtCJGztRpsipu343OKvKu2GAGmU5eOtaxYghDWfTwc_wj-vsYI0dXdqhq5XAM_Jos0K0EM-0BeGfgMbPZbhGMoi8RrWu3lA49H2GMhKzSWycBwBqYamjMX-SFweYLZjh-eAlJB6kSSWila1l5_fNDS1APeTqXw1gdx_4cp72G48ZbQBuX9qOatWKXJOtVuoto5iGZ7cXLAMMKK9ownJZKqDkJtJTBHqY0KSOOMS1UfH2_aeGIKd0X3Lj3egDDqiqNz4neWU");'>
+</div>
+<!-- Content -->
+<div class="relative z-10 flex max-w-md flex-col items-center gap-6 animate-fade-in-up">
+<div class="space-y-3">
+<span class="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-bold text-primary backdrop-blur-sm">
+                            PREMIUM EVENTS
+                        </span>
+<h2 class="text-white text-4xl font-black leading-[1.1] tracking-[-0.033em] drop-shadow-lg">
+                            Незабываемые моменты в сердце города
+                        </h2>
+<p class="text-text-secondary text-base font-normal leading-relaxed max-w-[90%] mx-auto">
+                            Организация банкетов премиум-класса, где каждая деталь создает атмосферу праздника.
+                        </p>
+</div>
+<button class="group flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-14 px-8 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] shadow-[0_0_20px_rgba(242,127,13,0.4)] hover:shadow-[0_0_30px_rgba(242,127,13,0.6)] transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+<span class="truncate">Запросить предложение</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<!-- Scroll Indicator -->
+<div class="absolute -bottom-6 animate-bounce opacity-50">
+<span class="material-symbols-outlined text-white">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Services Section (Horizontal Scroll) -->
+<div class="flex flex-col py-8 gap-4 bg-background-dark">
+<div class="px-4 flex justify-between items-end">
+<h3 class="text-white tracking-tight text-[26px] font-bold leading-tight">Наши услуги</h3>
+<a class="text-primary text-sm font-medium hover:underline pb-1" href="#">Все услуги</a>
+</div>
+<div class="flex overflow-x-auto pb-4 px-4 gap-4 snap-x snap-mandatory [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<!-- Card 1 -->
+<div class="flex flex-col gap-3 min-w-[220px] snap-center group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Elegant wedding table setup with flowers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyO7C9Kv9C9ezB6qLXAPBU_wO-qGoBMDOq6_-WrL5zwmez4buw6wB6EZbZDY1qCI6iEKlkgry_c7D52huZ2jprUi5UeYveO-AybrMy-_g6SnlAESLa-AcGILFr0z6Q1_AK4FWBc6aATrPP2D77j8ivFkziDeEHD7yPtE-ekbUKWDJKnz1BJdr0Iqwdeip5z6klSx8_gioSjkZnWHjEkQT1nzB0hkrKDSULZbysF3-9vcXeOqwxTwThCr72xSXEAuxvu6SpvE6Px50N");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white text-lg font-bold leading-tight">Свадьбы</p>
+<p class="text-text-secondary text-xs mt-1">От 50 гостей</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-3 min-w-[220px] snap-center group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Corporate event with presentation screen and audience" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA54b3rJmb6nUpSVuCn8Xx_jM0zpckCoDBlkwI-qvMn_P3yLgU7FdjS2ewdVJ-DrVztpyqMBNtDMarT5BraXQwd461F-UCT1q-4gV48eR-Oeg6v1AS4_wks5IeVz1VMdDe8f6Sv5IFkAHzPd2qtGhXM_QmuNeaVWK61lwyfzQvi47Nyga4sMLySCczjqm7MUILRfNzNsGthS-R5N_h9KEG-73z8ypZtYcVYvAM_00c285ZLGrNTeC_ABHNyfZUwPjUCadPoqS0lbxt1");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white text-lg font-bold leading-tight">Корпоративы</p>
+<p class="text-text-secondary text-xs mt-1">Проектор и звук</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-3 min-w-[220px] snap-center group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Private party with dim lighting and cocktails" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAg2PvIKcdYSvhgPdkJuD_h37ExXg-qBjm1MG8KfK20qlT8eZDIOsjqgu0m6pcJ_JpgOHC3RlIF9zw2Zj3ZpXDncw4jvz289QuRw7I3eTtYdocKjXFPUC7-YJJHRcGLOeJSNxj3WudD0r4b0HXQY1gh8Hop2cAj_tzUjTlUFVhPWIY4S3xCB_G_GF_JOCJlzQ9xjduk3uLU_uETx_u--zaRYRY02CwY0pPlbDi7GgB_JPEIP0e0bkU58TcRd8ZffzmLEwAqGDMcbfvP");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-white text-lg font-bold leading-tight">Вечеринки</p>
+<p class="text-text-secondary text-xs mt-1">VIP обслуживание</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Card (Cuisine) -->
+<div class="px-4 py-2 pb-8 bg-background-dark">
+<div class="flex flex-col overflow-hidden rounded-2xl bg-[#2a221b] border border-white/5 shadow-xl">
+<div class="relative w-full aspect-video bg-cover bg-center" data-alt="Chef plating a gourmet dish with precision" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzcLx4JlyR4GYvD1k_SColoXwEmgFa3nxthjJ8ODvyMCKvgz879_dJyEC4z_Dn5rT50e8zIpHq4l03b6pE7-CMJS6-gE8vxrohfLN8ks5SNWL7CNZtt2QOdrn_TK0ITFbDBeUQBcog4Y7xquISeQVzN8Zb-CxsGTdeqQpJPDt_nL0CHRYlYUle663JCUd6Y-WXrws0xP0DRGjdr5EvOI9DwOAWrm9dyx4tWlYxT4rOTVLFkOm5HYQmWhHJMBDchPzsPLiFvzgTYB-p");'>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Michelin Star</span>
+</div>
+</div>
+<div class="flex flex-col p-5 gap-4">
+<div>
+<h3 class="text-white text-xl font-bold leading-tight mb-2">Авторская кухня</h3>
+<p class="text-text-secondary text-sm leading-relaxed">
+                            Изысканные блюда от шеф-повара, созданные специально для вашего мероприятия. Сезонные ингредиенты и уникальная подача.
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-white/5">
+<div class="flex -space-x-2">
+<img alt="Dish preview 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-[#2a221b] object-cover" data-alt="Small preview of salad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqthcNglcwifHgxjYft1-10UKL0Rl95VE5d_h1VBlvnIKlcW8YwgFIiYx61Ku1D4DHVyxOICf-lzoM_eBPE_Qo0cjtgt-rBTZYbAQEKf6o1hGy7sphn_bb-UEDviPhoiRmlWRC5UcYBjz6-pS7tjqRtSV_AhgB886QGtE5tMudMLtai7eQw17HkvN-pC7bPPS7fY0ovjSf1juQRlsS9-WrjEzR9QcQlv4Oy_gCKTjbDBVwaIZ4X8Lrekk6OKKHoOOlx1C9zjq59gk5"/>
+<img alt="Dish preview 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-[#2a221b] object-cover" data-alt="Small preview of dessert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA98yO1BkF6yfn27HctZ7Pgroo4SsqM5rNs2eERISVBfyFOGWsyJslMVE4a7zEhs3RyRNxpmLt0iu4wvMJBGtOdaNILuwUGrJoCdjxiyqvlhEdnkbA5VoEumKDFdlAl4Q0KAJ7tNCwp001fci8QsYJuTaXJRM6xn7py0am2HhzIph5VpavVdMUiudYHnaHVnrAfX9J8_6oWc9yp3DnK_ROFFOBD81_yMpiDILABHg-8SySQZSBHDgaSVD7qSYjRsFdHOYRVXX_LvWFI"/>
+<img alt="Dish preview 3" class="inline-block h-8 w-8 rounded-full ring-2 ring-[#2a221b] object-cover" data-alt="Small preview of main course" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrG59BhUYcBp5777e5FYHDLtyZ_WGkA8wPs1kyfMit5Jekao50kaC7zzyNHZOfRZoFeOrVrKJu3nrqDSYvjSQ-f651o3KZ4t5ancm6NFrOAQsuIeelTj3SNGVZR0NAKLjryUz0tkMBRv7Sha4xC9rjo2D7tOXn5QxRs-XdcNYhTkfmllaL5l_yo9vCMJ6XXDgDkmhikHbYo-G9BunuwCwvNl3P-rvOSrmKBkvj23KnqSgaVT5u2QvaCp_SoQ-0SUIzs_XwTOCW5U3o"/>
+</div>
+<button class="flex items-center justify-center gap-1.5 rounded-lg bg-white/5 hover:bg-white/10 px-4 py-2 text-primary text-sm font-bold transition-colors">
+<span>Меню</span>
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Review/Social Proof -->
+<div class="px-4 pb-8 bg-background-dark text-center">
+<div class="relative py-8 border-y border-white/5">
+<span class="material-symbols-outlined absolute top-4 left-1/2 -translate-x-1/2 text-primary/20 text-6xl select-none">format_quote</span>
+<p class="relative z-10 text-white text-lg font-medium leading-relaxed italic mb-4">
+                    "Лучшее место для проведения свадьбы. Персонал был невероятно внимателен, а еда — выше всяких похвал."
+                </p>
+<div class="flex flex-col items-center justify-center gap-1">
+<p class="text-primary font-bold text-sm">Анна и Михаил</p>
+<div class="flex text-primary text-xs">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA Bar (Sticky on scroll up typically, but fixed here for simple access) -->
+<div class="sticky bottom-0 z-40 p-4 bg-background-dark/95 backdrop-blur border-t border-white/5 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-text-secondary text-xs font-medium">Есть вопросы?</span>
+<span class="text-white text-sm font-bold">+7 (999) 000-00-00</span>
+</div>
+<button class="flex-1 rounded-lg bg-white text-background-dark font-bold h-12 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                Забронировать
+            </button>
+</div>
+<!-- Footer -->
+<footer class="bg-[#1a130c] pt-12 pb-24 px-4 text-center">
+<div class="flex justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">local_dining</span>
+</div>
+<h2 class="text-white text-2xl font-bold mb-2">Banquet Hall</h2>
+<p class="text-text-secondary text-sm mb-8 max-w-xs mx-auto">Создаем идеальные мероприятия с 2010 года.</p>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-white/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-white/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-white/60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<div class="text-white/20 text-xs">
+                © 2023 Banquet Hall. Все права защищены.
+            </div>
+</footer>
+</div>
+</body></html>
