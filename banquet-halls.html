@@ -36,28 +36,7 @@
 
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white selection:bg-primary selection:text-white">
-<style>
-    .page-shell {
-      max-width: 1300px;
-      width: min(100%, 1300px);
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
 
-    @media (min-width: 1280px) {
-      .page-shell {
-        max-width: 1200px;
-      }
-    }
-
-    @media (min-width: 1536px) {
-      .page-shell {
-        max-width: 1300px;
-      }
-    }
-  </style>
 <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-20 page-shell">
 <header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md p-4 pb-2 border-b border-white/5">
 <button class="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10 active:bg-white/20 transition-colors">
@@ -76,11 +55,11 @@
 </button>
 <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
 <span class="material-symbols-outlined text-white/80 text-[20px]">groups</span>
-<p class="text-white/80 text-sm font-medium leading-normal">До 50</p>
+<p class="text-white/80 text-sm font-medium leading-normal">До 15</p>
 </button>
 <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
 <span class="material-symbols-outlined text-white/80 text-[20px]">crowdsource</span>
-<p class="text-white/80 text-sm font-medium leading-normal">От 100</p>
+<p class="text-white/80 text-sm font-medium leading-normal">От 20</p>
 </button>
 <button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
 <span class="material-symbols-outlined text-white/80 text-[20px]">wb_sunny</span>
@@ -100,144 +79,175 @@
 </div>
 <div class="grid grid-cols-2 gap-4 px-4 pb-4 pt-4">
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Luxurious golden banquet hall with chandeliers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvWcYXCEqPjBXAseXYXQphiX4FZa8_qvEDQt8p4AS7PJPqAUgz7xiv7xahCOLjh2O9hlUm6xHIZ2lywvpTKC_tDtr-CQvv9_eBIFe8fXe8irMqqXx3hCBbUsW-A2BbliNXSgEdDbyBE5exx0A6ivUTXWG_eDLbYMKcLakS2qqOfrQIDFjRi80ffXYLPiENqdszjzrMXHVm9tRPHQIsMP2kg-w_StXiiuFjdReu_xc-C6_uBBRalHmPf37WlAfXdKfvFdTGRCwYiHoQ");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="banquet-hall" style='background-image: url("images/banquet-hall-01.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">Золотой зал</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Банкетный зал</h3>
 <div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-green-400">Свободен</span>
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">30-60</span>
+<span class="text-xs font-medium text-white/90">до 25</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">120 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Modern restaurant interior with emerald green accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-gBTuvwOieydCNGIhtJtb7zb0n10pw00wr4CtiCiHSs5wWNY9tKCPjA8OeBQsPsG9zeQaIX9bt9_3Qew7LmKMuvis534yeZ4cE1JL0mbPLvWF4oRlDKJoK1o11yoyODa1ZH7--lNiTpakO0lvnfK4WZugTV45nlQAqZYPNsfJzPyEXXc61s58thwCMICpq8Wy844GXF6jwfMpBTA8FMMmUGWdsOZq9Qcy6hahemN83L9pvx5SFbKfA_p7PqM5BvchpVSXMhIstYC4");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="leenda-hall" style='background-image: url("images/leenda-hall-01.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">Изумрудный сад</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Комната с аквариумом и водопадом</h3>
 <div class="flex items-center justify-center rounded-full bg-gray-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-gray-400">Уточнить</span>
+
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">80-120</span>
+<span class="text-xs font-medium text-white/90">до 14</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">250 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Open air terrace with string lights at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgUYNxxRQC3LAUbGRvIPpGNbzh2IDCP1f0zUSsN4GNVyojopMFnsKU0TFIeVGwsUGQWxSasBawJfAFpgLab3d-OBTTdn0pq0mjEAcG6FL8ZB47-4v3sboA6sUMm7kyMg-1evJAgmCUnRjsGWtNI0D-16gbAs_zpOAwWFATStJDGEOfz0C0MuP3dVCpQbpPbAGIQfWIoSHgzoAXldAW_K5nsf_-OViGDa7RN-LtDbhD-29kbDXb52XGDr1mTZQa7dgjqxOIc3kVaTjk");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="fireplace-hall" style='background-image: url("images/fireplace-hall-07.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">Летняя терраса</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Большая VIP-комната</h3>
 <div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-green-400">Свободен</span>
+
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">150+</span>
+<span class="text-xs font-medium text-white/90">до 10</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">400 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Cozy private dining room with warm lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeLf4wEJuTg0SwlXSOw_jQEepsnIMpJM6s04A7suIaaaTsg8DNLC_nm3o0RXjDenUvabF6q-4VP94IgGe98w7rqfjQXYEHgRyy0U0R-3C8zrKfM_9dy49F0p18Ya3lvBQavusfQ3pdIm2RYJ8qSkY-fafPw0VRlCbzemMr_52wz7TvyYbc2ccHZeyxOzZZRzuUGArMc-N2MUY9nHFEq66bZ0kQtussDohnQFw4y4Rk1UoRujddBqHpLdNLiAx9e4INw5resTkW5KAS");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="english-library" style='background-image: url("images/english-library-01.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">VIP Лофт</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Малая VIP-комната</h3>
 <div class="flex items-center justify-center rounded-full bg-red-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-red-400">Занят</span>
+
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">10-20</span>
+<span class="text-xs font-medium text-white/90">до 6</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">45 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Elegant dining room with high ceilings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvWcYXCEqPjBXAseXYXQphiX4FZa8_qvEDQt8p4AS7PJPqAUgz7xiv7xahCOLjh2O9hlUm6xHIZ2lywvpTKC_tDtr-CQvv9_eBIFe8fXe8irMqqXx3hCBbUsW-A2BbliNXSgEdDbyBE5exx0A6ivUTXWG_eDLbYMKcLakS2qqOfrQIDFjRi80ffXYLPiENqdszjzrMXHVm9tRPHQIsMP2kg-w_StXiiuFjdReu_xc-C6_uBBRalHmPf37WlAfXdKfvFdTGRCwYiHoQ");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="dream-forest-loft" style='background-image: url("images/dream-forest-loft-01.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">Серебряный Зал</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Лофт "Dream Forest"</h3>
 <div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-green-400">Свободен</span>
+
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">50-100</span>
+<span class="text-xs font-medium text-white/90">до 28</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">180 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 <div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
-<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Rooftop terrace with city view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgUYNxxRQC3LAUbGRvIPpGNbzh2IDCP1f0zUSsN4GNVyojopMFnsKU0TFIeVGwsUGQWxSasBawJfAFpgLab3d-OBTTdn0pq0mjEAcG6FL8ZB47-4v3sboA6sUMm7kyMg-1evJAgmCUnRjsGWtNI0D-16gbAs_zpOAwWFATStJDGEOfz0C0MuP3dVCpQbpPbAGIQfWIoSHgzoAXldAW_K5nsf_-OViGDa7RN-LtDbhD-29kbDXb52XGDr1mTZQa7dgjqxOIc3kVaTjk");'>
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="wine-studio" style='background-image: url("images/wine-studio-01.jpg");'>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
 <div class="relative z-10 p-3 flex flex-col gap-1.5">
 <div class="flex items-center justify-between mb-1">
-<h3 class="text-lg font-bold text-white leading-tight">Панорамная Крыша</h3>
+<h3 class="text-lg font-bold text-white leading-tight">Винная студия</h3>
 <div class="flex items-center justify-center rounded-full bg-red-500/20 px-2 py-0.5 backdrop-blur-sm">
-<span class="text-[10px] font-bold text-red-400">Занят</span>
+
 </div>
 </div>
 <div class="flex items-center gap-3">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">person</span>
-<span class="text-xs font-medium text-white/90">200+</span>
+<span class="text-xs font-medium text-white/90">до 15</span>
 </div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
-<span class="text-xs font-medium text-white/90">300 м²</span>
+<span class="text-xs font-medium text-white/90">? м²</span>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+  <div
+    class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100"
+    data-alt="main-hall"
+    style='background-image: url("images/main-hall-01.jpg");'>
+  </div>
+
+  <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+
+  <div class="relative z-10 p-3 flex flex-col gap-1.5">
+    <div class="flex items-center justify-between mb-1">
+      <h3 class="text-lg font-bold text-white leading-tight">Основной зал</h3>
+
+      <div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
+        
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-primary text-[16px]">person</span>
+        <span class="text-xs font-medium text-white/90">до 80</span>
+      </div>
+
+      <div class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+        <span class="text-xs font-medium text-white/90">? м²</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="fixed bottom-[88px] right-4 z-40">
 <button class="flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 transition-transform active:scale-90">
 <span class="material-symbols-outlined text-[26px]">calendar_month</span>
@@ -258,8 +268,12 @@
 <p class="text-[10px] font-bold leading-normal tracking-wide">Залы</p>
 </a>
 <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="#">
-<span class="material-symbols-outlined text-[24px]">person</span>
-<p class="text-[10px] font-medium leading-normal tracking-wide">Профиль</p>
+<span class="material-symbols-outlined text-[24px]">event</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Услуги</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="#">
+<span class="material-symbols-outlined text-[24px]">Contacts</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
 </a>
 </div>
 </div>

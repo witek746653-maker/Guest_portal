@@ -50,5 +50,23 @@ body {
 summary::-webkit-details-marker {
     display: none;
 }
+.page-shell {
+  max-width: 1300px;
+  width: min(100%, 1300px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 
-  
+@media (min-width: 1280px) {
+  .page-shell {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-shell {
+  max-width: 1300px;
+  }
+}
