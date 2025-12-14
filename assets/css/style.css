@@ -1,6 +1,31 @@
 body {
   min-height: max(884px, 100dvh);
 }
+
+:root {
+  --page-max-width: 1280px;
+  --page-side-padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+.page-shell {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+  box-sizing: border-box;
+}
+
+.page-shell-fixed {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
+}
 /* Custom scrollbar hiding for horizontal scroll areas */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
