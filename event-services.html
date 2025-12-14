@@ -7,6 +7,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/style.css">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
@@ -16,7 +17,7 @@
                     colors: {
                         "primary": "#f27f0d",
                         "background-light": "#f8f7f5",
-                        "background-dark": "#181411", // Using the specific dark hex from examples
+                        "background-dark": "#181411",
                         "card-dark": "#27211b",
                         "text-secondary": "#baab9c",
                     },
@@ -34,68 +35,10 @@
             },
         }
     </script>
-<style>
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .safe-area-bottom {
-            padding-bottom: env(safe-area-inset-bottom, 20px);
-        }
-        body {
-            min-height: max(884px, 100dvh);
-        }
-        input[type="checkbox"] {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            display: inline-block;
-            height: 24px;
-            width: 24px;
-            background-color: #27211b;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            vertical-align: middle;
-            position: relative;
-        }
-        input[type="checkbox"]:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        input[type="checkbox"]:checked {
-            background-color: #f27f0d;
-            border-color: #f27f0d;
-        }
-        input[type="checkbox"]:checked::after {
-            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9.55 18.006l-4.75-4.75l1.41-1.41l3.34 3.34l7.98-7.98l1.41 1.41l-9.39 9.39Z"/></svg>');
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            line-height: 1;
-            color: white;
-        }
-        .material-symbols-checkbox {
-            font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+
   </head>
 <body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col pb-24">
+<div class="relative flex min-h-screen w-full flex-col pb-4">
 <header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md px-4 py-4 border-b border-white/5">
 <button class="flex size-10 items-center justify-center rounded-full bg-white/5 text-white active:bg-white/10 transition-colors">
 <span class="material-symbols-outlined">arrow_back_ios_new</span>
@@ -127,126 +70,176 @@
 </div>
 </div>
 <div class="flex flex-col gap-3 p-4">
-<div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3">
-<div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-<div class="absolute top-0.5 left-0.5 z-20 rounded-full bg-black/40 backdrop-blur-md px-1 py-0.5 text-[0.6rem] font-semibold text-white ring-1 ring-white/10">
-                Популярное
-            </div>
+<a href="service-florists.html"
+   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+      <div class="h-full w-full bg-cover bg-center"
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'>
+      </div>
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Услуги оформителя и флориста</h3>
+      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+        <span class="flex items-center">
+          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+          <span>Установка: 1 час</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end shrink-0 ml-2">
+      <span class="text-sm font-bold text-primary whitespace-nowrap">от ... ₽</span>
+    </div>
+  </div>
+</a>
+
+<a href="service-artists.html"
+   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+      <div class="h-full w-full bg-cover bg-center"
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'>
+      </div>
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Артисты и ведущие</h3>
+      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+        <span class="flex items-center">
+          <span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
+          <span>Длительность: 2-4 часа</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end shrink-0 ml-2">
+      <span class="text-sm font-bold text-primary whitespace-nowrap">... ₽ / час</span>
+    </div>
+  </div>
+
+</a>
+<a href="service-equipment.html"
+   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+      <div class="h-full w-full bg-cover bg-center"
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'>
+      </div>
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
+        Техника и оборудование
+      </h3>
+      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+        <span class="flex items-center">
+          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+          <span>Установка: 30 мин</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end shrink-0 ml-2">
+      <span class="text-sm font-bold text-primary whitespace-nowrap">… ₽</span>
+    </div>
+  </div>
+
+</a>
+<a href="service-photographer.html"
+   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+      <div class="h-full w-full bg-cover bg-center"
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'>
+      </div>
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
+        Фото и видео съемка
+      </h3>
+      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+        <span class="flex items-center">
+          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+          <span>Установка: 2 часа</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end shrink-0 ml-2">
+      <span class="text-sm font-bold text-primary whitespace-nowrap">
+        ... ₽
+      </span>
+    </div>
+  </div>
+
+</a>
+<a href="service-entertainment.html"
+   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+      <div class="h-full w-full bg-cover bg-center"
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'>
+      </div>
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
+        Организация мероприятий
+      </h3>
+      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+        <span class="flex items-center">
+          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+          <span>Установка: 2 часа</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end shrink-0 ml-2">
+      <span class="text-sm font-bold text-primary whitespace-nowrap">
+        ... ₽
+      </span>
+    </div>
+  </div>
+
+</a>
+
+
+
+<div class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2">
+<div class="flex items-center justify-between gap-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="index.html">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="banquet-menu.html">
+<span class="material-symbols-outlined text-[24px]">restaurant_menu</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Меню</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 hover:text-white transition-colors" href="#">
+  <span class="material-symbols-outlined text-[24px] fill-current">chair</span>
+  <p class="text-[10px] font-medium leading-normal tracking-wide">Залы</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="event-services.html">
+  <span class="material-symbols-outlined text-[24px] fill-current">event</span>
+  <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="contacts.html">
+<span class="material-symbols-outlined text-[24px]">Contacts</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
+</a>
 </div>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Флористика столов</h3>
-<div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">inventory</span>
-<span>In Stock</span>
-</span>
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">numbers</span>
-<span>x1</span>
-</span>
-</div>
-</div>
-<div class="flex flex-col items-end shrink-0 ml-2">
-<span class="text-sm font-bold text-primary whitespace-nowrap">от 15 000 ₽</span>
-<label class="relative flex items-center cursor-pointer mt-1">
-<input class="w-5 h-5 rounded-md bg-white/5 border border-white/10 checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-200" type="checkbox"/>
-<span class="material-symbols-outlined material-symbols-checkbox absolute left-0 top-0 text-white pointer-events-none opacity-0 checked:opacity-100 transition-opacity text-base">check</span>
-</label>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3">
-<div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-</div>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Живая музыка (Джаз)</h3>
-<div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">inventory</span>
-<span>Limited</span>
-</span>
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">numbers</span>
-<span>x1</span>
-</span>
-</div>
-</div>
-<div class="flex flex-col items-end shrink-0 ml-2">
-<span class="text-sm font-bold text-primary whitespace-nowrap">20 000 ₽ / час</span>
-<label class="relative flex items-center cursor-pointer mt-1">
-<input class="w-5 h-5 rounded-md bg-white/5 border border-white/10 checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-200" type="checkbox"/>
-<span class="material-symbols-outlined material-symbols-checkbox absolute left-0 top-0 text-white pointer-events-none opacity-0 checked:opacity-100 transition-opacity text-base">check</span>
-</label>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3">
-<div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'></div>
-</div>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Проектор и экран</h3>
-<div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">inventory</span>
-<span>In Stock</span>
-</span>
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">numbers</span>
-<span>x1</span>
-</span>
-</div>
-</div>
-<div class="flex flex-col items-end shrink-0 ml-2">
-<span class="text-sm font-bold text-primary whitespace-nowrap">5 000 ₽</span>
-<label class="relative flex items-center cursor-pointer mt-1">
-<input class="w-5 h-5 rounded-md bg-white/5 border border-white/10 checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-200" type="checkbox"/>
-<span class="material-symbols-outlined material-symbols-checkbox absolute left-0 top-0 text-white pointer-events-none opacity-0 checked:opacity-100 transition-opacity text-base">check</span>
-</label>
-</div>
-</div>
-<div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3">
-<div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'></div>
-</div>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Фотозона "Премиум"</h3>
-<div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">inventory</span>
-<span>In Stock</span>
-</span>
-<span class="flex items-center">
-<span class="material-symbols-outlined text-[14px] mr-1">numbers</span>
-<span>x1</span>
-</span>
-</div>
-</div>
-<div class="flex flex-col items-end shrink-0 ml-2">
-<span class="text-sm font-bold text-primary whitespace-nowrap">25 000 ₽</span>
-<label class="relative flex items-center cursor-pointer mt-1">
-<input class="w-5 h-5 rounded-md bg-white/5 border border-white/10 checked:bg-primary checked:border-primary focus:ring-2 focus:ring-primary/50 transition-all duration-200" type="checkbox"/>
-<span class="material-symbols-outlined material-symbols-checkbox absolute left-0 top-0 text-white pointer-events-none opacity-0 checked:opacity-100 transition-opacity text-base">check</span>
-</label>
-</div>
-</div>
-</div>
-<div class="fixed bottom-0 left-0 right-0 z-50">
-<div class="pointer-events-none absolute bottom-full left-0 h-12 w-full bg-gradient-to-t from-background-dark to-transparent"></div>
-<div class="bg-[#1e1915]/95 backdrop-blur-xl border-t border-white/10 p-4 safe-area-bottom shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
-<div class="mx-auto flex w-full max-w-md items-center justify-between gap-4">
-<div class="flex flex-col">
-<span class="text-xs font-medium text-text-secondary">Итого выбрано: 1</span>
-<span class="text-xl font-bold text-white">25 000 ₽</span>
-</div>
-<button class="flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-primary/25 active:scale-[0.98] transition-all">
-<span>К оформлению</span>
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
 </div>
 </div>
 </div>
