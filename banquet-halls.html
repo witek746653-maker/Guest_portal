@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Выбор банкетного зала</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols_Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white selection:bg-primary selection:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md p-4 pb-2 border-b border-white/5">
+<button class="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10 active:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-tight text-white">Выбор зала</h2>
+<button class="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10 active:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<div class="sticky top-[64px] z-40 bg-background-dark/95 backdrop-blur-md pb-3 border-b border-white/5">
+<div class="flex w-full gap-3 px-4 py-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white text-[20px]">grid_view</span>
+<p class="text-white text-sm font-bold leading-normal">Все</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
+<span class="material-symbols-outlined text-white/80 text-[20px]">groups</span>
+<p class="text-white/80 text-sm font-medium leading-normal">До 50</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
+<span class="material-symbols-outlined text-white/80 text-[20px]">crowdsource</span>
+<p class="text-white/80 text-sm font-medium leading-normal">От 100</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
+<span class="material-symbols-outlined text-white/80 text-[20px]">wb_sunny</span>
+<p class="text-white/80 text-sm font-medium leading-normal">Веранда</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 px-4 transition-colors hover:bg-white/20 active:scale-95">
+<span class="material-symbols-outlined text-white/80 text-[20px]">location_on</span>
+<p class="text-white/80 text-sm font-medium leading-normal">Этаж 1</p>
+</button>
+</div>
+<div class="flex justify-end px-4">
+<button class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium text-white/80 transition-colors hover:bg-white/20 active:scale-95">
+<span class="material-symbols-outlined text-white/80 text-[18px]">sort</span>
+                            Сортировать по
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 px-4 pb-4 pt-4">
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Luxurious golden banquet hall with chandeliers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvWcYXCEqPjBXAseXYXQphiX4FZa8_qvEDQt8p4AS7PJPqAUgz7xiv7xahCOLjh2O9hlUm6xHIZ2lywvpTKC_tDtr-CQvv9_eBIFe8fXe8irMqqXx3hCBbUsW-A2BbliNXSgEdDbyBE5exx0A6ivUTXWG_eDLbYMKcLakS2qqOfrQIDFjRi80ffXYLPiENqdszjzrMXHVm9tRPHQIsMP2kg-w_StXiiuFjdReu_xc-C6_uBBRalHmPf37WlAfXdKfvFdTGRCwYiHoQ");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">Золотой зал</h3>
+<div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-green-400">Свободен</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">30-60</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">120 м²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Modern restaurant interior with emerald green accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-gBTuvwOieydCNGIhtJtb7zb0n10pw00wr4CtiCiHSs5wWNY9tKCPjA8OeBQsPsG9zeQaIX9bt9_3Qew7LmKMuvis534yeZ4cE1JL0mbPLvWF4oRlDKJoK1o11yoyODa1ZH7--lNiTpakO0lvnfK4WZugTV45nlQAqZYPNsfJzPyEXXc61s58thwCMICpq8Wy844GXF6jwfMpBTA8FMMmUGWdsOZq9Qcy6hahemN83L9pvx5SFbKfA_p7PqM5BvchpVSXMhIstYC4");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">Изумрудный сад</h3>
+<div class="flex items-center justify-center rounded-full bg-gray-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-gray-400">Уточнить</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">80-120</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">250 м²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Open air terrace with string lights at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgUYNxxRQC3LAUbGRvIPpGNbzh2IDCP1f0zUSsN4GNVyojopMFnsKU0TFIeVGwsUGQWxSasBawJfAFpgLab3d-OBTTdn0pq0mjEAcG6FL8ZB47-4v3sboA6sUMm7kyMg-1evJAgmCUnRjsGWtNI0D-16gbAs_zpOAwWFATStJDGEOfz0C0MuP3dVCpQbpPbAGIQfWIoSHgzoAXldAW_K5nsf_-OViGDa7RN-LtDbhD-29kbDXb52XGDr1mTZQa7dgjqxOIc3kVaTjk");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">Летняя терраса</h3>
+<div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-green-400">Свободен</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">150+</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">400 м²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Cozy private dining room with warm lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeLf4wEJuTg0SwlXSOw_jQEepsnIMpJM6s04A7suIaaaTsg8DNLC_nm3o0RXjDenUvabF6q-4VP94IgGe98w7rqfjQXYEHgRyy0U0R-3C8zrKfM_9dy49F0p18Ya3lvBQavusfQ3pdIm2RYJ8qSkY-fafPw0VRlCbzemMr_52wz7TvyYbc2ccHZeyxOzZZRzuUGArMc-N2MUY9nHFEq66bZ0kQtussDohnQFw4y4Rk1UoRujddBqHpLdNLiAx9e4INw5resTkW5KAS");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">VIP Лофт</h3>
+<div class="flex items-center justify-center rounded-full bg-red-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-red-400">Занят</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">10-20</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">45 м²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Elegant dining room with high ceilings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvWcYXCEqPjBXAseXYXQphiX4FZa8_qvEDQt8p4AS7PJPqAUgz7xiv7xahCOLjh2O9hlUm6xHIZ2lywvpTKC_tDtr-CQvv9_eBIFe8fXe8irMqqXx3hCBbUsW-A2BbliNXSgEdDbyBE5exx0A6ivUTXWG_eDLbYMKcLakS2qqOfrQIDFjRi80ffXYLPiENqdszjzrMXHVm9tRPHQIsMP2kg-w_StXiiuFjdReu_xc-C6_uBBRalHmPf37WlAfXdKfvFdTGRCwYiHoQ");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">Серебряный Зал</h3>
+<div class="flex items-center justify-center rounded-full bg-green-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-green-400">Свободен</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">50-100</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">180 м²</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative flex h-[200px] flex-col justify-end overflow-hidden rounded-xl bg-gray-800 shadow-lg cursor-pointer">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 group-active:scale-100" data-alt="Rooftop terrace with city view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgUYNxxRQC3LAUbGRvIPpGNbzh2IDCP1f0zUSsN4GNVyojopMFnsKU0TFIeVGwsUGQWxSasBawJfAFpgLab3d-OBTTdn0pq0mjEAcG6FL8ZB47-4v3sboA6sUMm7kyMg-1evJAgmCUnRjsGWtNI0D-16gbAs_zpOAwWFATStJDGEOfz0C0MuP3dVCpQbpPbAGIQfWIoSHgzoAXldAW_K5nsf_-OViGDa7RN-LtDbhD-29kbDXb52XGDr1mTZQa7dgjqxOIc3kVaTjk");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
+<div class="relative z-10 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-lg font-bold text-white leading-tight">Панорамная Крыша</h3>
+<div class="flex items-center justify-center rounded-full bg-red-500/20 px-2 py-0.5 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-red-400">Занят</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="text-xs font-medium text-white/90">200+</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">square_foot</span>
+<span class="text-xs font-medium text-white/90">300 м²</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-[88px] right-4 z-40">
+<button class="flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[26px]">calendar_month</span>
+</button>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2">
+<div class="flex items-center justify-between gap-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="#">
+<span class="material-symbols-outlined text-[24px]">restaurant_menu</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Меню</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-current">chair</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Залы</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Профиль</p>
+</a>
+</div>
+</div>
+</div>
+
+</body></html>
