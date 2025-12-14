@@ -43,7 +43,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const cached = await caches.match(req);
-          return cached || caches.match("/offline.html");
+          return cached || caches.match("./offline.html");
         })
     );
     return;
