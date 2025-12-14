@@ -52,7 +52,29 @@
   </style>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white selection:bg-primary selection:text-white">
-<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-20 page-shell mx-auto">
+<style>
+    .page-shell {
+      max-width: 1300px;
+      width: min(100%, 1300px);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    @media (min-width: 1280px) {
+      .page-shell {
+        max-width: 1200px;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .page-shell {
+        max-width: 1300px;
+      }
+    }
+  </style>
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-20 page-shell">
 <header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md p-4 pb-2 border-b border-white/5">
 <button class="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/10 active:bg-white/20 transition-colors">
 <span class="material-symbols-outlined">arrow_back</span>
