@@ -1,4 +1,4 @@
-const CACHE_NAME = "app-cache-v5"; // меняйте при каждом релизе
+const CACHE_NAME = "app-cache-v6"; // меняйте при каждом релизе
 const APP_ASSETS = [
   "./offline.html",
   "./assets/css/style.css",
