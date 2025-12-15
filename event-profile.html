@@ -50,8 +50,11 @@
 <div class="relative w-full h-[45vh] min-h-[360px] shrink-0">
 <!-- Top Navigation Overlay -->
 <div class="absolute top-0 left-0 w-full z-20 p-4 pt-12 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent">
-<button class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
+<button
+  onclick="history.length > 1 ? history.back() : window.location.href='index.html'"
+  class="flex size-10 items-center justify-center rounded-full bg-black/60"
+>
+  <span class="material-symbols-outlined">arrow_back_ios_new</span>
 </button>
 <button class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
 <span class="material-symbols-outlined">ios_share</span>
@@ -59,7 +62,7 @@
 </div>
 <!-- Hero Image -->
 <div class="w-full h-full bg-gray-800 relative">
-<img alt="Banquet Setup" class="w-full h-full object-cover" data-alt="Elegant wedding banquet table setting with candles and flowers in dim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFc2BwCzbJTkjCpW3ffRMIT4q2E1sbKKGWisKS2K3uIdvk9JG3-S9YZJl7xcB274fWeV1xiK30Fv7C7K4JGGmwQgFFTYLr6TdmaGFiHQtkkTAFLkWKcfjGUsdxbz5oKF8g-mQoJQMxoH6qWb_6ajz60mMt1clu9VzLTo84t2Elpel84DKZGbTescpShNEI5kYkphoVMDRzZM0pQylDb4AVceBnHaNCjF8chEjh64o84mTmcGgQRnpXb9ZSbYi7hPr5FXREtRyJfYUs"/>
+<img alt="Место для фото" class="w-full h-full object-cover" data-alt="Name of..." src=""/>
 <!-- Gradient Overlay at bottom of image for seamless transition -->
 <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-dark to-transparent opacity-90 dark:block hidden"></div>
 <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-light to-transparent opacity-90 dark:hidden block"></div>
@@ -70,13 +73,13 @@
 <!-- Header Block -->
 <div class="flex flex-col gap-2">
 <div class="flex items-start justify-between gap-4">
-<h1 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Свадебный Банкет Premium</h1>
+<h1 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Название</h1>
 <div class="shrink-0 pt-1">
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">favorite</span>
 </div>
 </div>
 <div class="flex items-baseline gap-2 mt-1">
-<span class="text-primary text-2xl font-bold tracking-tight">5 000 ₽</span>
+<span class="text-primary text-2xl font-bold tracking-tight">... ₽</span>
 <span class="text-slate-500 dark:text-gray-400 font-medium">/ персону</span>
 </div>
 </div>
@@ -84,20 +87,20 @@
 <div class="flex gap-3 overflow-x-auto no-scrollbar pb-1 -mx-5 px-5">
 <div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-[#393028] border border-slate-200 dark:border-transparent px-4 shadow-sm">
 <span class="material-symbols-outlined text-primary text-[18px]">group</span>
-<p class="text-slate-700 dark:text-white text-sm font-medium">До 50 персон</p>
+<p class="text-slate-700 dark:text-white text-sm font-medium">До ... персон</p>
 </div>
 <div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-[#393028] border border-slate-200 dark:border-transparent px-4 shadow-sm">
 <span class="material-symbols-outlined text-primary text-[18px]">restaurant</span>
-<p class="text-slate-700 dark:text-white text-sm font-medium">Европейская</p>
+<p class="text-slate-700 dark:text-white text-sm font-medium">тег</p>
 </div>
 <div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-[#393028] border border-slate-200 dark:border-transparent px-4 shadow-sm">
 <span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
-<p class="text-slate-700 dark:text-white text-sm font-medium">5 часов</p>
+<p class="text-slate-700 dark:text-white text-sm font-medium">тег</p>
 </div>
 </div>
 <!-- Description -->
 <div class="text-slate-600 dark:text-gray-300 leading-relaxed text-[15px]">
-<p>Эксклюзивное предложение для вашего торжества. Мы создали идеальную атмосферу роскоши и уюта. В стоимость включено полное обслуживание, декорирование зала живыми цветами и персональный менеджер.</p>
+<p>Описание мероприятия</p>
 </div>
 <div class="w-full h-px bg-slate-200 dark:bg-white/10 my-1"></div>
 <!-- Included Services -->
@@ -109,8 +112,8 @@
 <span class="material-symbols-outlined text-sm font-bold">check</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-bold text-slate-900 dark:text-white">Авторское меню от Шефа</span>
-<span class="text-xs text-slate-500 dark:text-gray-400">4 курса, включая десерт</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-slate-500 dark:text-gray-400">...</span>
 </div>
 </div>
 <div class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-white/5 border border-slate-100 dark:border-transparent">
@@ -118,8 +121,8 @@
 <span class="material-symbols-outlined text-sm font-bold">check</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-bold text-slate-900 dark:text-white">Базовый декор зала</span>
-<span class="text-xs text-slate-500 dark:text-gray-400">Текстиль, свечи, сервировка</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-slate-500 dark:text-gray-400">...</span>
 </div>
 </div>
 <div class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-white/5 border border-slate-100 dark:border-transparent">
@@ -127,8 +130,8 @@
 <span class="material-symbols-outlined text-sm font-bold">check</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-bold text-slate-900 dark:text-white">Обслуживание 10%</span>
-<span class="text-xs text-slate-500 dark:text-gray-400">Работа официантов и хостес</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-slate-500 dark:text-gray-400">...</span>
 </div>
 </div>
 </div>
@@ -144,8 +147,8 @@
 <span class="material-symbols-outlined">queue_music</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-medium text-slate-900 dark:text-white">Живая музыка</span>
-<span class="text-xs text-primary font-bold">+ 15 000 ₽</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-primary font-bold">+ ... ₽</span>
 </div>
 </div>
 
@@ -157,8 +160,8 @@
 <span class="material-symbols-outlined">photo_camera</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-medium text-slate-900 dark:text-white">Фотограф (3ч)</span>
-<span class="text-xs text-primary font-bold">+ 12 000 ₽</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-primary font-bold">+ ... ₽</span>
 </div>
 </div>
 
@@ -170,8 +173,8 @@
 <span class="material-symbols-outlined">cake</span>
 </div>
 <div class="flex flex-col">
-<span class="text-sm font-medium text-slate-900 dark:text-white">Свадебный торт</span>
-<span class="text-xs text-primary font-bold">+ 800 ₽ / кг</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">...</span>
+<span class="text-xs text-primary font-bold">+ ... ₽ / кг</span>
 </div>
 </div>
 

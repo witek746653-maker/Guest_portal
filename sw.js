@@ -1,24 +1,20 @@
-const CACHE_NAME = "app-cache-v4";
+const CACHE_NAME = "app-cache-v5"; // меняйте при каждом релизе
 const APP_ASSETS = [
-  "./",                 // главная
-  "./index.html",
-  "./offline.html",     // офлайн-страница (создадим ниже)
+  "./offline.html",
   "./assets/css/style.css",
   "./assets/js/app.js",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
 ];
 
-// Установка: кладём базовые ассеты в кэш
+// install: кэшируем базовые ассеты
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_ASSETS))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_ASSETS)));
   self.skipWaiting();
 });
 
-// Активация: чистим старые кэши
+// activate: чистим старые кэши
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -28,31 +24,30 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Запросы: отдаём из кэша, а при сети обновляем; для HTML даём fallback offline.html
+// Кнопка "Обновить" из баннера
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") self.skipWaiting();
+});
+
+// fetch
 self.addEventListener("fetch", (event) => {
   const req = event.request;
+  const url = new URL(req.url);
 
-  // Навигация (переходы по страницам)
+  // только свой origin
+  if (url.origin !== self.location.origin) return;
+
+  // HTML (переходы): network-first, fallback -> offline
   if (req.mode === "navigate") {
-    event.respondWith(
-      fetch(req)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
-          return res;
-        })
-        .catch(async () => {
-          const cached = await caches.match(req);
-          return cached || caches.match("./offline.html");
-        })
-    );
+    event.respondWith(fetch(req).catch(() => caches.match("./offline.html")));
     return;
   }
 
-  // Остальные ресурсы: cache-first
+  // Остальное: cache-first + догрузка в кэш
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
+
       return fetch(req).then((res) => {
         const copy = res.clone();
         caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
@@ -61,4 +56,3 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-
