@@ -1,4 +1,4 @@
-const CACHE_NAME = "app-cache-v2";
+const CACHE_NAME = "app-cache-v4";
 const APP_ASSETS = [
   "./",                 // главная
   "./index.html",
