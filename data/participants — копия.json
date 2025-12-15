@@ -1,0 +1,50 @@
+[
+  {
+    "id": "vot-eti-rebyata",
+    "name": "Вот эти ребята",
+    "category": "Музыкант",
+    "tagline": "Живой звук и музыкальное сопровождение",
+    "rating": 4.9,
+    "reviews": 128,
+    "tags": [
+      {"icon": "verified", "text": "Штат"},
+      {"icon": "music_note", "text": "Джаз & Лаундж"},
+      {"icon": "work_history", "text": "Опыт 10 лет"},
+      {"icon": "speaker", "text": "Свое оборудование"}
+    ],
+    "about": "Александр — профессиональный саксофонист и звукорежиссёр с опытом работы более 10 лет…",
+    "portfolio": [
+      {
+        "src": "/images/portfolio/pic1.jpg",
+        "alt": "Saxophone player performing in a suit"
+      },
+      {
+        "src": "/images/portfolio/pic2.jpg",
+        "alt": "Atmospheric shot of a jazz band in a dimly lit club"
+      },
+      {
+        "src": "/images/portfolio/pic3.jpg",
+        "alt": "Close‑up detail of saxophone keys and musician's hands"
+      }
+    ],
+    "video": {
+      "src": "/images/video_preview.jpg",
+      "title": "Live @ Grand Hall",
+      "duration": "2:15"
+    },
+    "testimonial": {
+      "stars": 5,
+      "date": "12 Окт 2023",
+      "text": "Александр отлично вписался…",
+      "reviewerName": "Елена В.",
+      "reviewerAvatar": "/images/reviewers/elena.jpg"
+    },
+    "social": {
+      "instagram": "https://instagram.com/artist",
+      "youtube": "https://youtube.com/artist",
+      "website": "https://example.com"
+    },
+    "price": 15000
+  }
+
+]

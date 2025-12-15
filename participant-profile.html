@@ -2,9 +2,9 @@
 <html class="dark" lang="ru"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Портфолио члена команды</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Карточка члена команды</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -31,182 +31,130 @@
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased selection:bg-primary selection:text-white">
 <div class="relative min-h-screen w-full flex flex-col pb-24">
-<div class="relative w-full h-[460px] shrink-0">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Musician playing saxophone on a dimly lit stage with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCG0axH5HuVLJErZijzB-02kkeM0KYnbn547oBPkMshn-pjg5dQTHNj7DKwYBAyrkeUKcYfD262cpgZGBQBbcN_CzKS8uMxvnGvjUAOTojDA7blBTnlT5JXupxLEBcMP4-uhBqFYqRKwnzSl0a-fCem5Mjlvn0s8beHhuHgUodxOK0swrE5n41aYhSeOkd0GkBwJZ4dPS8g2jjhyvet3SObAFDoBopgBJed-w2FFY-W1NaBSb4YYzqlZAEZPa9FAmfgN3HhyhNbRzhm');">
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
-<div class="absolute top-0 left-0 w-full flex items-center justify-between p-4 z-20 pt-12"> 
-<button
-  type="button"
-  onclick="history.back()"
-  class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-  aria-label="Back"
->
-  <span class="material-symbols-outlined text-[24px]">arrow_back</span>
-</button>
-<button class="flex size-10 items-center justify-center rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition-colors">
-<span class="material-symbols-outlined">share</span>
-</button>
-</div>
-<div class="absolute bottom-0 left-0 w-full p-5 flex flex-col gap-2 z-10">
-<div class="flex items-center gap-2 mb-1">
-<div class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-[14px]">person</span>
-                        Музыкант
-                    </div>
-<div class="flex items-center gap-1 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full text-white text-xs font-medium border border-white/10">
-<span class="material-symbols-outlined text-primary text-[14px] fill-1">star</span>
-                        4.9 (128)
-                    </div>
-</div>
-<h1 class="text-white text-4xl font-bold leading-tight tracking-tight"></h1>
-<p class="text-gray-300 text-lg font-medium leading-normal">Живой звук и музыкальное сопровождение</p>
-</div>
-</div>
-<div class="flex flex-col px-4 pt-6 gap-8">
-<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1">
-<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-4">
-<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
-<p class="text-white text-sm font-medium">Штат</p>
-</div>
-<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-4">
-<span class="material-symbols-outlined text-primary text-[18px]">music_note</span>
-<p class="text-white text-sm font-medium">Джаз &amp; Лаундж</p>
-</div>
-<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-4">
-<span class="material-symbols-outlined text-primary text-[18px]">work_history</span>
-<p class="text-white text-sm font-medium">Опыт 10 лет</p>
-</div>
-<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-4">
-<span class="material-symbols-outlined text-primary text-[18px]">speaker</span>
-<p class="text-white text-sm font-medium">Свое оборудование</p>
-</div>
-</div>
-<div class="flex flex-col gap-3">
-<h3 class="text-white text-xl font-bold">О члене команды</h3>
-<p class="text-gray-400 text-base font-normal leading-relaxed font-body">
-                    Александр — профессиональный саксофонист и звукорежиссер с опытом работы в ресторанной индустрии более 10 лет. Отвечает за музыкальное оформление, настройку звука и создание уникальной атмосферы мероприятия. Работает как сольно, так и в составе кавер-групп ресторана.
+  <div class="relative w-full h-[460px] shrink-0">
+    <div id="artist-cover" class="absolute inset-0 bg-cover bg-center" data-alt="Artist cover" style="background-image: url('/images/artists/vot-eti-rebyata.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+    <div class="absolute top-0 left-0 w-full flex items-center justify-between p-4 z-20 pt-12">
+      <button
+        type="button"
+        onclick="history.back()"
+        class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        aria-label="Back"
+      >
+        <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+      </button>
+      <button class="flex size-10 items-center justify-center rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition-colors">
+        <span class="material-symbols-outlined">share</span>
+      </button>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col gap-2 z-10">
+      <div class="flex items-center gap-2 mb-1">
+        <div id="artist-category-pill" class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-[14px]">person</span>
+          <span id="artist-category"></span>
+        </div>
+        <div id="artist-rating-block" class="flex items-center gap-1 bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full text-white text-xs font-medium border border-white/10">
+          <span class="material-symbols-outlined text-primary text-[14px] fill-1">star</span>
+          <span id="artist-rating"></span> <span id="artist-reviews"></span>
+        </div>
+      </div>
+      <h1 id="artist-name" class="text-white text-4xl font-bold leading-tight tracking-tight"></h1>
+      <p id="artist-tagline" class="text-gray-300 text-lg font-medium leading-normal"></p>
+    </div>
+  </div>
+
+  <div class="flex flex-col px-4 pt-6 gap-8">
+    <div id="artist-tags" class="flex gap-3 overflow-x-auto hide-scrollbar pb-1"></div>
+
+    <div id="artist-about-block" class="flex flex-col gap-3">
+      <h3 class="text-white text-xl font-bold">Артист</h3>
+      <p id="artist-about" class="text-gray-400 text-base font-normal leading-relaxed font-body">
+                    
                 </p>
-</div>
-<div class="flex flex-col gap-4">
-<div class="flex justify-between items-end">
-<h3 class="text-white text-xl font-bold">Портфолио</h3>
-<button class="text-primary text-sm font-semibold">Все фото</button>
-</div>
-<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4 snap-x">
-<div class="snap-center shrink-0 w-64 aspect-[3/4] rounded-xl overflow-hidden relative">
-<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Saxophone player performing in a suit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQOcQtdUnJeg-1urHyBFx2u3nMkhoBjJv6zKxTFWxLEZ2TZgskJPHRypvB6hn--Kacg8ExPCTA6w1jPzQse3SMElyPy-9UvSaEwwV2KSFJrPqsqsJBFJovTQgEUM8FcbIMUQcZIxrSeu8cIgdmqflESX6SlmQ0ahXZAFMhhR_764VkhNfjCM2URFf7PDH5w9ZYf11eTVpndJZEaul6MZcuuD43h066zJYiiuNdP2GWOQbVP3zNe0JoeT0HirMvgpj6hlyfeAX7goZ9');">
-</div>
-</div>
-<div class="snap-center shrink-0 w-64 aspect-[3/4] rounded-xl overflow-hidden relative">
-<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Atmospheric shot of a jazz band in a dimly lit club" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqd2MAuWrTDeOHGNsJvJIQfUpxF8_2X5JCyLKUTogVR24fttLBoxIMRYK2hotDfxkGQgS4dFQEqtPm49UhCkLOM1o7yu54F0ZM6IwJ6FANCMqCrAPhz6onrGq4uHLGmfzJM_G5SUgYV8Vv_vqQVifWWxMFwmBrjb_hQtII9BXieeZv7R753TB9-hVnijW1Uhys2ph2D5O7H9fMSVS89U26e07ARiJQukZ8GtCU4LzKYE093hyyvNSXJgd-60dawbYqorhAh3TQ-IMa');">
-</div>
-</div>
-<div class="snap-center shrink-0 w-64 aspect-[3/4] rounded-xl overflow-hidden relative">
-<div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500" data-alt="Close up detail of saxophone keys and musician's hands" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO0Cr6g5PIwDh9DkwFgS8KeMHob5CZSNkT-VVuS9Va0EzUaJYru7oZGmPwnE3qDVmoGam6ltxnHl-xQww8KN0rNQDut3NhGSCZbS4sYiNU3AEmnO5fpgsHClC2d-NudIE_yzoFc_5sNncAjfJe6ZkWv6-9bi9xGmY2Knv30EM1lol1hBawL8Klk0f-M8WxPT82wfINFqIScssphtgb6cfoyd0ePKTdw5xBc4nNJWpmYFVJeJwM6T3ZHa91A0bxr81uDbs_6vBARcjo');">
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-4">
-<h3 class="text-white text-xl font-bold">Примеры работ</h3>
-<div class="relative w-full aspect-video rounded-xl overflow-hidden group cursor-pointer">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Wide shot of artist performing live on stage with audience" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpPEovfyI-HpsZ_29DhYFNLFgSxcAh2WPJhL03tHCa--nVAJ8yGZQEXOqPcLL84jlnxCSdWT4kVikDXjMmZu_QgUTjIa-w1M3flNhgrKn-M2NC-Bg_aETy8WfrPOXMj6erF6jJ08Ecki-VUKY1Is9BQdZX-sPf5K96RsWfrQQCy5BF5CPDBwXjTUBG5OgwXsiHPiv6p28NliUcrGThAJ3u84WelEtnsLOoz17V-UnVPfQOui1bFLqMO88Is37n1p6iKgrGB673MyZC');">
-</div>
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-<div class="size-16 rounded-full bg-primary/90 text-white flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-<span class="material-symbols-outlined text-[32px] fill-1 ml-1">play_arrow</span>
-</div>
-</div>
-<div class="absolute bottom-3 left-3 px-3 py-1 bg-black/60 backdrop-blur rounded text-white text-xs font-medium">
-                        Live @ Grand Hall (2:15)
+    </div>
+
+    <div id="artist-portfolio-block" class="flex flex-col gap-4">
+      <div class="flex justify-between items-end">
+        <h3 class="text-white text-xl font-bold">Портфолио</h3>
+        <button class="text-primary text-sm font-semibold">Все фото</button>
+      </div>
+      <div id="artist-portfolio" class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4 snap-x"></div>
+    </div>
+
+    <div id="artist-video-block" class="flex flex-col gap-4">
+      <h3 class="text-white text-xl font-bold">Примеры работ</h3>
+      <div id="artist-video" class="relative w-full aspect-video rounded-xl overflow-hidden group cursor-pointer">
+        <div class="video-bg absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Wide shot of artist performing live on stage with audience" style="background-image: url('');">
+        </div>
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+          <div class="size-16 rounded-full bg-primary/90 text-white flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined text-[32px] fill-1 ml-1">play_arrow</span>
+          </div>
+        </div>
+        <div class="absolute bottom-3 left-3 px-3 py-1 bg-black/60 backdrop-blur rounded text-white text-xs font-medium">
+                        <span class="video-title"></span> (<span class="video-duration"></span>)
                     </div>
-</div>
-</div>
-<div class="flex flex-col gap-2 rounded-2xl bg-surface-dark p-1 overflow-hidden">
-<div class="flex items-center justify-between p-4 bg-surface-dark hover:bg-white/5 rounded-xl transition-colors cursor-pointer group">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-lg bg-background-dark flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">payments</span>
-</div>
-<div class="flex flex-col">
-<span class="text-white font-semibold">Услуги и Цены</span>
-<span class="text-gray-400 text-xs">Пакеты услуг и доп. опции</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors">chevron_right</span>
-</div>
-<div class="w-full h-px bg-white/5 mx-4"></div>
-<div class="flex items-center justify-between p-4 bg-surface-dark hover:bg-white/5 rounded-xl transition-colors cursor-pointer group">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-lg bg-background-dark flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">description</span>
-</div>
-<div class="flex flex-col">
-<span class="text-white font-semibold">Условия работы</span>
-<span class="text-gray-400 text-xs">Райдер и требования</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors">chevron_right</span>
-</div>
-</div>
-<div class="bg-gradient-to-br from-surface-dark to-surface-dark/50 p-5 rounded-2xl border border-white/5">
-<div class="flex justify-between items-start mb-3">
-<div class="flex gap-1 text-primary">
-<span class="material-symbols-outlined text-[20px] fill-1">star</span>
-<span class="material-symbols-outlined text-[20px] fill-1">star</span>
-<span class="material-symbols-outlined text-[20px] fill-1">star</span>
-<span class="material-symbols-outlined text-[20px] fill-1">star</span>
-<span class="material-symbols-outlined text-[20px] fill-1">star</span>
-</div>
-<span class="text-gray-400 text-xs font-medium">12 Окт 2023</span>
-</div>
-<p class="text-gray-200 text-sm leading-relaxed italic mb-4">
-                    "Александр отлично вписался в команду нашего мероприятия. Звук был идеально настроен, а саксофон добавил именно ту изюминку, которую мы искали."
+      </div>
+    </div>
+
+    <div id="artist-testimonial" class="bg-gradient-to-br from-surface-dark to-surface-dark/50 p-5 rounded-2xl border border-white/5">
+      <div class="flex justify-between items-start mb-3">
+        <div class="testimonial-stars flex gap-1 text-primary">
+          <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+          <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+          <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+          <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+          <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+        </div>
+        <span class="testimonial-date text-gray-400 text-xs font-medium"></span>
+      </div>
+      <p class="testimonial-text text-gray-200 text-sm leading-relaxed italic mb-4">
+                    ""
                 </p>
-<div class="flex items-center gap-3">
-<div class="size-8 rounded-full bg-gray-600 bg-cover" data-alt="Portrait of a female reviewer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMlWzqEEQMVAoBkVafQuAecQI1NZOBv1ZbjC4ZrSX5LmxqhdgmDtLosHk6vKRJqWhOfP_mnomRtKb5eqwMVvm1qjNnQepabrJGNT_Rp5-KSCJzgPyxlocL-2Bd5ijswaODGyTMlNjSuDDts-lvGtAXSnSwZ5RNnVrstCVzAbxE6AIcVCNMik27yRKCHLNC1eP7B84sTdCIR_3StGaSmqPZ00rulxJeKgqBo6PU5GhRlKkITJ93EtNmIygeORb1frU549lvChId9NxG');"></div>
-<p class="text-white text-sm font-semibold">Елена В.</p>
+      <div class="flex items-center gap-3">
+        <div class="testimonial-avatar size-8 rounded-full bg-gray-600 bg-cover" data-alt="Portrait of a female reviewer" style="background-image: url('');"></div>
+        <p class="testimonial-reviewer text-white text-sm font-semibold"></p>
+      </div>
+    </div>
+
+    <div id="artist-social-links" class="flex justify-center gap-6 py-4 pb-8">
+      <a id="link-instagram" class="text-gray-400 hover:text-white transition-colors" href="">
+        <span class="sr-only">Instagram</span>
+        <div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+          <span class="material-symbols-outlined text-2xl">photo_camera</span>
+        </div>
+      </a>
+      <a id="link-youtube" class="text-gray-400 hover:text-white transition-colors" href="">
+        <span class="sr-only">YouTube</span>
+        <div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+          <span class="material-symbols-outlined text-2xl">smart_display</span>
+        </div>
+      </a>
+      <a id="link-website" class="text-gray-400 hover:text-white transition-colors" href="">
+        <span class="sr-only">Website</span>
+        <div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+          <span class="material-symbols-outlined text-2xl">language</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div id="artist-cta-bar" class="fixed bottom-0 left-0 w-full z-40 px-4 py-3 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 pb-8 safe-area-pb">
+    <div class="flex items-center justify-between gap-4 max-w-md mx-auto">
+      <div class="flex flex-col">
+        <span class="text-gray-400 text-xs font-medium">Ставка</span>
+        <div class="flex items-end gap-1">
+          <span id="artist-price" class="text-white text-xl font-bold"></span>
+          <span class="text-gray-400 text-sm font-medium mb-1">/ час</span>
+        </div>
+      </div>
+      <button class="flex-1 bg-primary hover:bg-primary/90 text-white h-12 rounded-xl font-bold text-base shadow-lg shadow-primary/25 active:scale-95 transition-all flex items-center justify-center gap-2">
+        <span>Нанять в команду</span>
+        <span class="material-symbols-outlined text-[20px]">person_add</span>
+      </button>
+    </div>
+  </div>
 </div>
-</div>
-<div class="flex justify-center gap-6 py-4 pb-8">
-<a class="text-gray-400 hover:text-white transition-colors" href="#">
-<span class="sr-only">Instagram</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">photo_camera</span>
-</div>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="#">
-<span class="sr-only">YouTube</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">smart_display</span>
-</div>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="#">
-<span class="sr-only">Website</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">language</span>
-</div>
-</a>
-</div>
-</div>
-<div class="fixed bottom-0 left-0 w-full z-40 px-4 py-3 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 pb-8 safe-area-pb">
-<div class="flex items-center justify-between gap-4 max-w-md mx-auto">
-<div class="flex flex-col">
-<span class="text-gray-400 text-xs font-medium">Ставка</span>
-<div class="flex items-end gap-1">
-<span class="text-white text-xl font-bold">15 000 ₽</span>
-<span class="text-gray-400 text-sm font-medium mb-1">/ час</span>
-</div>
-</div>
-<button class="flex-1 bg-primary hover:bg-primary/90 text-white h-12 rounded-xl font-bold text-base shadow-lg shadow-primary/25 active:scale-95 transition-all flex items-center justify-center gap-2">
-<span>Нанять в команду</span>
-<span class="material-symbols-outlined text-[20px]">person_add</span>
-</button>
-</div>
-</div>
-</div>
-…
 <script src="assets/js/participant-profile.js"></script>
 
 
