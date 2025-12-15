@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+
 <html class="dark" lang="ru"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Дополнительные услуги</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<title>Галерея артистов</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -17,9 +17,8 @@
                     colors: {
                         "primary": "#f27f0d",
                         "background-light": "#f8f7f5",
-                        "background-dark": "#181411",
-                        "card-dark": "#27211b",
-                        "text-secondary": "#baab9c",
+                        "background-dark": "#221910",
+                        "surface-dark": "#32281e", // Custom slightly lighter dark for cards/inputs
                     },
                     fontFamily: {
                         "display": ["Plus Jakarta Sans", "sans-serif"]
@@ -28,7 +27,6 @@
                         "DEFAULT": "0.25rem",
                         "lg": "0.5rem",
                         "xl": "0.75rem",
-                        "2xl": "1rem",
                         "full": "9999px"
                     },
                 },
@@ -37,274 +35,115 @@
     </script>
 
   </head>
-<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col pb-24 page-shell">
-<header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md px-4 py-4 border-b border-white/5">
-<button class="flex size-10 items-center justify-center rounded-full bg-white/5 text-white active:bg-white/10 transition-colors">
-<span class="material-symbols-outlined">arrow_back_ios_new</span>
+<body class="bg-background-light dark:bg-background-dark font-display text-white antialiased min-h-screen flex flex-col">
+<!-- Header -->
+<div class="sticky top-0 z-10 bg-background-dark/95 backdrop-blur-sm border-b border-white/5">
+<div class="flex items-center justify-between px-4 py-3">
+<button
+  type="button"
+  onclick="history.back()"
+  class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+  aria-label="Back"
+>
+  <span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
 </button>
-<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Дополнительные услуги</h1>
-</header>
-<div class="sticky top-[72px] z-40 bg-background-dark/95 backdrop-blur-sm pt-2 pb-4">
-<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar snap-x">
-<button class="flex h-10 shrink-0 snap-start items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-lg shadow-primary/20 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-[20px]">star</span>
-<span class="text-sm font-semibold">Все</span>
-</button>
-<button class="flex h-10 shrink-0 snap-start items-center justify-center gap-x-2 rounded-full bg-card-dark border border-white/5 px-5 hover:bg-white/5 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-text-secondary">local_florist</span>
-<span class="text-sm font-medium text-text-secondary">Декор</span>
-</button>
-<button class="flex h-10 shrink-0 snap-start items-center justify-center gap-x-2 rounded-full bg-card-dark border border-white/5 px-5 hover:bg-white/5 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-text-secondary">music_note</span>
-<span class="text-sm font-medium text-text-secondary">Развлечения</span>
-</button>
-<button class="flex h-10 shrink-0 snap-start items-center justify-center gap-x-2 rounded-full bg-card-dark border border-white/5 px-5 hover:bg-white/5 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-text-secondary">bolt</span>
-<span class="text-sm font-medium text-text-secondary">Техника</span>
-</button>
-<button class="flex h-10 shrink-0 snap-start items-center justify-center gap-x-2 rounded-full bg-card-dark border border-white/5 px-5 hover:bg-white/5 transition-transform active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-text-secondary">table_restaurant</span>
-<span class="text-sm font-medium text-text-secondary">Мебель</span>
-</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-wide flex-1 text-center pr-10">Творческая команда</h2>
 </div>
 </div>
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-<a href="artist.html?id=1" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Скрипач" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-                <div class="absolute top-2 right-2 z-20 rounded-full bg-black/40 backdrop-blur-md px-2 py-0.5 text-xs font-semibold text-white ring-1 ring-white/10">Популярное</div>
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Вот эти ребята (Джаз Band)</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 12 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=2" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Саксофонист" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Twinx Sound</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">20 000 ₽ / час</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=3" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Кавер‑группа" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">LERA Папиш</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 60 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=4" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="DJ‑сет" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Ильхом Тагиров</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 15 000 ₽ / час</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=5" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Ведущий" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Олеся Полищук</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 25 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=6" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Шоу барабанщиков" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Павел Елесеев</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 50 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=7" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Танцевальный коллектив" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Polina Band</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 40 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=8" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Фокусник" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Натаниэль</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 18 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=9" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Стендап‑комик" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Елизавета Юргина</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 30 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=10" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Шоу мыльных пузырей" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Евгения</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 22 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=11" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Песочное шоу" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Екатерина Колесникова</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 35 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=12" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Вокалист(ка)" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Павел Савченко</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 14 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=13" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Акробаты" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Сергей Бондарь</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 55 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=14" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Караоке‑бэнд" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Артур Шилов</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 45 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=15" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Струнный квартет" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1wUazL68fl6R0ktZwiTqR3RGFQ6YD_3kAUW-eF1AGyvWUy7wuVFJmacdWfxv_hDMX1-hur5N8V_KVbS8jU2ZlS3w_j2VPmBqZ36LvQVmQeJr72VjoupS7KeX_DbjKZhXC-k7aMG2QB9hS5cO29j6jdywcPbAwl9FuYHM5BhaSuuAk685YuUCZKWxhLGVq0AA2KUVU4itnthSDR8US8FsG26mj_LdDbXQIbM9z-eHqSJOMxg5-CLjxXrKQh3ihlQeO4GtkCrYC2zwH");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Ярослав Ломовцев</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 38 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=16" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Лаунж‑проект" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSBI5WI6EfFVLNKbViyzLynso0zNfwSvfL_UlYvmRWJXD2EBLjc3ooG3XpmN8i2Eh_kfeasL_bvDzxhfTuPbrOdAQdD5A_nPNmjCmyFCN18ipRfWT7i79FLad0KmCzHXSVKez_q5YD_yYJ_4JutxvtDhra59bEQeHko2DcUHc7LtusgA9JzSMw9cTvgjinhTbCSEJBe3tHIcCL0bwa1i1Rn4h68lqgl7Wk5eRb1JwiAjWkLGO81YBJy_uUS8SO5UbOHfpxgqHHQaIX");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Петр Микитенко</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 28 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=17" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Барабанное шоу" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWgxgjcU6gjLF4uAhbX6ir8fMvVQLQd3cznsaQUgyDCLT6O8EjX0kP_-KZUv8E9AA7O_pgAMquFUGErYGX_7lB9S5bw6W6lv0KX0ZktFWbFfM4MlqP2p_Z5MbvcEnZs4ebramUmOTQUYHz1Tv0_5ci2-xA4FMK1ZNbLEf06hDqW19mZXx70wIhrzXf9OQ2ysfG-ZbitkZiRXZIFv-ezhZZFQ0LaLqflaBDfT3HClUlpzJfHas0jJRcyVshRCGENpoclo7IcGvqziB1");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Леонид Кияшко</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 52 000 ₽</span>
-        </div>
-    </div>
-</a>
-<a href="artist.html?id=18" class="group relative flex flex-col overflow-hidden rounded-lg bg-card-dark shadow-xl ring-1 ring-white/5 focus:outline-none focus:ring-2 focus:ring-primary/60 transition-transform active:scale-[0.99]">
-    <div class="relative aspect-square w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-        <div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Гитарист" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLpsuRfWADqdKKzKUxwW_UvzAqDXGMfFBvl-FSLWrxSOSGjZIe0Rswk3oXsd9WZKCtc0WBTf-fO-E6EwOTOd9PE7rj8ma-64ojkltNpLWeD_E_JDnKATR0Sc70KIhDi7K5NGOA8Jpe7kYmHW1OA3vZhgjZn_2XVpdHqSSWBgSkSNkb-aQWW6SOjSlPUzj967poiqAmRDMxxndc_ftJ-LKZ8Gzy6XSRiohmqcNSyaFwMu9xt_uJhlTRLdk1HCwmNK1s2YQMeJQsjaOi");'></div>
-
-    </div>
-    <div class="flex flex-col p-3 pt-3 pb-4">
-        <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Артист N</h3>
-        <div class="mt-2">
-            <span class="inline-flex items-center rounded-md bg-white/5 px-2 py-1 text-xs font-medium text-text-secondary ring-1 ring-inset ring-white/10">от 10 000 ₽</span>
-        </div>
-    </div>
-</a>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col pb-24"> <!-- pb-24 to account for fixed FAB -->
+<!-- Search Bar -->
+<div class="px-4 py-4">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-surface-dark group focus-within:ring-2 focus-within:ring-primary/50 transition-shadow">
+<div class="text-white/50 flex border-none items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
 </div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-white/50 px-3 text-base font-normal leading-normal" placeholder="Поиск артиста..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto scrollbar-hide w-full">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 transition-transform active:scale-95">
+<p class="text-[#221910] text-sm font-bold leading-normal">Все</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-5 transition-colors hover:bg-white/5 active:scale-95">
+<p class="text-white/90 text-sm font-medium leading-normal">Вокал</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-5 transition-colors hover:bg-white/5 active:scale-95">
+<p class="text-white/90 text-sm font-medium leading-normal">Скрипка</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-5 transition-colors hover:bg-white/5 active:scale-95">
+<p class="text-white/90 text-sm font-medium leading-normal">Саксофон</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-5 transition-colors hover:bg-white/5 active:scale-95">
+<p class="text-white/90 text-sm font-medium leading-normal">Ведущие</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/5 px-5 transition-colors hover:bg-white/5 active:scale-95">
+<p class="text-white/90 text-sm font-medium leading-normal"></p>
+</button>
+</div>
+<!-- Artist Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Female jazz singer performing with microphone in dim light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBztWRCx4YBfvc9SLVoIIS7g0t2JwtqtQ3lWmtrxRjWUM1MjY9QtNIHU7o1hXAoiBn-CFhjUgGzmzhAtZuaA2DUJRKbWxC51Jmysukit2Oo2pVyIg84RxTgI2daK0JPImFpW7OlcR2aUU6isH2ooAyvLnmJTET7OgBvqWuIVQL7WLc2uV9aIqpuTEMlzihgvscAEw00-C4RHlz8GkYCc5OMbh8rEtLLYN3jtI6v-rozaYLI2VAxeB0v_CkZEZC_eulZ0AY3dtW1jBg_");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Джаз / Лаунж</p>
+<p class="text-white text-base font-bold leading-tight">Анна Мельникова</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Rock band performing on stage with dramatic lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9gSte9wdGyH17NP_TAy1E2fOcvKO28mZsPxJLYDaqLH9CVH2pyY2Olp__yJKopbg-_-pqF9JK_nf61LouY9pvI0DQNsWHu6GC_XQKhFBgeAKl_VLabtc-KlfQzxYD99-SfMNVRQT3jW17iDSe9YANtl0egAjRLiQR-iqUkm4tJwcO1D94l2KXG_X0PYJ_-nKLmykI0Yiojft3Ffsmp7Tbw6hLaOaiSXs2PtP2RWrgYUEFlnjUd_h5Y96zMqT3-PKm5aBeBG-5MulH");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Кавер-группа</p>
+<p class="text-white text-base font-bold leading-tight">The Night Owls</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="DJ mixing music at a club console with neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD79DmORTZMsTE49LkgTKyCPRfsi7ocDMmv8-pKjJg9arUhCn0m_tklq6-053Zv0-5p-n_D5GSxpJToOcOG8oTv4T6xakfRKgLlJdzQm5Py-QA7AkChtQ7W-PToHwSP_NLbuvVV3ZfH1C7qGPdow9vt0Ko2WYtkUDs_9Ci6RQDu7cJf0FujnvOvLOc3s3III9er7c_9g3UhOyQqPSKOnvFOS2JMelme6GgPpePaS9u7uiT3-jtNSGq0xEw3sX5llbcYy7nrZKLSZTG5");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">House / Pop</p>
+<p class="text-white text-base font-bold leading-tight">DJ Alex Ray</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Classical string quartet playing instruments" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJptM2vcGCiJYn_M0GyhhoWbrXAHMlqRgwFW7vg6CD1tNXXmnCF5hva6dfqjSxZVMDJK6XvkkXQL1Hke3bpcX73PS1SfwoKTlcWIr3JMnIjwQRhWYBcAN8QDPOX618eTie33laA5-BIGP7N58ukbNbozGCnMoWwEgMTrD4pKNN0jpfdP9OcwkKFwJYDQs7Zycr6D_7rzvfRi7FG1kZE5sl6t7KGUdJ0cluQi4TJhHu_ZdUWk-r74oN8tB_Ag8BDOrLMStkoRXwRBrO");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Классика</p>
+<p class="text-white text-base font-bold leading-tight">Струнный Квартет</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Magician performing card trick close up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsNPUsFfqi-VeoSujZjBP0KVRA9hN-stHCg9evWuezgyn0q2cLKs2Mbigh_2bskuHPK1iBGDgEMW9ZW9JdrvxsSPPDjhGCXF-b5K6l5DnxMPwwlQqSULJirx7O57jF0ZmFVpB6x-OR0CdiluzQcyAgov01tlYcm7sLyj-vByXadUzwR9q1BWMKUmjTS2eFeQ-bf0Gd3oG8O2DKSsKv8GyRDdyNn6xpgpcKXoaMukdN7R3_e6qZKjQtOeuPhtHlkrYKwwa8sbzvw7zc");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Магия / Иллюзии</p>
+<p class="text-white text-base font-bold leading-tight">Иллюзионист Макс</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative flex flex-col gap-3 rounded-xl overflow-hidden aspect-[3/4] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Fire dancer performing with flames at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkkWjCZMA7eFJaW2b9dbKaU3nDYKQXhU2zq4Q-teYmoqqMBYP-SkQMf9Hi-2Cjpde56oUlpkikFiw7TMaxGic-BT7zD0sligmTgAD5tQnShYLfpIZgV6ShwynH0eNeTEqLNAARvgGpKX4xKzdWq8ojYGnrhHlmi_iSCRNiwIk_Oat_vOiUTmwZ3lB7h9AQ-cEyyIFzKmBq679XUPxfuVOe1rY2wTn0MpVThuH3c3ToJ3TMinuiyo8JogD4cJnsPVZPNH3nqZsEeXcB");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full justify-end p-3">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Фаер-шоу</p>
+<p class="text-white text-base font-bold leading-tight">Ignis Team</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button Area -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent z-20">
 
 </div>
 </body></html>
