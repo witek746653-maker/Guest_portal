@@ -342,11 +342,11 @@
   },
   {
     "id": "aleksey-photograph",
-    "name": "Алексей",
+    "name": "instagram",
     "category": "Фотограф",
     "tagline": "",
-    "cardImage": "./images/artists/aleksey-photograph.jpg",
-    "coverImage": "./images/artists/aleksey-photograph.jpg",
+    "cardImage": "./images/artists/photograph.jpg",
+    "coverImage": "./images/artists/photograph.jpg",
     "tags": [
       {"icon": "camera_alt", "text": "Фотосъемка"}
     ],
@@ -620,11 +620,11 @@
   },
   {
     "id": "petr-mikitenko",
-    "name": "Петр Микитенко",
+    "name": "Петр instagram",
     "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "cardImage": "./images/artists/petr-mikitenko.jpg",
+    "coverImage": "./images/artists/petr-mikitenko.jpg",
     "tags": [
       {"icon": "person", "text": "Ведущий"}
     ],
