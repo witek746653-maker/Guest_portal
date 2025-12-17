@@ -79,7 +79,7 @@
     },
     "social": {
       "instagram": "https://www.instagram.com/polina_band/?hl=ru",
-      "youtube": "www.youtube.com/@PolinaMe",
+      "youtube": "https://www.youtube.com/@PolinaMe",
       "website": "https://polina.me/#rec547720847"
     },
     "price": ""
@@ -98,14 +98,7 @@
     "about": "Twixound Cover band — это музыкальный коллектив на любой праздник - Свадьбу, Юбилей, Новый Год. Бешеная энергетика группы, артистичность исполнительниц и, конечно же, сногсшибательная, стильная внешность солисток — это залог успеха вашего Праздника. Сочетание прекрасных голосов наших солисток Юлии и Натальи в совокупности с живой музыкой позволяет артистам разнообразить репертуар, и одинаково легко исполнять поп и рок-н-рольные, ретро хиты и супер современные треки, петь на русском, английском, и других языках...\nШикарные солистки — это наш главный козырь! Элегантные, а порой и дерзкие, наряды наших див, яркий сценический образ и сумасшедшая работа с залом приятно удивят вас. Если вы хотите чтобы на вашем торжестве была группа с обворожительными солистками, обладающими сильными красивыми голосами, то вам сюда!",
           
     "portfolio": [
-      "./images/artists/twixsound-01.webp",
-      "./images/artists/twixsound-02.webp",
-      "./images/artists/twixsound-03.webp",
-      "./images/artists/twixsound-04.webp",
-      "./images/artists/twixsound-05.webp",
-      "./images/artists/twixsound-06.webp",
-      "./images/artists/twixsound-07.webp",
-      "./images/artists/twixsound-08.webp"
+      
     ],
     "video": {
       "src": "https://youtu.be/UTIDmW4SZnI",
@@ -120,7 +113,7 @@
     },
     "social": {
       "instagram": "https://www.instagram.com/twixound.covershow/",
-      "youtube": "www.youtube.com/@twixoundgruppa",
+      "youtube": "https://www.youtube.com/@twixoundgruppa",
       "website": ""
     },
     "price": ""
@@ -282,7 +275,7 @@
     "about": "",
           
     "portfolio": [
-      ""
+     
     ],
     "video": {
       "src": "https://youtu.be/o3jY_LAgI2U",
@@ -305,7 +298,7 @@
   {
     "id": "elizaveta-yurgina",
     "name": "Елизавета Юргина",
-    "category": "Сольный артист",
+    "category": "Саксофон",
     "tagline": "",
     "cardImage": "./images/artists/elizaveta-yurgina.jpg",
     "coverImage": "./images/artists/elizaveta-yurgina.jpg",
@@ -342,7 +335,7 @@
   },
   {
     "id": "aleksey-photograph",
-    "name": "instagram",
+    "name": "Алексей",
     "category": "Фотограф",
     "tagline": "",
     "cardImage": "./images/artists/photograph.jpg",
@@ -353,7 +346,7 @@
     "about": "",
           
     "portfolio": [
-      ""
+      
     ],
     "video": {
       "src": "",
@@ -386,7 +379,7 @@
     "about": "Меня зовут Иван Счетчиков. Я профессиональный спортивный фотограф с опытом съемок более 7 лет. Прекрасно разбираюсь в тонкостях циклических видов спорта (бег, велоспорт, триатлон, трейлраннинг, лыжные гонки), умею работать с дополнительным светом и под водой. Работаю на массовых спортивных событиях, снимаю профессиональный спорт, репортаж и деловые мероприятия.",
           
     "portfolio": [
-      ""
+      
     ],
     "video": {
       "src": "",
@@ -404,7 +397,7 @@
       "youtube": "",
       "website": "https://ivanschetchikov.ru/disk/31-12-2023-folio-rt7r6q"
     },
-    "price": "от 4000 руб."
+    "price": 4000
   },
   {
     "id": "mihalevskiy-artem",
@@ -419,7 +412,7 @@
     "about": "Красиво/Дорого снимаю события. Работаю с Брендами/Компаниями/Людьми.",
           
     "portfolio": [
-      ""
+      
     ],
     "video": {
       "src": "",
@@ -453,7 +446,7 @@
     "about": "",
           
     "portfolio": [
-      ""
+      
     ],
     "video": {
       "src": "",
@@ -481,7 +474,7 @@
     "cardImage": "./images/artists/pavel-savchenko.jpg",
     "coverImage": "./images/artists/pavel-savchenko.jpg",
     "tags": [
-      {"icon": "person", "text": "ведущий"},
+      {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 20 лет"},
       {"icon": "star_border", "text": "Топ 101 ведущих страны"}
     ],
@@ -519,7 +512,7 @@
     "cardImage": "./images/artists/sergey-bondar.jpg",
     "coverImage": "./images/artists/sergey-bondar.jpg",
     "tags": [
-      {"icon": "person", "text": "ведущий"},
+      {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 8 лет"}
     ],
     "about": "Мой опыт ведущим 8 лет, я профессионально занимаюсь юмором, победитель шоу \"Лига Городов\" на ТНТ, выступал на Первом канале в Высшей лиге КВН Формат моих мероприятий- это лёгкое общение с гостями, уместные шутки, современные интерактивы с экраном и без, знакомые вам по популярным интернет и ТВ-Шоу.",
@@ -552,11 +545,11 @@
     "id": "artur-shilov",
     "name": "Артур Шилов",
     "category": "Ведущий",
-    "tagline": "КУДРЯВО ВЕДУ.",
+    "tagline": "Кудряво веду.",
     "cardImage": "./images/artists/artur-shilov.jpg",
     "coverImage": "./images/artists/artur-shilov.jpg",
     "tags": [
-      {"icon": "person", "text": "ведущий"},
+      {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 10 лет"},
       {"icon": "star_border", "text": "Топ 101 ведущих страны"}
     ],
@@ -583,7 +576,7 @@
       "youtube": "https://www.youtube.com/@shilov_artur",
       "website": "https://arturshilov.tilda.ws/"
     },
-    "price": "от 130 000 руб."
+    "price": ""
   },
   {
     "id": "yaroslav-lomovtsev",
@@ -593,12 +586,12 @@
     "cardImage": "./images/artists/event-host.jpg",
     "coverImage": "./images/artists/event-host.jpg",
     "tags": [
-      {"icon": "person", "text": "ведущий"}
+      {"icon": "person", "text": "Ведущий"}
     ],
     "about": "Комик, ведущий, автор смеха.",
           
     "portfolio": [
-      ""
+      
     ],
     "video": {
       "src": "",
@@ -620,7 +613,7 @@
   },
   {
     "id": "petr-mikitenko",
-    "name": "Петр instagram",
+    "name": "Петр Микитенко",
     "category": "Ведущий",
     "tagline": "",
     "cardImage": "./images/artists/petr-mikitenko.jpg",
