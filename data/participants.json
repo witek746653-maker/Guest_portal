@@ -5,70 +5,69 @@
     "category": "Музыкант",
     "tagline": "Живой джаз для вашего мероприятия",
     
-    "cardImage": "/images/artists/vot-eti-rebyata.jpg",
-    "coverImage": "/images/artists/vot-eti-rebyata.jpg",
+    "cardImage": "./images/artists/vot-eti-rebyata.jpg",
+    "coverImage": "./images/artists/vot-eti-rebyata.jpg",
     "tags": [
       {"icon": "verified", "text": "Штат"},
       {"icon": "music_note", "text": "Джаз & Лаундж"},
       {"icon": "work_history", "text": "Опыт 10 лет"},
       {"icon": "speaker", "text": "Свое оборудование"}
     ],
-    "about": "евр syh tyhsghyts yhtyhhyt6sa",
+    "about": "Кавер-группа «Вот Эти Ребята» предлагает организацию выступлений для любых мероприятий. Наша команда состоит из мастеров спорта по игре в кавера и супер героев, которые призваны уничтожить уныние на праздниках. В нашем репертуаре есть песни, под которые танцевали на выпускном ваши родители и даже дедушки с бабушками. Мы также можем написать песню на заказ специально для вашей второй половинки, мамы, сестры или начальника. У нас много бонусов и специальных услуг, таких как вэлком за пол цены. Мы простые и без пафоса, проконсультируем по всем вопросам и даже очень странным. Вместо долгого перечисления достижений, смотрите наш рекламный ролик. Если вы хотите узнать о нас больше, мы вышлем более подробный пресс-релиз со всеми регалиями.",
     "portfolio": [
+      "./images/artists/vot-eti-rebyata-01.jpg",
+      "./images/artists/vot-eti-rebyata-02.jpg",
+      "./images/artists/vot-eti-rebyata-03.jpg",
+      "./images/artists/vot-eti-rebyata-04.jpg",
+      "./images/artists/vot-eti-rebyata-05.jpg",
+      "./images/artists/vot-eti-rebyata-06.jpg",
+      "./images/artists/vot-eti-rebyata-07.jpg",
+      "./images/artists/vot-eti-rebyata-08.jpg" 
       
     ],
     "video": {
-      "src": "/images/video_preview.jpg",
+      "src": "https://drive.google.com/drive/folders/1ZBQ-xbPjIiOQIbfKfjY70MsbgayknNJZ",
       "title": "Live @ Grand Hall",
       "duration": "2:15"
     },
-    "testimonial": {
-      "stars": 5,
-      "date": "12 Окт 2023",
-      "text": "Александр отлично вписался…",
-      "reviewerName": "Елена В.",
-      "reviewerAvatar": "/images/reviewers/elena.jpg"
-    },
     "social": {
-      "instagram": "https://instagram.com/artist",
+      "telegram": "https://instagram.com/artist",
       "youtube": "https://youtube.com/artist",
       "website": "https://example.com"
     },
     "price": 15000
   },
   {
-    "id": "vot_ieti-rebyata-2",
-    "name": "gr  gearstgtggaergg",
+    "id": "polina-band",
+    "name": "Polina Band",
     "category": "Музыкант",
-    "tagline": "ьпииииииииииииииииииииииииииииииииииии",
-    "rating": 4.9,
-    "reviews": 128,
-    "cardImage": "/images/artists/vot-eti-rebyata.jpg",
-    "coverImage": "/images/artists/vot-eti-rebyata.jpg",
+    "tagline": "Джаз",
+    "cardImage": "./images/artists/polina-band.jpg",
+    "coverImage": "./images/artists/polina-band.jpg",
     "tags": [
       {"icon": "verified", "text": "Штат"},
       {"icon": "music_note", "text": "Джаз & Лаундж"},
       {"icon": "work_history", "text": "Опыт 10 лет"},
       {"icon": "speaker", "text": "Свое оборудование"}
     ],
-    "about": "",
+    "about": "полина",
     "portfolio": [
-      
+      "./images/artists/polina-band-01.jpg",
+      "./images/artists/polina-band-02.jpg",
+      "./images/artists/polina-band-03.jpg",
+      "./images/artists/polina-band-04.jpg",
+      "./images/artists/polina-band-05.jpg",
+      "./images/artists/polina-band-06.jpg",
+      "./images/artists/polina-band-07.jpg",
+      "./images/artists/polina-band-08.jpg"
     ],
     "video": {
-      "src": "/images/video_preview.jpg",
+      "src": "https://www.youtube.com/watch?v=HE37_LKngug",
       "title": "Live @ Grand Hall",
       "duration": "2:15"
     },
-    "testimonial": {
-      "stars": 5,
-      "date": "12 Окт 2023",
-      "text": "Александр отлично вписался…",
-      "reviewerName": "Елена В.",
-      "reviewerAvatar": "/images/reviewers/elena.jpg"
-    },
     "social": {
-      "instagram": "https://instagram.com/artist",
+      "telegram": "https://instagram.com/artist",
       "youtube": "https://youtube.com/artist",
       "website": "https://example.com"
     },
