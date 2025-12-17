@@ -1,13 +1,16 @@
+// Получаем значение параметра из query string
 function getParam(name) {
   const params = new URLSearchParams(window.location.search);
   return params.get(name);
 }
 
+// Универсальный переключатель видимости элемента
 const setVisible = (el, visible) => {
   if (!el) return;
   el.style.display = visible ? '' : 'none';
 };
 
+// Записываем текст в элемент или скрываем его, если контента нет
 const setTextOrHide = (id, value) => {
   const el = document.getElementById(id);
   if (!el) return false;
@@ -22,18 +25,28 @@ const setTextOrHide = (id, value) => {
   return false;
 };
 
+// Утилита для установки фонового изображения
+const setBgImage = (el, src) => {
+  if (!el || !src) return;
+  el.style.backgroundImage = `url('${src}')`;
+};
+
+// Форматирование чисел для цены
+const formatPrice = (price) => new Intl.NumberFormat('ru-RU').format(price);
+
 async function loadArtist() {
   const id = getParam('id');
   if (!id) return;
 
   try {
+    // Читаем общий JSON со всеми участниками
     const response = await fetch('data/participants.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const artists = await response.json();
     const artist = Array.isArray(artists) ? artists.find((item) => item.id === id) : null;
     if (!artist) return;
 
-    // Заголовки
+    // Заголовки и основные тексты
     document.title = artist.name ? `${artist.name} — профайл` : 'Профайл участника';
     const nameEl = document.getElementById('artist-name');
     if (nameEl) nameEl.textContent = artist.name || 'Участник';
@@ -50,16 +63,14 @@ async function loadArtist() {
     const ratingBlock = document.getElementById('artist-rating-block');
     const hasRating = artist.rating !== undefined && artist.rating !== null && artist.rating !== '';
     const hasReviews = artist.reviews !== undefined && artist.reviews !== null && artist.reviews !== '';
-    if (hasRating) document.getElementById('artist-rating').textContent = artist.rating;
-    if (hasReviews) document.getElementById('artist-reviews').textContent = `(${artist.reviews})`;
+    if (hasRating) setTextOrHide('artist-rating', artist.rating);
+    if (hasReviews) setTextOrHide('artist-reviews', `(${artist.reviews})`);
     setVisible(ratingBlock, hasRating || hasReviews);
 
     const cover = document.getElementById('artist-cover');
-    if (cover && (artist.coverImage || artist.cardImage)) {
-      cover.style.backgroundImage = `url('${artist.coverImage || artist.cardImage}')`;
-    }
+    setBgImage(cover, artist.coverImage || artist.cardImage);
 
-    // Теги
+    // Теги из массива tags
     const tagsContainer = document.getElementById('artist-tags');
     if (tagsContainer) {
       tagsContainer.innerHTML = '';
@@ -91,7 +102,7 @@ async function loadArtist() {
       setVisible(aboutBlock, false);
     }
 
-    // Портфолио
+    // Портфолио (поддерживаем строки и объекты)
     const portfolioBlock = document.getElementById('artist-portfolio-block');
     const portfolio = document.getElementById('artist-portfolio');
     const shots = Array.isArray(artist.portfolio) ? artist.portfolio : [];
@@ -100,12 +111,13 @@ async function loadArtist() {
       portfolio.innerHTML = '';
       portfolio.style.display = 'flex';
       shots.forEach((item) => {
+        const shot = typeof item === 'string' ? { src: item } : item;
         const wrapper = document.createElement('div');
         wrapper.className = 'snap-center shrink-0 w-64 aspect-[3/4] rounded-xl overflow-hidden relative';
         wrapper.innerHTML = `
           <div class="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500"
-               data-alt="${item.alt || ''}"
-               style="background-image: url('${item.src || ''}')"></div>
+               data-alt="${shot.alt || ''}"
+               style="background-image: url('${shot.src || ''}')"></div>
         `;
         portfolio.appendChild(wrapper);
       });
@@ -113,51 +125,56 @@ async function loadArtist() {
       setVisible(portfolioBlock, false);
     }
 
-    // Видео
+    // Видео (ссылка + превью)
     const videoBlock = document.getElementById('artist-video-block');
     const videoWrapper = document.getElementById('artist-video');
     const hasVideo = artist.video && (artist.video.src || artist.video.title || artist.video.duration);
     if (videoBlock && videoWrapper && hasVideo) {
-      if (artist.video.src) {
-        videoWrapper.querySelector('.video-bg').style.backgroundImage = `url('${artist.video.src}')`;
-      }
+      const preview = artist.video.preview || artist.coverImage || artist.cardImage || '';
+      setBgImage(videoWrapper.querySelector('.video-bg'), preview);
+      videoWrapper.href = artist.video.src || '#';
       videoWrapper.querySelector('.video-title').textContent = artist.video.title || '';
       videoWrapper.querySelector('.video-duration').textContent = artist.video.duration || '';
-      setVisible(videoBlock, true);
+      setVisible(videoBlock, Boolean(artist.video.src));
     } else {
       setVisible(videoBlock, false);
     }
 
-    // Отзыв
-    const test = document.getElementById('artist-testimonial');
-    const hasTestimonial = artist.testimonial && (artist.testimonial.text || artist.testimonial.reviewerName);
-    if (test && hasTestimonial) {
-      const starsEl = test.querySelector('.testimonial-stars');
-      starsEl.innerHTML = '';
-      const starsCount = artist.testimonial.stars || 0;
-      for (let i = 0; i < starsCount; i++) {
-        starsEl.innerHTML += '<span class="material-symbols-outlined text-[20px] fill-1">star</span>';
+   
+    // Райдер и документы
+    const riderBlock = document.getElementById('artist-rider-block');
+    if (riderBlock) {
+      const riderTitle = document.getElementById('artist-rider-title');
+      const riderDescription = document.getElementById('artist-rider-description');
+      if (artist.rider && artist.rider.url) {
+        riderBlock.href = artist.rider.url;
+        if (artist.rider.download) riderBlock.download = artist.rider.download;
+        if (riderTitle) riderTitle.textContent = artist.rider.title || 'Условия работы';
+        if (riderDescription) riderDescription.textContent = artist.rider.description || 'Скачать райдер и требования';
+        setVisible(riderBlock, true);
+      } else {
+        setVisible(riderBlock, false);
       }
-      test.querySelector('.testimonial-date').textContent = artist.testimonial.date || '';
-      test.querySelector('.testimonial-text').textContent = artist.testimonial.text || '';
-      test.querySelector('.testimonial-reviewer').textContent = artist.testimonial.reviewerName || '';
-      const avatar = test.querySelector('.testimonial-avatar');
-      if (artist.testimonial.reviewerAvatar) {
-        avatar.style.backgroundImage = `url('${artist.testimonial.reviewerAvatar}')`;
-      }
-      setVisible(test, true);
-    } else {
-      setVisible(test, false);
     }
 
     // Соцсети
     const social = artist.social || {};
     const socialWrapper = document.getElementById('artist-social-links');
+    const telegram = document.getElementById('link-telegram');
     const instagram = document.getElementById('link-instagram');
     const youtube = document.getElementById('link-youtube');
     const website = document.getElementById('link-website');
     let hasSocial = false;
 
+    if (telegram) {
+      if (social.telegram) {
+        telegram.href = social.telegram;
+        setVisible(telegram, true);
+        hasSocial = true;
+      } else {
+        setVisible(telegram, false);
+      }
+    }
     if (instagram) {
       if (social.instagram) {
         instagram.href = social.instagram;
@@ -187,11 +204,11 @@ async function loadArtist() {
     }
     setVisible(socialWrapper, hasSocial);
 
-    // Стоимость
+    // Стоимость / CTA
     const priceBar = document.getElementById('artist-cta-bar');
     const priceEl = document.getElementById('artist-price');
     if (priceBar && priceEl && artist.price !== undefined && artist.price !== null && artist.price !== '') {
-      priceEl.textContent = `${new Intl.NumberFormat('ru-RU').format(artist.price)} руб.`;
+      priceEl.textContent = `${formatPrice(artist.price)} руб.`;
       setVisible(priceBar, true);
     } else {
       setVisible(priceBar, false);
@@ -201,4 +218,5 @@ async function loadArtist() {
   }
 }
 
+// Запускаем наполнение страницы после загрузки DOM
 document.addEventListener('DOMContentLoaded', loadArtist);

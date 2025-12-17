@@ -2,16 +2,16 @@
   {
     "id": "vot-eti-rebyata",
     "name": "Вот эти ребята",
-    "category": "Музыкант",
-    "tagline": "Живой джаз для вашего мероприятия",
+    "category": "Кавер группа",
+    "tagline": "Кавер-группа, rock band и jazz band в одном флаконе!",
     
     "cardImage": "./images/artists/vot-eti-rebyata.jpg",
     "coverImage": "./images/artists/vot-eti-rebyata.jpg",
     "tags": [
-      {"icon": "verified", "text": "Штат"},
-      {"icon": "music_note", "text": "Джаз & Лаундж"},
-      {"icon": "work_history", "text": "Опыт 10 лет"},
-      {"icon": "speaker", "text": "Свое оборудование"}
+      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "music_note", "text": "Джаз"},
+      {"icon": "music_note", "text": "Рок"},
+       {"icon": "music_note", "text": "Поп"}
     ],
     "about": "Кавер-группа «Вот Эти Ребята» предлагает организацию выступлений для любых мероприятий. Наша команда состоит из мастеров спорта по игре в кавера и супер героев, которые призваны уничтожить уныние на праздниках. В нашем репертуаре есть песни, под которые танцевали на выпускном ваши родители и даже дедушки с бабушками. Мы также можем написать песню на заказ специально для вашей второй половинки, мамы, сестры или начальника. У нас много бонусов и специальных услуг, таких как вэлком за пол цены. Мы простые и без пафоса, проконсультируем по всем вопросам и даже очень странным. Вместо долгого перечисления достижений, смотрите наш рекламный ролик. Если вы хотите узнать о нас больше, мы вышлем более подробный пресс-релиз со всеми регалиями.",
     "portfolio": [
@@ -21,56 +21,152 @@
       "./images/artists/vot-eti-rebyata-04.jpg",
       "./images/artists/vot-eti-rebyata-05.jpg",
       "./images/artists/vot-eti-rebyata-06.jpg",
-      "./images/artists/vot-eti-rebyata-07.jpg",
-      "./images/artists/vot-eti-rebyata-08.jpg" 
+      "./images/artists/vot-eti-rebyata-07.jpg"
       
     ],
     "video": {
-      "src": "https://drive.google.com/drive/folders/1ZBQ-xbPjIiOQIbfKfjY70MsbgayknNJZ",
-      "title": "Live @ Grand Hall",
-      "duration": "2:15"
+      "src": "https://youtu.be/qtyTbZbPRF4",
+      "title": "Кавер-группа «Вот Эти Ребята» Москва",
+      "duration": "3:08"
+    },
+    "rider": {
+      "url": "https://docs.google.com/document/d/1zSsLjghcC8s9PoUTfKxKqYzY5TPCOmWB/edit",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "https://instagram.com/artist",
-      "youtube": "https://youtube.com/artist",
-      "website": "https://example.com"
+      "telegram": "",
+      "youtube": "www.youtube.com/@Кавер-группаВотЭтиРебята",
+      "website": ""
     },
-    "price": 15000
+    "price":"" 
   },
   {
     "id": "polina-band",
     "name": "Polina Band",
-    "category": "Музыкант",
+    "category": "Кавер группа",
     "tagline": "Джаз",
     "cardImage": "./images/artists/polina-band.jpg",
     "coverImage": "./images/artists/polina-band.jpg",
     "tags": [
-      {"icon": "verified", "text": "Штат"},
-      {"icon": "music_note", "text": "Джаз & Лаундж"},
-      {"icon": "work_history", "text": "Опыт 10 лет"},
-      {"icon": "speaker", "text": "Свое оборудование"}
+      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "music_note", "text": "Джаз"},
+      {"icon": "music_note", "text": "Поп"}
     ],
-    "about": "полина",
+    "about": "Элегантная кавер-группа для вашего события. Популярные хиты в танцевально-джазовой обработке. Играем на деловых и торжественных встречах представителей газовой отрасли Нидерландов, Франции и России и не только. С(т)ильный женский вока, музыканты международного уровня, оригинальные, но узнаваемые аранжировки.",
+          
     "portfolio": [
-      "./images/artists/polina-band-01.jpg",
-      "./images/artists/polina-band-02.jpg",
-      "./images/artists/polina-band-03.jpg",
-      "./images/artists/polina-band-04.jpg",
-      "./images/artists/polina-band-05.jpg",
-      "./images/artists/polina-band-06.jpg",
-      "./images/artists/polina-band-07.jpg",
-      "./images/artists/polina-band-08.jpg"
+      "./images/artists/polina-band-01.webp",
+      "./images/artists/polina-band-02.webp",
+      "./images/artists/polina-band-03.webp",
+      "./images/artists/polina-band-04.webp",
+      "./images/artists/polina-band-05.webp",
+      "./images/artists/polina-band-06.webp",
+      "./images/artists/polina-band-07.webp",
+      "./images/artists/polina-band-08.webp"
     ],
     "video": {
-      "src": "https://www.youtube.com/watch?v=HE37_LKngug",
-      "title": "Live @ Grand Hall",
-      "duration": "2:15"
+      "src": "https://youtu.be/UC07jS05JvQ",
+      "title": "Кавер группа Polina Band - трио на свадьбу, корпоратив, Новый Год",
+      "duration": "2:43"
+    },
+     "rider": {
+      "url": "https://disk.yandex.ru/d/9ztLEhdHjzEtAA/%D0%A0%D0%B0%D0%B9%D0%B4%D0%B5%D1%80%D1%8B",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "https://instagram.com/artist",
-      "youtube": "https://youtube.com/artist",
-      "website": "https://example.com"
+      "telegram": "https://t.me/polina_band_cover",
+      "youtube": "www.youtube.com/@PolinaMe",
+      "website": "https://polina.me/#rec547720847"
     },
-    "price": 15000
+    "price": ""
+  },
+ {
+    "id": "twixsound-cover-band",
+    "name": "Twixound Cover band",
+    "category": "Кавер группа",
+    "tagline": "Джаз",
+    "cardImage": "./images/artists/twixsound-cover-band.jpg",
+    "coverImage": "./images/artists/twixsound-cover-band.jpg",
+    "tags": [
+      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "music_note", "text": "Поп"}
+    ],
+    "about": "Twixound Cover band — это музыкальный коллектив на любой праздник - Свадьбу, Юбилей, Новый Год. Бешеная энергетика группы, артистичность исполнительниц и, конечно же, сногсшибательная, стильная внешность солисток — это залог успеха вашего Праздника. Сочетание прекрасных голосов наших солисток Юлии и Натальи в совокупности с живой музыкой позволяет артистам разнообразить репертуар, и одинаково легко исполнять поп и рок-н-рольные, ретро хиты и супер современные треки, петь на русском, английском, и других языках...\nШикарные солистки — это наш главный козырь! Элегантные, а порой и дерзкие, наряды наших див, яркий сценический образ и сумасшедшая работа с залом приятно удивят вас. Если вы хотите чтобы на вашем торжестве была группа с обворожительными солистками, обладающими сильными красивыми голосами, то вам сюда!",
+          
+    "portfolio": [
+      "./images/artists/twixsound-01.webp",
+      "./images/artists/twixsound-02.webp",
+      "./images/artists/twixsound-03.webp",
+      "./images/artists/twixsound-04.webp",
+      "./images/artists/twixsound-05.webp",
+      "./images/artists/twixsound-06.webp",
+      "./images/artists/twixsound-07.webp",
+      "./images/artists/twixsound-08.webp"
+    ],
+    "video": {
+      "src": "https://youtu.be/UTIDmW4SZnI",
+      "title": "КАВЕР ГРУППА TWIXOUND НА СВАДЬБЕ | МОСКВА",
+      "duration": "0:58"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "telegram": "",
+      "youtube": "www.youtube.com/@twixoundgruppa",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "music_note", "text": "Джаз"},
+      {"icon": "music_note", "text": "Поп"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp",
+      "./images/artists/.webp"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "telegram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
   }
 ]
