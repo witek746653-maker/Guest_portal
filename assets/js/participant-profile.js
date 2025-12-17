@@ -161,7 +161,6 @@ async function loadArtist() {
     const social = artist.social || {};
     const socialWrapper = document.getElementById('artist-social-links');
     const instagram = document.getElementById('link-instagram');
-    const instagram = document.getElementById('link-instagram');
     const youtube = document.getElementById('link-youtube');
     const website = document.getElementById('link-website');
     let hasSocial = false;
