@@ -46,3 +46,28 @@ fetch("./components/contact-modal.html")
     const root = document.getElementById("modal-root");
     if (root) root.innerHTML = html;
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('gallery-modal');
+  const closeBtn = document.getElementById('close-gallery');
+  const triggers = document.querySelectorAll('.js-open-gallery');
+  if(modal && closeBtn) {
+      triggers.forEach(trigger => {
+          trigger.addEventListener('click', (e) => {
+              e.preventDefault();
+              modal.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+          });
+      });
+      closeBtn.addEventListener('click', () => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+      });
+      modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+              modal.classList.add('hidden');
+              document.body.style.overflow = '';
+          }
+      });
+  }
+});
