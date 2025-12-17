@@ -160,19 +160,19 @@ async function loadArtist() {
     // Соцсети
     const social = artist.social || {};
     const socialWrapper = document.getElementById('artist-social-links');
-    const telegram = document.getElementById('link-telegram');
+    const instagram = document.getElementById('link-instagram');
     const instagram = document.getElementById('link-instagram');
     const youtube = document.getElementById('link-youtube');
     const website = document.getElementById('link-website');
     let hasSocial = false;
 
-    if (telegram) {
-      if (social.telegram) {
-        telegram.href = social.telegram;
-        setVisible(telegram, true);
+    if (instagram) {
+      if (social.instagram) {
+        instagram.href = social.instagram;
+        setVisible(instagram, true);
         hasSocial = true;
       } else {
-        setVisible(telegram, false);
+        setVisible(instagram, false);
       }
     }
     if (instagram) {

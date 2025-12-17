@@ -36,7 +36,7 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "",
+      "instagram": "https://www.instagram.com/vot_eti_rebyata/",
       "youtube": "www.youtube.com/@Кавер-группаВотЭтиРебята",
       "website": ""
     },
@@ -46,7 +46,7 @@
     "id": "polina-band",
     "name": "Polina Band",
     "category": "Кавер группа",
-    "tagline": "Джаз",
+    "tagline": "",
     "cardImage": "./images/artists/polina-band.jpg",
     "coverImage": "./images/artists/polina-band.jpg",
     "tags": [
@@ -78,7 +78,7 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "https://t.me/polina_band_cover",
+      "instagram": "https://www.instagram.com/polina_band/?hl=ru",
       "youtube": "www.youtube.com/@PolinaMe",
       "website": "https://polina.me/#rec547720847"
     },
@@ -88,7 +88,7 @@
     "id": "twixsound-cover-band",
     "name": "Twixound Cover band",
     "category": "Кавер группа",
-    "tagline": "Джаз",
+    "tagline": "",
     "cardImage": "./images/artists/twixsound-cover-band.jpg",
     "coverImage": "./images/artists/twixsound-cover-band.jpg",
     "tags": [
@@ -119,37 +119,241 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "",
+      "instagram": "https://www.instagram.com/twixound.covershow/",
       "youtube": "www.youtube.com/@twixoundgruppa",
       "website": ""
     },
     "price": ""
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
-    "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "id": "ilhom-tagirov",
+    "name": "Ильхом Тагиров",
+    "category": "Сольный артист",
+    "tagline": "Артист и автор музыки. Участник шоу Голос.",
+    "cardImage": "./images/artists/ilhom-tagirov.jpg",
+    "coverImage": "./images/artists/ilhom-tagirov.jpg",
     "tags": [
-      {"icon": "groups", "text": "Коллектив"},
-      {"icon": "music_note", "text": "Джаз"},
-      {"icon": "music_note", "text": "Поп"}
+      {"icon": "person", "text": "Соло-артист"}
+      
     ],
     "about": "",
           
     "portfolio": [
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp",
-      "./images/artists/.webp"
+      "./images/artists/ilhom-tagirov-01.jpg",
+      "./images/artists/ilhom-tagirov-02.jpg"
+      
+    ],
+    "video": {
+      "src": "https://youtu.be/mWD7wYAEpRo",
+      "title": "Ильхом Тагиров. «Dream a Little Dream of Me» - Слепые прослушивания - Голос - Сезон 10",
+      "duration": "6:00"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "https://www.youtube.com/@%D0%98%D0%BB%D1%8C%D1%85%D0%BE%D0%BC%D0%A2%D0%B0%D0%B3%D0%B8%D1%80%D0%BE%D0%B2",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "lera-papish",
+    "name": "LERA Папиш",
+    "category": "Сольный артист",
+    "tagline": "",
+    "cardImage": "./images/artists/lera-papish.jpg",
+    "coverImage": "./images/artists/lera-papish.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"},
+      {"icon": "music_note", "text": "Поп"}
+    ],
+    "about": "Welcome — визитная карточка артистки. Эстетика 40-х годов в стиле и в выступлении. Исполнение современных композиций на английском языке в джазовой авторской интерпритации доставляет эстетическое удовольствие с самого начала мероприятия. Часовой формат, который можно разбить на 2 блока по 30 минут, либо 3 блока по 20 минут. Лера Папиш имеет многолетний успешный опыт выступлений на мероприятиях любого масштаба – от корпоративных событий и частных праздников до крупных международных фестивалей и концертов. Работает на лучших площадках России, сотрудничает с ведущими event-агентствами, участвовала в правительственных мероприятиях и коммерческих проектах.",
+          
+    "portfolio": [
+      "./images/artists/lera-papish-01.jpg",
+      "./images/artists/lera-papish-02.jpg",
+      "./images/artists/lera-papish-03.jpg",
+      "./images/artists/lera-papish-04.jpg",
+      "./images/artists/lera-papish-05.jpg"
+    ],
+    "video": {
+      "src": "https://youtu.be/S8RAMSJKScs",
+      "title": "Valery Papish | Валерия Папиш",
+      "duration": "0:25"
+    },
+     "rider": {
+      "url": "http://www.lerapapish.ru/#raider",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/papish.zheee/",
+      "youtube": "",
+      "website": "http://www.lerapapish.ru/"
+    },
+    "price": ""
+  },
+  {
+    "id": "pavel-elyseуv",
+    "name": "Павел Елисеев",
+    "category": "Сольный артист",
+    "tagline": "Участник шоу Голос.",
+    "cardImage": "./images/artists/pavel-elyseev.jpg",
+    "coverImage": "./images/artists/pavel-elyseev.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/pavel-elyseev-01.jpg"
+    ],
+    "video": {
+      "src": "https://youtu.be/rFt5vJNl8K8",
+      "title": "Павел Елисеев - Детство | Pavel Eliseev - Childhood",
+      "duration": "4:09"
+    },
+     "rider": {
+      "url": "https://docs.google.com/document/d/1zSsLjghcC8s9PoUTfKxKqYzY5TPCOmWB/edit",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/pasha_eliseev/",
+      "youtube": "http://www.youtube.com/@%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB%D0%95%D0%BB%D0%B8%D1%81%D0%B5%D0%B5%D0%B2-%D0%B76%D1%86",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "lesya-polishchuk",
+    "name": "Леся Полищук",
+    "category": "Сольный артист",
+    "tagline": "Автор треков, исполнитель. Участница шоу Голос.",
+    "cardImage": "./images/artists/lesya-polishchuk.jpg",
+    "coverImage": "./images/artists/lesya-polishchuk.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/lesya-polishchuk-01.jpg"
+    ],
+    "video": {
+      "src": "https://youtu.be/BU1pfk2mCrU",
+      "title": "Леся Полищук, Паша Панамо - Белая ночь (премьера MOOD VIDEO 2024)",
+      "duration": "3:15"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/myolesya_artist/",
+      "youtube": "http://www.youtube.com/@lesyapolish",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "nataniel",
+    "name": "Натаниэль",
+    "category": "Саксофон",
+    "tagline": "",
+    "cardImage": "./images/artists/nataniel.jpg",
+    "coverImage": "./images/artists/nataniel.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Инструментальная музыка"},
+      {"icon": "graphic_eq", "text": "Сансофон"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      ""
+    ],
+    "video": {
+      "src": "https://youtu.be/o3jY_LAgI2U",
+      "title": "Sade - smooth operator | cover Kamila |",
+      "duration": "1:15"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "elizaveta-yurgina",
+    "name": "Елизавета Юргина",
+    "category": "Сольный артист",
+    "tagline": "",
+    "cardImage": "./images/artists/elizaveta-yurgina.jpg",
+    "coverImage": "./images/artists/elizaveta-yurgina.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "graphic_eq", "text": "Саксофон",
+      "icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/elizaveta-yurgina-01.jpg",
+      "./images/artists/elizaveta-yurgina-02.jpg",
+      "./images/artists/elizaveta-yurgina-03.jpg",
+      "./images/artists/elizaveta-yurgina-04.jpg"
+    ],
+    "video": {
+      "src": "https://youtu.be/J7A7dWbr9Kg",
+      "title": "Eliza's Band - Cappuccino",
+      "duration": "4:02"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/eliza.sax/",
+      "youtube": "http://www.youtube.com/@elizayurgina7270",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "aleksey-photograph",
+    "name": "Алексей",
+    "category": "Фотограф",
+    "tagline": "",
+    "cardImage": "./images/artists/aleksey-photograph.jpg",
+    "coverImage": "./images/artists/aleksey-photograph.jpg",
+    "tags": [
+      {"icon": "camera_alt", "text": "Фотосъемка"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      ""
     ],
     "video": {
       "src": "",
@@ -163,10 +367,389 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "telegram": "",
+      "instagram": "https://www.instagram.com/ilexdi?igsh=cmNhbzEwazF5cTMw&utm_source=qr",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "ivan-schetchikov-photograph",
+    "name": "Иван Счетчиков",
+    "category": "Фотограф",
+    "tagline": "\"Оставлю в памяти яркие моменты ваших событий!\"",
+    "cardImage": "./images/artists/photograph.jpg",
+    "coverImage": "./images/artists/photograph.jpg",
+    "tags": [
+      {"icon": "camera_alt", "text": "Фотосъемка"}
+    ],
+    "about": "Меня зовут Иван Счетчиков. Я профессиональный спортивный фотограф с опытом съемок более 7 лет. Прекрасно разбираюсь в тонкостях циклических видов спорта (бег, велоспорт, триатлон, трейлраннинг, лыжные гонки), умею работать с дополнительным светом и под водой. Работаю на массовых спортивных событиях, снимаю профессиональный спорт, репортаж и деловые мероприятия.",
+          
+    "portfolio": [
+      ""
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/ivanschetchikov_photo/",
+      "youtube": "",
+      "website": "https://ivanschetchikov.ru/disk/31-12-2023-folio-rt7r6q"
+    },
+    "price": "от 4000 руб."
+  },
+  {
+    "id": "mihalevskiy-artem",
+    "name": "Михалевский Артём",
+    "category": "Фотограф",
+    "tagline": "",
+    "cardImage": "./images/artists/photograph.jpg",
+    "coverImage": "./images/artists/photograph.jpg",
+    "tags": [
+      {"icon": "camera_alt", "text": "Фотосъемка"}
+    ],
+    "about": "Красиво/Дорого снимаю события. Работаю с Брендами/Компаниями/Людьми.",
+          
+    "portfolio": [
+      ""
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/mihalevskiy.art",
+      "youtube": "",
+      "website": "https://mihalevskiyart.gallery.photo/"
+    },
+    "price": ""
+  },
+  {
+    "id": "ekaterina-kolesnikova",
+    "name": "Екатерина Колесникова",
+    "category": "Скрипка",
+    "tagline": "",
+    "cardImage": "./images/artists/violin.jpg",
+    "coverImage": "./images/artists/violin.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "graphic_eq", "text": "Скрипка"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      ""
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "pavel-savchenko",
+    "name": "Павел Савченко",
+    "category": "Ведущий",
+    "tagline": "",
+    "cardImage": "./images/artists/pavel-savchenko.jpg",
+    "coverImage": "./images/artists/pavel-savchenko.jpg",
+    "tags": [
+      {"icon": "person", "text": "ведущий"},
+      {"icon": "skill", "text": "Опыт более 20 лет"}
+    ],
+    "about": "Я всегда работаю так: легко, интеллигентно, позитивно. Пожелания заказчика - для меня закон. Уверяю вас, на празднике не будет \"дурацких\" конкурсов. Будут современные мультимедийные интерактивы, игровые шоу и режиссура проекта. Я уверен, что смело могу про это говорить, так как: За последние 19 лет провел более 1000 корпоративных праздников и не меньше ивентов, как в России, так и за рубежом!!! И у многих компаний, я стал постоянным ведущим значимых событий.",
+          
+    "portfolio": [
+      "./images/artists/pavel-savchenko-01.jpg",
+      "./images/artists/pavel-savchenko-02.jpg",
+      "./images/artists/pavel-savchenko-03.jpg",
+      "./images/artists/pavel-savchenko-04.jpg"
+    ],
+    "video": {
+      "src": "https://rutube.ru/video/f9ab545fccbbb8208d440a4d2fe3f206/",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/pavel_savchenko_tv/",
+      "youtube": "",
+      "website": "https://pavelsavchenko.com/korp"
+    },
+    "price": ""
+  },
+  {
+    "id": "sergey-bondar",
+    "name": "Сергей Бондарь",
+    "category": "Ведущий",
+    "tagline": "\"Я современный, драйвовый, интеллигентный ведущий\"",
+    "cardImage": "./images/artists/sergey-bondar.jpg",
+    "coverImage": "./images/artists/sergey-bondar.jpg",
+    "tags": [
+      {"icon": "person", "text": "ведущий"},
+      {"icon": "skill", "text": "Опыт более 8 лет"}
+    ],
+    "about": "Мой опыт ведущим 8 лет, я профессионально занимаюсь юмором, победитель шоу \"Лига Городов\" на ТНТ, выступал на Первом канале в Высшей лиге КВН Формат моих мероприятий- это лёгкое общение с гостями, уместные шутки, современные интерактивы с экраном и без, знакомые вам по популярным интернет и ТВ-Шоу.",
+          
+    "portfolio": [
+      "./images/artists/sergey-bondar-01.jpg",
+      "./images/artists/sergey-bondar-02.jpg",
+      "./images/artists/sergey-bondar-03.jpg",
+      "./images/artists/sergey-bondar-04.jpg"
+    ],
+    "video": {
+      "src": "https://www.youtube.com/watch?v=2HdoJqO_3Eo",
+      "title": "NEW PROMO | Ведущий Сергей Бондарь",
+      "duration": "0:58"
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/bondarbondars",
+      "youtube": "https://www.youtube.com/@bondarevent",
+      "website": "http://bondarevent.ru/"
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "website": ""
+    },
+    "price": ""
+  },
+  {
+    "id": "",
+    "name": "",
+    "category": "",
+    "tagline": "",
+    "cardImage": "./images/artists/.jpg",
+    "coverImage": "./images/artists/.jpg",
+    "tags": [
+      {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Джаз"}
+    ],
+    "about": "",
+          
+    "portfolio": [
+      "./images/artists/.jpg"
+    ],
+    "video": {
+      "src": "",
+      "title": "",
+      "duration": ""
+    },
+     "rider": {
+      "url": "",
+      "download": "",
+      "title": "Райдер и документы",
+      "description": "Скачать технический и бытовой райдер"
+    },
+    "social": {
+      "instagram": "",
       "youtube": "",
       "website": ""
     },
     "price": ""
   }
+  
 ]
