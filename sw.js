@@ -1,4 +1,4 @@
-const CACHE_NAME = "app-cache-v17"; // bump cache to force refresh on deploy
+const CACHE_NAME = "app-cache-v18"; // bump cache to force refresh on deploy
 const APP_ASSETS = [
   "./offline.html",
   "./assets/css/style.css",
