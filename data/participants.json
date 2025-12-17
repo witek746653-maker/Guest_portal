@@ -3,9 +3,8 @@
     "id": "vot-eti-rebyata",
     "name": "Вот эти ребята",
     "category": "Музыкант",
-    "tagline": "Живой звук и ",
-    "rating": 4.9,
-    "reviews": 128,
+    "tagline": "Живой джаз для вашего мероприятия",
+    
     "cardImage": "/images/artists/vot-eti-rebyata.jpg",
     "coverImage": "/images/artists/vot-eti-rebyata.jpg",
     "tags": [
@@ -14,20 +13,9 @@
       {"icon": "work_history", "text": "Опыт 10 лет"},
       {"icon": "speaker", "text": "Свое оборудование"}
     ],
-    "about": "Александр — профессиональный саксофонист и звукорежиссёр с опытом работы более 10 лет…",
+    "about": "евр syh tyhsghyts yhtyhhyt6sa",
     "portfolio": [
-      {
-        "src": "/images/portfolio/pic1.jpg",
-        "alt": "Saxophone player performing in a suit"
-      },
-      {
-        "src": "/images/portfolio/pic2.jpg",
-        "alt": "Atmospheric shot of a jazz band in a dimly lit club"
-      },
-      {
-        "src": "/images/portfolio/pic3.jpg",
-        "alt": "Close‑up detail of saxophone keys and musician's hands"
-      }
+      
     ],
     "video": {
       "src": "/images/video_preview.jpg",
@@ -50,9 +38,9 @@
   },
   {
     "id": "vot_ieti-rebyata-2",
-    "name": "Вот эти ребята",
+    "name": "gr  gearstgtggaergg",
     "category": "Музыкант",
-    "tagline": "Живой звук и ",
+    "tagline": "ьпииииииииииииииииииииииииииииииииииии",
     "rating": 4.9,
     "reviews": 128,
     "cardImage": "/images/artists/vot-eti-rebyata.jpg",
@@ -63,20 +51,9 @@
       {"icon": "work_history", "text": "Опыт 10 лет"},
       {"icon": "speaker", "text": "Свое оборудование"}
     ],
-    "about": "Александр — профессиональный саксофонист и звукорежиссёр с опытом работы более 10 лет…",
+    "about": "",
     "portfolio": [
-      {
-        "src": "/images/portfolio/pic1.jpg",
-        "alt": "Saxophone player performing in a suit"
-      },
-      {
-        "src": "/images/portfolio/pic2.jpg",
-        "alt": "Atmospheric shot of a jazz band in a dimly lit club"
-      },
-      {
-        "src": "/images/portfolio/pic3.jpg",
-        "alt": "Close‑up detail of saxophone keys and musician's hands"
-      }
+      
     ],
     "video": {
       "src": "/images/video_preview.jpg",
