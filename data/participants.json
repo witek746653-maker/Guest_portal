@@ -482,7 +482,8 @@
     "coverImage": "./images/artists/pavel-savchenko.jpg",
     "tags": [
       {"icon": "person", "text": "ведущий"},
-      {"icon": "skill", "text": "Опыт более 20 лет"}
+      {"icon": "skill", "text": "Опыт более 20 лет"},
+      {"icon": "star_border", "text": "Топ 101 ведущих страны"}
     ],
     "about": "Я всегда работаю так: легко, интеллигентно, позитивно. Пожелания заказчика - для меня закон. Уверяю вас, на празднике не будет \"дурацких\" конкурсов. Будут современные мультимедийные интерактивы, игровые шоу и режиссура проекта. Я уверен, что смело могу про это говорить, так как: За последние 19 лет провел более 1000 корпоративных праздников и не меньше ивентов, как в России, так и за рубежом!!! И у многих компаний, я стал постоянным ведущим значимых событий.",
           
@@ -548,20 +549,23 @@
     "price": ""
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
-    "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "id": "artur-shilov",
+    "name": "Артур Шилов",
+    "category": "Ведущий",
+    "tagline": "КУДРЯВО ВЕДУ.",
+    "cardImage": "./images/artists/artur-shilov.jpg",
+    "coverImage": "./images/artists/artur-shilov.jpg",
     "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "person", "text": "ведущий"},
+      {"icon": "skill", "text": "Опыт более 10 лет"},
+      {"icon": "star_border", "text": "Топ 101 ведущих страны"}
     ],
-    "about": "",
+    "about": "Шутил на ТНТ, в \"Рассмеши комика\", ваше мероприятие следующее. Родился в день рождения мамы, поэтому точно знаю как сделать праздник незабываемым. Занимаюсь футболом с 8 лет, но забил меньше голов, чем провел свадеб. Работал «Ведущим инженером», сейчас только «Ведущий».",
           
     "portfolio": [
-      "./images/artists/.jpg"
+      "./images/artists/artur-shilov-01.jpg",
+      "./images/artists/artur-shilov-02.jpg",
+      "./images/artists/artur-shilov-03.jpg"
     ],
     "video": {
       "src": "",
@@ -575,27 +579,26 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "instagram": "",
-      "youtube": "",
-      "website": ""
+      "instagram": "https://www.instagram.com/shilov_artur/",
+      "youtube": "https://www.youtube.com/@shilov_artur",
+      "website": "https://arturshilov.tilda.ws/"
     },
-    "price": ""
+    "price": "от 130 000 руб."
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
+    "id": "yaroslav-lomovtsev",
+    "name": "Ярослав Ломовцев",
+    "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "cardImage": "./images/artists/event-host.jpg",
+    "coverImage": "./images/artists/event-host.jpg",
     "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "person", "text": "ведущий"}
     ],
-    "about": "",
+    "about": "Комик, ведущий, автор смеха.",
           
     "portfolio": [
-      "./images/artists/.jpg"
+      ""
     ],
     "video": {
       "src": "",
@@ -609,27 +612,29 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "instagram": "",
+      "instagram": "https://www.instagram.com/yaroslav.lomovtsev/",
       "youtube": "",
       "website": ""
     },
     "price": ""
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
+    "id": "petr-mikitenko",
+    "name": "Петр Микитенко",
+    "category": "Ведущий",
     "tagline": "",
     "cardImage": "./images/artists/.jpg",
     "coverImage": "./images/artists/.jpg",
     "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "person", "text": "Ведущий"}
     ],
-    "about": "",
+    "about": "Профессиональный ведущий Петр! Двигатель и душа любого мероприятия. Уникальные способности чувствовать публику и любовь к своему делу - залог успеха творчества Петра. Качественный юмор и уникальность идей сделают необычным и незабываемым Ваше мероприятие. Внушительный опыт и уровень клиентов - подтверждение его профессионализма. На счету Петра проведение Концертов Международного масштаба, проведение частных мероприятий для первых лиц государства, корпоративные мероприятия для известных компаний, сотрудничество с крупными евент компаниями, выступление на одной сцене со звездами шоу бизнеса!",
           
     "portfolio": [
-      "./images/artists/.jpg"
+      "./images/artists/petr-mikitenko-01.jpg",
+      "./images/artists/petr-mikitenko-02.jpg",
+      "./images/artists/petr-mikitenko-03.jpg",
+      "./images/artists/petr-mikitenko-04.jpg"
     ],
     "video": {
       "src": "",
@@ -643,27 +648,30 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "instagram": "",
-      "youtube": "",
+      "instagram": "https://www.instagram.com/petrmikitenko/",
+      "youtube": "https://www.youtube.com/user/petrparty",
       "website": ""
     },
     "price": ""
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
+    "id": "leonid-kiyashko",
+    "name": "Леонид Кияшко",
+    "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "cardImage": "./images/artists/leonid-kiyashko.jpg",
+    "coverImage": "./images/artists/leonid-kiyashko.jpg",
     "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "person", "text": "Ведущий"},
+      {"icon": "skill", "text": "Опыт более 14 лет"}
     ],
-    "about": "",
+    "about": "Мой профессиональный опыт, закалённый временем и образованием, позволяет проводить мероприятия на высочайшем уровне. Самая маленькая аудитория - 10 персон, самая большая - 2000 гостей. Работаю в стиле современного, культурного шоумена. Конферанс понятный как молодой, так и взрослой аудитории. Уважение к каждому гостю. Всегда на связи, начиная с момента первой встречи. Готов помочь советом и делом. Со мной удобно. Всегда работаю по договору. Наличный и безналичный расчёт. ИП.",
           
     "portfolio": [
-      "./images/artists/.jpg"
+      "./images/artists/leonid-kiyashko-01.jpg",
+      "./images/artists/leonid-kiyashko-02.jpg",
+      "./images/artists/leonid-kiyashko-03.jpg",
+      "./images/artists/leonid-kiyashko-04.jpg"
     ],
     "video": {
       "src": "",
@@ -677,61 +685,26 @@
       "description": "Скачать технический и бытовой райдер"
     },
     "social": {
-      "instagram": "",
+      "instagram": "https://www.instagram.com/leonid_kiyashko/",
       "youtube": "",
-      "website": ""
+      "website": "https://leonidkiyashko.ru/"
     },
     "price": ""
   },
   {
-    "id": "",
-    "name": "",
-    "category": "",
+    "id": "kristina-artist",
+    "name": "Кристина",
+    "category": "Организатор детских праздников",
     "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
+    "cardImage": "./images/artists/kid-event.jpg",
+    "coverImage": "./images/artists/kid-event.jpg",
     "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "person", "text": "Организатор детских праздников"}
     ],
     "about": "",
           
     "portfolio": [
-      "./images/artists/.jpg"
-    ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
-     "rider": {
-      "url": "",
-      "download": "",
-      "title": "Райдер и документы",
-      "description": "Скачать технический и бытовой райдер"
-    },
-    "social": {
-      "instagram": "",
-      "youtube": "",
-      "website": ""
-    },
-    "price": ""
-  },
-  {
-    "id": "",
-    "name": "",
-    "category": "",
-    "tagline": "",
-    "cardImage": "./images/artists/.jpg",
-    "coverImage": "./images/artists/.jpg",
-    "tags": [
-      {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
-    ],
-    "about": "",
-          
-    "portfolio": [
-      "./images/artists/.jpg"
+      ""
     ],
     "video": {
       "src": "",
@@ -751,5 +724,6 @@
     },
     "price": ""
   }
-  
 ]
+
+  
