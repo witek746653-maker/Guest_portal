@@ -311,8 +311,8 @@
     "coverImage": "./images/artists/elizaveta-yurgina.jpg",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
-      {"icon": "graphic_eq", "text": "Саксофон",
-      "icon": "music_note", "text": "Джаз"}
+      {"icon": "graphic_eq", "text": "Саксофон"},
+      {"icon": "music_note", "text": "Джаз"}
     ],
     "about": "",
           
