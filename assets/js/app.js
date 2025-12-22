@@ -71,3 +71,63 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+// Расчёт расстояния до ресторана и отображение "X км от вас"
+(function () {
+  const distanceEl = document.getElementById('distance-text');
+  if (!distanceEl) return; // мы не на странице контактов
+
+  // Координаты ресторана (можете уточнить по Яндекс/Google Maps)
+  const RESTAURANT_LAT = 55.7640;
+  const RESTAURANT_LNG = 37.5638;
+
+  function toRad(deg) {
+    return (deg * Math.PI) / 180;
+  }
+
+  function getDistanceKm(lat1, lon1, lat2, lon2) {
+    const R = 6371; // радиус Земли, км
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(lat1)) *
+        Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  }
+
+  if (!('geolocation' in navigator)) {
+    // если геолокация недоступна — просто не трогаем текст
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const { latitude, longitude } = pos.coords;
+      const distanceKm = getDistanceKm(
+        latitude,
+        longitude,
+        RESTAURANT_LAT,
+        RESTAURANT_LNG
+      );
+
+      const value =
+        distanceKm < 1
+          ? `${Math.round(distanceKm * 1000)} м от вас • Построить маршрут`
+          : `${distanceKm.toFixed(1)} км от вас • Построить маршрут`;
+
+      distanceEl.textContent = value;
+    },
+    () => {
+      // при ошибке геолокации оставляем дефолтный текст
+      // либо можно установить, например:
+      // distanceEl.textContent = 'Рядом с вами • Построить маршрут';
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+    }
+  );
+})();
