@@ -113,12 +113,97 @@ function renderParticipantCard(person, profilePage = 'participant-profile.html')
 }
 
 /**
+ * Фильтрует участников по поисковому запросу
+ * Ищет в name, tagline, about и tags
+ * @param {Array} participants - Массив участников
+ * @param {string} searchQuery - Поисковый запрос
+ * @returns {Array} Отфильтрованный массив участников
+ */
+function filterBySearch(participants, searchQuery) {
+  if (!Array.isArray(participants) || !searchQuery || typeof searchQuery !== 'string') {
+    return participants;
+  }
+
+  const query = searchQuery.toLowerCase().trim();
+  if (!query) {
+    return participants;
+  }
+
+  return participants.filter((person) => {
+    if (!person) return false;
+
+    // Поиск по имени
+    const name = (person.name || '').toLowerCase();
+    if (name.includes(query)) return true;
+
+    // Поиск по tagline
+    const tagline = (person.tagline || '').toLowerCase();
+    if (tagline.includes(query)) return true;
+
+    // Поиск по описанию
+    const about = (person.about || '').toLowerCase();
+    if (about.includes(query)) return true;
+
+    // Поиск по тегам
+    if (Array.isArray(person.tags)) {
+      const hasMatchingTag = person.tags.some((tag) => {
+        if (typeof tag === 'string') {
+          return tag.toLowerCase().includes(query);
+        }
+        if (tag && tag.text) {
+          return tag.text.toLowerCase().includes(query);
+        }
+        return false;
+      });
+      if (hasMatchingTag) return true;
+    }
+
+    return false;
+  });
+}
+
+/**
+ * Фильтрует участников по тегу
+ * @param {Array} participants - Массив участников
+ * @param {string} tagText - Текст тега для фильтрации
+ * @returns {Array} Отфильтрованный массив участников
+ */
+function filterByTag(participants, tagText) {
+  if (!Array.isArray(participants) || !tagText || typeof tagText !== 'string') {
+    return participants;
+  }
+
+  const tag = tagText.trim();
+  if (!tag) {
+    return participants;
+  }
+
+  return participants.filter((person) => {
+    if (!person || !Array.isArray(person.tags)) {
+      return false;
+    }
+
+    return person.tags.some((t) => {
+      if (typeof t === 'string') {
+        return t === tag;
+      }
+      if (t && t.text) {
+        return t.text === tag;
+      }
+      return false;
+    });
+  });
+}
+
+/**
  * Рендерит сетку участников в указанный контейнер
  * @param {string} containerId - ID контейнера для рендеринга
  * @param {string|Array<string>} categories - Категория или массив категорий для фильтрации
  * @param {string} profilePage - URL страницы профиля
+ * @param {string} searchQuery - Опциональный поисковый запрос
+ * @param {string} tagFilter - Опциональный фильтр по тегу
  */
-async function renderParticipantsGrid(containerId, categories, profilePage = 'participant-profile.html') {
+async function renderParticipantsGrid(containerId, categories, profilePage = 'participant-profile.html', searchQuery = '', tagFilter = '') {
   const grid = document.getElementById(containerId);
   if (!grid) {
     console.warn(`Контейнер с ID "${containerId}" не найден`);
@@ -148,7 +233,17 @@ async function renderParticipantsGrid(containerId, categories, profilePage = 'pa
       );
     }
 
-    const filtered = filterByCategory(participants, categories);
+    let filtered = filterByCategory(participants, categories);
+
+    // Применяем фильтр по тегу, если указан
+    if (tagFilter) {
+      filtered = filterByTag(filtered, tagFilter);
+    }
+
+    // Применяем поисковый фильтр, если указан
+    if (searchQuery) {
+      filtered = filterBySearch(filtered, searchQuery);
+    }
 
     grid.innerHTML = '';
 
@@ -175,6 +270,8 @@ if (typeof window !== 'undefined') {
   window.ParticipantsService = {
     loadParticipantsData,
     filterByCategory,
+    filterBySearch,
+    filterByTag,
     renderParticipantCard,
     renderParticipantsGrid,
     normalizeCategory,
