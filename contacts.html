@@ -77,22 +77,7 @@
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
 
-    <!-- Градиент сверху, чтобы текст читался поверх -->
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background-dark/80 via-background-dark/40 to-transparent"></div>
-
-            
-          <!-- Кнопка для построения маршрута -->
-          <a
-            href="https://yandex.ru/maps/?rtext=~Москва,+ул.+1905+года,+10с1&rtt=auto"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 bg-primary text-white px-4 py-3 rounded-xl shadow-[0_4px_16px_rgba(242,127,13,0.5)] hover:bg-primary/90 active:scale-[0.97] transition-all"
-          >
-            <span class="material-symbols-outlined text-[20px]">near_me</span>
-            <span class="text-xs font-semibold uppercase tracking-wide">Построить маршрут</span>
-          </a>
-        </div>
-  </div>
+    
 
   <!-- Подсказки как добраться -->
   <div class="mt-4 space-y-2 text-sm text-slate-600 dark:text-white/70">
@@ -103,7 +88,6 @@
 <!-- конец Map Section -->
 <!-- Contact Info List -->
 <div class="px-4 space-y-3">
-<!-- Address -->
 <!-- Address -->
 <a
   href="https://yandex.ru/maps/?rtext=~Москва,+ул.+1905+года,+10с1&rtt=auto"
@@ -119,7 +103,7 @@
     <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
       ул. 1905 года, 10с1, Москва
     </p>
-    <p id="distance-text" class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">
+    <p id="distance-text" class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-2 text-left">
       Нажмите, чтобы построить маршрут.
     </p>
   </div>
@@ -130,32 +114,30 @@
 </a>
 
 <!-- Phone -->
-<button class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm">
-<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div class="flex flex-col items-start flex-1">
-<p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">+7 (926) 222-30-22</p>
-<p class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">Ежедневно с 10:00 до 22:00</p>
-</div>
-<div class="shrink-0 text-slate-400 dark:text-white/20">
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-</button>
-<!-- Email -->
-<button class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm">
-<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div class="flex flex-col items-start flex-1">
-<p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">vip@delavida.ru</p>
-<p class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">Для бронирования мероприятий</p>
-</div>
-<div class="shrink-0 text-slate-400 dark:text-white/20">
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-</button>
-</div>
+<!-- Phone -->
+<a
+  href="tel:+79262223022"
+  class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm"
+>
+  <div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+    <span class="material-symbols-outlined">call</span>
+  </div>
+
+  <div class="flex flex-col items-start flex-1">
+    <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
+      +7 (926) 222-30-22
+    </p>
+    <p class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">
+      Ежедневно с 10:00 до 22:00
+    </p>
+  </div>
+
+  <div class="shrink-0 text-slate-400 dark:text-white/20">
+    <span class="material-symbols-outlined">chevron_right</span>
+  </div>
+</a>
+
+
 <!-- Opening Hours -->
 <div class="px-4 py-8">
 <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Время работы</h3>
