@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Категории для страницы артистов и ведущих
   currentCategories = [
-    'Кавер группа',
+    'Кавер-группа',
     'Сольный артист',
     'Саксофон',
     'Скрипка',

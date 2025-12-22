@@ -2,13 +2,13 @@
   {
     "id": "vot-eti-rebyata",
     "name": "Вот эти ребята",
-    "category": "Кавер группа",
+    "category": "Кавер-группа",
     "tagline": "Кавер-группа, rock band и jazz band в одном флаконе!",
     
     "cardImage": "./images/artists/vot-eti-rebyata.jpg",
     "coverImage": "./images/artists/vot-eti-rebyata.jpg",
     "tags": [
-      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Джаз"},
       {"icon": "music_note", "text": "Рок"},
        {"icon": "music_note", "text": "Поп"}
@@ -45,12 +45,12 @@
   {
     "id": "polina-band",
     "name": "Polina Band",
-    "category": "Кавер группа",
+    "category": "Кавер-группа",
     "tagline": "",
     "cardImage": "./images/artists/polina-band.jpg",
     "coverImage": "./images/artists/polina-band.jpg",
     "tags": [
-      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Джаз"},
       {"icon": "music_note", "text": "Поп"}
     ],
@@ -87,12 +87,12 @@
  {
     "id": "twixsound-cover-band",
     "name": "Twixound Cover band",
-    "category": "Кавер группа",
+    "category": "Кавер-группа",
     "tagline": "",
     "cardImage": "./images/artists/twixsound-cover-band.jpg",
     "coverImage": "./images/artists/twixsound-cover-band.jpg",
     "tags": [
-      {"icon": "groups", "text": "Коллектив"},
+      {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Поп"}
     ],
     "about": "Twixound Cover band — это музыкальный коллектив на любой праздник - Свадьбу, Юбилей, Новый Год. Бешеная энергетика группы, артистичность исполнительниц и, конечно же, сногсшибательная, стильная внешность солисток — это залог успеха вашего Праздника. Сочетание прекрасных голосов наших солисток Юлии и Натальи в совокупности с живой музыкой позволяет артистам разнообразить репертуар, и одинаково легко исполнять поп и рок-н-рольные, ретро хиты и супер современные треки, петь на русском, английском, и других языках...\nШикарные солистки — это наш главный козырь! Элегантные, а порой и дерзкие, наряды наших див, яркий сценический образ и сумасшедшая работа с залом приятно удивят вас. Если вы хотите чтобы на вашем торжестве была группа с обворожительными солистками, обладающими сильными красивыми голосами, то вам сюда!",
@@ -202,7 +202,9 @@
     "coverImage": "./images/artists/pavel-elyseev.jpg",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
-      {"icon": "music_note", "text": "Джаз"}
+      {"icon": "music_note", "text": "Джаз"},
+      {"icon": "music_note", "text": "Поп"},
+      {"icon": "music_note", "text": "Рок"}
     ],
     "about": "",
           
@@ -270,7 +272,7 @@
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Инструментальная музыка"},
-      {"icon": "graphic_eq", "text": "Сансофон"}
+      {"icon": "graphic_eq", "text": "Саксофон"}
     ],
     "about": "",
           
@@ -304,6 +306,7 @@
     "coverImage": "./images/artists/elizaveta-yurgina.jpg",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Инструментальная музыка"},
       {"icon": "graphic_eq", "text": "Саксофон"},
       {"icon": "music_note", "text": "Джаз"}
     ],
@@ -441,6 +444,7 @@
     "coverImage": "./images/artists/violin.jpg",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
+      {"icon": "music_note", "text": "Инструментальная музыка"},
       {"icon": "graphic_eq", "text": "Скрипка"}
     ],
     "about": "",
