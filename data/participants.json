@@ -5,8 +5,8 @@
     "category": "Кавер-группа",
     "tagline": "Кавер-группа, rock band и jazz band в одном флаконе!",
     
-    "cardImage": "./images/artists/vot-eti-rebyata.jpg",
-    "coverImage": "./images/artists/vot-eti-rebyata.jpg",
+    "cardImage": "./images/artists/vot-eti-rebyata.webp",
+    "coverImage": "./images/artists/vot-eti-rebyata.webp",
     "tags": [
       {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Джаз"},
@@ -15,13 +15,13 @@
     ],
     "about": "Кавер-группа «Вот Эти Ребята» предлагает организацию выступлений для любых мероприятий. Наша команда состоит из мастеров спорта по игре в кавера и супер героев, которые призваны уничтожить уныние на праздниках. В нашем репертуаре есть песни, под которые танцевали на выпускном ваши родители и даже дедушки с бабушками. Мы также можем написать песню на заказ специально для вашей второй половинки, мамы, сестры или начальника. У нас много бонусов и специальных услуг, таких как вэлком за пол цены. Мы простые и без пафоса, проконсультируем по всем вопросам и даже очень странным. Вместо долгого перечисления достижений, смотрите наш рекламный ролик. Если вы хотите узнать о нас больше, мы вышлем более подробный пресс-релиз со всеми регалиями.",
     "portfolio": [
-      "./images/artists/vot-eti-rebyata-01.jpg",
-      "./images/artists/vot-eti-rebyata-02.jpg",
-      "./images/artists/vot-eti-rebyata-03.jpg",
-      "./images/artists/vot-eti-rebyata-04.jpg",
-      "./images/artists/vot-eti-rebyata-05.jpg",
-      "./images/artists/vot-eti-rebyata-06.jpg",
-      "./images/artists/vot-eti-rebyata-07.jpg"
+      "./images/artists/vot-eti-rebyata-01.webp",
+      "./images/artists/vot-eti-rebyata-02.webp",
+      "./images/artists/vot-eti-rebyata-03.webp",
+      "./images/artists/vot-eti-rebyata-04.webp",
+      "./images/artists/vot-eti-rebyata-05.webp",
+      "./images/artists/vot-eti-rebyata-06.webp",
+      "./images/artists/vot-eti-rebyata-07.webp"
       
     ],
     "video": {
@@ -47,8 +47,8 @@
     "name": "Polina Band",
     "category": "Кавер-группа",
     "tagline": "",
-    "cardImage": "./images/artists/polina-band.jpg",
-    "coverImage": "./images/artists/polina-band.jpg",
+    "cardImage": "./images/artists/polina-band.webp",
+    "coverImage": "./images/artists/polina-band.webp",
     "tags": [
       {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Джаз"},
@@ -89,8 +89,8 @@
     "name": "Twixound Cover band",
     "category": "Кавер-группа",
     "tagline": "",
-    "cardImage": "./images/artists/twixsound-cover-band.jpg",
-    "coverImage": "./images/artists/twixsound-cover-band.jpg",
+    "cardImage": "./images/artists/twixsound-cover-band.webp",
+    "coverImage": "./images/artists/twixsound-cover-band.webp",
     "tags": [
       {"icon": "groups", "text": "Кавер-группа"},
       {"icon": "music_note", "text": "Поп"}
@@ -123,8 +123,8 @@
     "name": "Ильхом Тагиров",
     "category": "Сольный артист",
     "tagline": "Артист и автор музыки. Участник шоу Голос.",
-    "cardImage": "./images/artists/ilhom-tagirov.jpg",
-    "coverImage": "./images/artists/ilhom-tagirov.jpg",
+    "cardImage": "./images/artists/ilhom-tagirov.webp",
+    "coverImage": "./images/artists/ilhom-tagirov.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"}
       
@@ -132,8 +132,8 @@
     "about": "",
           
     "portfolio": [
-      "./images/artists/ilhom-tagirov-01.jpg",
-      "./images/artists/ilhom-tagirov-02.jpg"
+      "./images/artists/ilhom-tagirov-01.webp",
+      "./images/artists/ilhom-tagirov-02.webp"
       
     ],
     "video": {
@@ -159,8 +159,8 @@
     "name": "LERA Папиш",
     "category": "Сольный артист",
     "tagline": "",
-    "cardImage": "./images/artists/lera-papish.jpg",
-    "coverImage": "./images/artists/lera-papish.jpg",
+    "cardImage": "./images/artists/lera-papish.webp",
+    "coverImage": "./images/artists/lera-papish.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Джаз"},
@@ -169,11 +169,11 @@
     "about": "Welcome — визитная карточка артистки. Эстетика 40-х годов в стиле и в выступлении. Исполнение современных композиций на английском языке в джазовой авторской интерпритации доставляет эстетическое удовольствие с самого начала мероприятия. Часовой формат, который можно разбить на 2 блока по 30 минут, либо 3 блока по 20 минут. Лера Папиш имеет многолетний успешный опыт выступлений на мероприятиях любого масштаба – от корпоративных событий и частных праздников до крупных международных фестивалей и концертов. Работает на лучших площадках России, сотрудничает с ведущими event-агентствами, участвовала в правительственных мероприятиях и коммерческих проектах.",
           
     "portfolio": [
-      "./images/artists/lera-papish-01.jpg",
-      "./images/artists/lera-papish-02.jpg",
-      "./images/artists/lera-papish-03.jpg",
-      "./images/artists/lera-papish-04.jpg",
-      "./images/artists/lera-papish-05.jpg"
+      "./images/artists/lera-papish-01.webp",
+      "./images/artists/lera-papish-02.webp",
+      "./images/artists/lera-papish-03.webp",
+      "./images/artists/lera-papish-04.webp",
+      "./images/artists/lera-papish-05.webp"
     ],
     "video": {
       "src": "https://youtu.be/S8RAMSJKScs",
@@ -198,8 +198,8 @@
     "name": "Павел Елисеев",
     "category": "Сольный артист",
     "tagline": "Участник шоу Голос.",
-    "cardImage": "./images/artists/pavel-elyseev.jpg",
-    "coverImage": "./images/artists/pavel-elyseev.jpg",
+    "cardImage": "./images/artists/pavel-elyseev.webp",
+    "coverImage": "./images/artists/pavel-elyseev.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Джаз"},
@@ -209,7 +209,7 @@
     "about": "",
           
     "portfolio": [
-      "./images/artists/pavel-elyseev-01.jpg"
+      "./images/artists/pavel-elyseev-01.webp"
     ],
     "video": {
       "src": "https://youtu.be/rFt5vJNl8K8",
@@ -234,15 +234,15 @@
     "name": "Леся Полищук",
     "category": "Сольный артист",
     "tagline": "Автор треков, исполнитель. Участница шоу Голос.",
-    "cardImage": "./images/artists/lesya-polishchuk.jpg",
-    "coverImage": "./images/artists/lesya-polishchuk.jpg",
+    "cardImage": "./images/artists/lesya-polishchuk.webp",
+    "coverImage": "./images/artists/lesya-polishchuk.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"}
     ],
     "about": "",
           
     "portfolio": [
-      "./images/artists/lesya-polishchuk-01.jpg"
+      "./images/artists/lesya-polishchuk-01.webp"
     ],
     "video": {
       "src": "https://youtu.be/BU1pfk2mCrU",
@@ -267,8 +267,8 @@
     "name": "Натаниэль",
     "category": "Саксофон",
     "tagline": "",
-    "cardImage": "./images/artists/nataniel.jpg",
-    "coverImage": "./images/artists/nataniel.jpg",
+    "cardImage": "./images/saxophone.webp",
+    "coverImage": "./images/saxophone.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Инструментальная музыка"},
@@ -302,8 +302,8 @@
     "name": "Елизавета Юргина",
     "category": "Саксофон",
     "tagline": "",
-    "cardImage": "./images/artists/elizaveta-yurgina.jpg",
-    "coverImage": "./images/artists/elizaveta-yurgina.jpg",
+    "cardImage": "./images/artists/elizaveta-yurgina.webp",
+    "coverImage": "./images/artists/elizaveta-yurgina.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Инструментальная музыка"},
@@ -313,10 +313,10 @@
     "about": "",
           
     "portfolio": [
-      "./images/artists/elizaveta-yurgina-01.jpg",
-      "./images/artists/elizaveta-yurgina-02.jpg",
-      "./images/artists/elizaveta-yurgina-03.jpg",
-      "./images/artists/elizaveta-yurgina-04.jpg"
+      "./images/artists/elizaveta-yurgina-01.webp",
+      "./images/artists/elizaveta-yurgina-02.webp",
+      "./images/artists/elizaveta-yurgina-03.webp",
+      "./images/artists/elizaveta-yurgina-04.webp"
     ],
     "video": {
       "src": "https://youtu.be/J7A7dWbr9Kg",
@@ -341,8 +341,8 @@
     "name": "Алексей",
     "category": "Фотограф",
     "tagline": "",
-    "cardImage": "./images/artists/photograph.jpg",
-    "coverImage": "./images/artists/photograph.jpg",
+    "cardImage": "./images/photograph.webp",
+    "coverImage": "./images/photograph.webp",
     "tags": [
       {"icon": "camera_alt", "text": "Фотосъемка"}
     ],
@@ -374,8 +374,8 @@
     "name": "Иван Счетчиков",
     "category": "Фотограф",
     "tagline": "\"Оставлю в памяти яркие моменты ваших событий!\"",
-    "cardImage": "./images/artists/photograph.jpg",
-    "coverImage": "./images/artists/photograph.jpg",
+    "cardImage": "./images/photograph.webp",
+    "coverImage": "./images/photograph.webp",
     "tags": [
       {"icon": "camera_alt", "text": "Фотосъемка"}
     ],
@@ -407,8 +407,8 @@
     "name": "Михалевский Артём",
     "category": "Фотограф",
     "tagline": "",
-    "cardImage": "./images/artists/photograph.jpg",
-    "coverImage": "./images/artists/photograph.jpg",
+    "cardImage": "./images/photograph.webp",
+    "coverImage": "./images/photograph.webp",
     "tags": [
       {"icon": "camera_alt", "text": "Фотосъемка"}
     ],
@@ -440,8 +440,8 @@
     "name": "Екатерина Колесникова",
     "category": "Скрипка",
     "tagline": "",
-    "cardImage": "./images/artists/violin.jpg",
-    "coverImage": "./images/artists/violin.jpg",
+    "cardImage": "./images/violin.webp",
+    "coverImage": "./images/violin.webp",
     "tags": [
       {"icon": "person", "text": "Соло-артист"},
       {"icon": "music_note", "text": "Инструментальная музыка"},
@@ -475,8 +475,8 @@
     "name": "Павел Савченко",
     "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/pavel-savchenko.jpg",
-    "coverImage": "./images/artists/pavel-savchenko.jpg",
+    "cardImage": "./images/artists/pavel-savchenko.webp",
+    "coverImage": "./images/artists/pavel-savchenko.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 20 лет"},
@@ -485,10 +485,10 @@
     "about": "Я всегда работаю так: легко, интеллигентно, позитивно. Пожелания заказчика - для меня закон. Уверяю вас, на празднике не будет \"дурацких\" конкурсов. Будут современные мультимедийные интерактивы, игровые шоу и режиссура проекта. Я уверен, что смело могу про это говорить, так как: За последние 19 лет провел более 1000 корпоративных праздников и не меньше ивентов, как в России, так и за рубежом!!! И у многих компаний, я стал постоянным ведущим значимых событий.",
           
     "portfolio": [
-      "./images/artists/pavel-savchenko-01.jpg",
-      "./images/artists/pavel-savchenko-02.jpg",
-      "./images/artists/pavel-savchenko-03.jpg",
-      "./images/artists/pavel-savchenko-04.jpg"
+      "./images/artists/pavel-savchenko-01.webp",
+      "./images/artists/pavel-savchenko-02.webp",
+      "./images/artists/pavel-savchenko-03.webp",
+      "./images/artists/pavel-savchenko-04.webp"
     ],
     "video": {
       "src": "https://rutube.ru/video/f9ab545fccbbb8208d440a4d2fe3f206/",
@@ -513,8 +513,8 @@
     "name": "Сергей Бондарь",
     "category": "Ведущий",
     "tagline": "\"Я современный, драйвовый, интеллигентный ведущий\"",
-    "cardImage": "./images/artists/sergey-bondar.jpg",
-    "coverImage": "./images/artists/sergey-bondar.jpg",
+    "cardImage": "./images/artists/sergey-bondar.webp",
+    "coverImage": "./images/artists/sergey-bondar.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 8 лет"}
@@ -522,10 +522,10 @@
     "about": "Мой опыт ведущим 8 лет, я профессионально занимаюсь юмором, победитель шоу \"Лига Городов\" на ТНТ, выступал на Первом канале в Высшей лиге КВН Формат моих мероприятий- это лёгкое общение с гостями, уместные шутки, современные интерактивы с экраном и без, знакомые вам по популярным интернет и ТВ-Шоу.",
           
     "portfolio": [
-      "./images/artists/sergey-bondar-01.jpg",
-      "./images/artists/sergey-bondar-02.jpg",
-      "./images/artists/sergey-bondar-03.jpg",
-      "./images/artists/sergey-bondar-04.jpg"
+      "./images/artists/sergey-bondar-01.webp",
+      "./images/artists/sergey-bondar-02.webp",
+      "./images/artists/sergey-bondar-03.webp",
+      "./images/artists/sergey-bondar-04.webp"
     ],
     "video": {
       "src": "https://www.youtube.com/watch?v=2HdoJqO_3Eo",
@@ -550,8 +550,8 @@
     "name": "Артур Шилов",
     "category": "Ведущий",
     "tagline": "Кудряво веду.",
-    "cardImage": "./images/artists/artur-shilov.jpg",
-    "coverImage": "./images/artists/artur-shilov.jpg",
+    "cardImage": "./images/artists/artur-shilov.webp",
+    "coverImage": "./images/artists/artur-shilov.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 10 лет"},
@@ -560,9 +560,9 @@
     "about": "Шутил на ТНТ, в \"Рассмеши комика\", ваше мероприятие следующее. Родился в день рождения мамы, поэтому точно знаю как сделать праздник незабываемым. Занимаюсь футболом с 8 лет, но забил меньше голов, чем провел свадеб. Работал «Ведущим инженером», сейчас только «Ведущий».",
           
     "portfolio": [
-      "./images/artists/artur-shilov-01.jpg",
-      "./images/artists/artur-shilov-02.jpg",
-      "./images/artists/artur-shilov-03.jpg"
+      "./images/artists/artur-shilov-01.webp",
+      "./images/artists/artur-shilov-02.webp",
+      "./images/artists/artur-shilov-03.webp"
     ],
     "video": {
       "src": "",
@@ -587,8 +587,8 @@
     "name": "Ярослав Ломовцев",
     "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/event-host.jpg",
-    "coverImage": "./images/artists/event-host.jpg",
+    "cardImage": "./images/event-host.webp",
+    "coverImage": "./images/event-host.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"}
     ],
@@ -620,18 +620,18 @@
     "name": "Петр Микитенко",
     "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/petr-mikitenko.jpg",
-    "coverImage": "./images/artists/petr-mikitenko.jpg",
+    "cardImage": "./images/artists/petr-mikitenko.webp",
+    "coverImage": "./images/artists/petr-mikitenko.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"}
     ],
     "about": "Профессиональный ведущий Петр! Двигатель и душа любого мероприятия. Уникальные способности чувствовать публику и любовь к своему делу - залог успеха творчества Петра. Качественный юмор и уникальность идей сделают необычным и незабываемым Ваше мероприятие. Внушительный опыт и уровень клиентов - подтверждение его профессионализма. На счету Петра проведение Концертов Международного масштаба, проведение частных мероприятий для первых лиц государства, корпоративные мероприятия для известных компаний, сотрудничество с крупными евент компаниями, выступление на одной сцене со звездами шоу бизнеса!",
           
     "portfolio": [
-      "./images/artists/petr-mikitenko-01.jpg",
-      "./images/artists/petr-mikitenko-02.jpg",
-      "./images/artists/petr-mikitenko-03.jpg",
-      "./images/artists/petr-mikitenko-04.jpg"
+      "./images/artists/petr-mikitenko-01.webp",
+      "./images/artists/petr-mikitenko-02.webp",
+      "./images/artists/petr-mikitenko-03.webp",
+      "./images/artists/petr-mikitenko-04.webp"
     ],
     "video": {
       "src": "",
@@ -656,8 +656,8 @@
     "name": "Леонид Кияшко",
     "category": "Ведущий",
     "tagline": "",
-    "cardImage": "./images/artists/leonid-kiyashko.jpg",
-    "coverImage": "./images/artists/leonid-kiyashko.jpg",
+    "cardImage": "./images/artists/leonid-kiyashko.webp",
+    "coverImage": "./images/artists/leonid-kiyashko.webp",
     "tags": [
       {"icon": "person", "text": "Ведущий"},
       {"icon": "history", "text": "Опыт более 14 лет"}
@@ -665,10 +665,10 @@
     "about": "Мой профессиональный опыт, закалённый временем и образованием, позволяет проводить мероприятия на высочайшем уровне. Самая маленькая аудитория - 10 персон, самая большая - 2000 гостей. Работаю в стиле современного, культурного шоумена. Конферанс понятный как молодой, так и взрослой аудитории. Уважение к каждому гостю. Всегда на связи, начиная с момента первой встречи. Готов помочь советом и делом. Со мной удобно. Всегда работаю по договору. Наличный и безналичный расчёт. ИП.",
           
     "portfolio": [
-      "./images/artists/leonid-kiyashko-01.jpg",
-      "./images/artists/leonid-kiyashko-02.jpg",
-      "./images/artists/leonid-kiyashko-03.jpg",
-      "./images/artists/leonid-kiyashko-04.jpg"
+      "./images/artists/leonid-kiyashko-01.webp",
+      "./images/artists/leonid-kiyashko-02.webp",
+      "./images/artists/leonid-kiyashko-03.webp",
+      "./images/artists/leonid-kiyashko-04.webp"
     ],
     "video": {
       "src": "",
@@ -693,8 +693,8 @@
     "name": "Михаил",
     "category": "Звукорежиссер",
     "tagline": "",
-    "cardImage": "./images/artists/sound-engeneer.jpg",
-    "coverImage": "./images/artists/sound-engeneer.jpg",
+    "cardImage": "./images/sound-engeneer.webp",
+    "coverImage": "./images/sound-engeneer.webp",
     "tags": [
       {"icon": "person", "text": "Настройка оборудования и звука"}
     ],

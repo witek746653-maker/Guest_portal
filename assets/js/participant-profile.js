@@ -34,6 +34,39 @@ const setBgImage = (el, src) => {
 // Форматирование чисел для цены
 const formatPrice = (price) => new Intl.NumberFormat('ru-RU').format(price);
 
+// Определяет страницу возврата на основе категории участника
+function getBackPageUrl(category) {
+  if (!category) return 'service-artists.html';
+  
+  const categoryLower = category.toLowerCase();
+  
+  // Фотограф → service-photography.html
+  if (categoryLower.includes('фотограф')) {
+    return 'service-photography.html';
+  }
+  
+  // Звукорежиссер → service-sound-engeneer.html
+  if (categoryLower.includes('звукорежиссер')) {
+    return 'service-sound-engeneer.html';
+  }
+  
+  // Флорист или Декоратор → service-decoration.html
+  if (categoryLower.includes('флорист') || categoryLower.includes('декоратор')) {
+    return 'service-decoration.html';
+  }
+  
+  // Техника или Оборудование → service-equipment.html
+  if (categoryLower.includes('техника') || categoryLower.includes('оборудование')) {
+    return 'service-equipment.html';
+  }
+  
+  // Все остальные → service-artists.html
+  return 'service-artists.html';
+}
+
+// Глобальная переменная для хранения данных участника
+let currentArtist = null;
+
 async function loadArtist() {
   const id = getParam('id');
   if (!id) return;
@@ -45,6 +78,9 @@ async function loadArtist() {
     const artists = await response.json();
     const artist = Array.isArray(artists) ? artists.find((item) => item.id === id) : null;
     if (!artist) return;
+    
+    // Сохраняем данные участника для использования в кнопке "назад"
+    currentArtist = artist;
 
     // Заголовки и основные тексты
     document.title = artist.name ? `${artist.name} — профайл` : 'Профайл участника';
@@ -211,6 +247,15 @@ async function loadArtist() {
       setVisible(priceBar, true);
     } else {
       setVisible(priceBar, false);
+    }
+    
+    // Устанавливаем правильный URL для кнопки "назад" на основе категории
+    const backButton = document.getElementById('back-button');
+    if (backButton) {
+      const backPageUrl = getBackPageUrl(artist.category);
+      backButton.onclick = () => {
+        window.location.href = backPageUrl;
+      };
     }
   } catch (error) {
     console.error('Не удалось загрузить данные профайла', error);
