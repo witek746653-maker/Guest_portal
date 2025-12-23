@@ -95,39 +95,51 @@ summary::-webkit-details-marker {
 .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 20px);
 }
-#update-banner {
+/* Уведомление об обновлении приложения (toast) */
+#update-toast {
   position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  z-index: 9999;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  z-index: 10000;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
 
-  padding: 10px 12px;
+  padding: 12px 20px;
   border-radius: 12px;
 
-  background: rgba(20, 20, 20, 0.92);
+  background: rgba(34, 25, 16, 0.95);
   color: #fff;
 
   font-size: 14px;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.4;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
 }
 
-#update-banner .update-banner__btn {
-  border: 0;
-  border-radius: 10px;
-  padding: 8px 12px;
+#update-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
 
-  background: #ffffff;
-  color: #111;
-  font-weight: 600;
-  cursor: pointer;
+#update-toast .update-toast__content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#update-toast .update-toast__content .material-symbols-outlined {
+  font-size: 20px;
+  color: #f27f0d;
 }
 

@@ -1,50 +1,95 @@
+// Флаг для предотвращения множественных обновлений
+let isUpdating = false;
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js").then((reg) => {
-    if (reg.waiting) showUpdateBanner(reg);
+    // Проверяем, есть ли ожидающий Service Worker
+    if (reg.waiting) {
+      handleServiceWorkerUpdate(reg);
+    }
 
+    // Слушаем события обновления
     reg.addEventListener("updatefound", () => {
       const nw = reg.installing;
       if (!nw) return;
 
       nw.addEventListener("statechange", () => {
+        // Когда новый Service Worker установлен и есть активный контроллер
         if (nw.state === "installed" && navigator.serviceWorker.controller) {
-          showUpdateBanner(reg);
+          handleServiceWorkerUpdate(reg);
         }
       });
     });
+
+    // Периодически проверяем обновления (каждые 60 секунд)
+    setInterval(() => {
+      reg.update();
+    }, 60000);
   });
 
+  // Когда Service Worker активирован, показываем уведомление и перезагружаем страницу
+  let controllerChangeHandled = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
-    window.location.reload();
+    // Предотвращаем множественные обработки
+    if (controllerChangeHandled) return;
+    controllerChangeHandled = true;
+    
+    // Показываем уведомление об обновлении
+    showUpdateNotification();
+    
+    // Перезагружаем страницу через небольшую задержку, чтобы пользователь увидел уведомление
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   });
 }
 
-function showUpdateBanner(reg) {
-  if (document.getElementById("update-banner")) return;
+// Обработка обновления Service Worker
+function handleServiceWorkerUpdate(reg) {
+  if (isUpdating) return; // Предотвращаем множественные обновления
+  isUpdating = true;
 
-  const banner = document.createElement("div");
-  banner.id = "update-banner";
-  banner.innerHTML = `
-    <div class="update-banner__text">
-      Доступно новое обновление. Обновите страницу, чтобы получить свежую версию.
+  // Активируем новый Service Worker сразу
+  if (reg.waiting) {
+    reg.waiting.postMessage({ type: "SKIP_WAITING" });
+  }
+  // Уведомление покажем при controllerchange
+}
+
+// Показываем простое уведомление об обновлении (toast)
+function showUpdateNotification() {
+  // Удаляем старое уведомление, если оно есть
+  const existingToast = document.getElementById("update-toast");
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Создаем новое уведомление
+  const toast = document.createElement("div");
+  toast.id = "update-toast";
+  toast.innerHTML = `
+    <div class="update-toast__content">
+      <span class="material-symbols-outlined">check_circle</span>
+      <span>Приложение обновлено</span>
     </div>
-    <button class="update-banner__btn" type="button">Обновить</button>
   `;
 
-  const btn = banner.querySelector(".update-banner__btn");
-  btn?.addEventListener("click", () => {
-    if (reg.waiting) {
-      // Отправляем сообщение service worker для активации
-      reg.waiting.postMessage({ type: "SKIP_WAITING" });
-      // Явно перезагружаем страницу после небольшой задержки
-      // Это гарантирует, что новый service worker активируется
-      setTimeout(() => {
-        window.location.reload();
-      }, 100);
-    }
-  });
+  document.body.appendChild(toast);
 
-  document.body.appendChild(banner);
+  // Показываем уведомление
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  // Автоматически скрываем через 3 секунды
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      if (toast.parentNode) {
+        toast.remove();
+      }
+    }, 300);
+  }, 3000);
 }
 
 // Подгружаем модальное окно "Контакты" лениво — работает как раньше
@@ -139,3 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   );
 })();
+
+document.getElementById('shareBtn').addEventListener('click', async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: 'Заголовок',
+        text: 'Описание или сообщение',
+        url: window.location.href
+      });
+    } catch (e) {
+      // пользователь закрыл меню — это нормально
+    }
+  } else {
+    alert('Шаринг не поддерживается в этом браузере');
+  }
+});
+
