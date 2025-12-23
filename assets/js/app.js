@@ -33,7 +33,15 @@ function showUpdateBanner(reg) {
 
   const btn = banner.querySelector(".update-banner__btn");
   btn?.addEventListener("click", () => {
-    if (reg.waiting) reg.waiting.postMessage({ type: "SKIP_WAITING" });
+    if (reg.waiting) {
+      // Отправляем сообщение service worker для активации
+      reg.waiting.postMessage({ type: "SKIP_WAITING" });
+      // Явно перезагружаем страницу после небольшой задержки
+      // Это гарантирует, что новый service worker активируется
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    }
   });
 
   document.body.appendChild(banner);
