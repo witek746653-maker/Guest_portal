@@ -24,11 +24,13 @@
       "./images/artists/vot-eti-rebyata-07.webp"
       
     ],
-    "video": {
-      "src": "https://youtu.be/qtyTbZbPRF4",
-      "title": "Кавер-группа «Вот Эти Ребята» Москва",
-      "duration": "3:08"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/qtyTbZbPRF4",
+        "title": "Кавер-группа «Вот Эти Ребята» Москва",
+        "duration": "3:08"
+      }
+    ],
     "rider": {
       "url": "https://docs.google.com/document/d/1zSsLjghcC8s9PoUTfKxKqYzY5TPCOmWB/edit",
       "download": "",
@@ -40,7 +42,8 @@
       "youtube": "www.youtube.com/@Кавер-группаВотЭтиРебята",
       "website": ""
     },
-    "price":"" 
+    "priceNote": "",
+    "price": ""
   },
   {
     "id": "polina-band",
@@ -56,7 +59,7 @@
     ],
     "about": [
       "Кавер группа Polina-band: контрабас, гитара, вокал.  Популярные хиты в танцевально-джазовой обработке. С(т)ильный женский вока, музыканты международного уровня, оригинальные, но узнаваемые аранжировки.",
-      "Программа до 1,5 часов. Можно разбить время как будет комфортно, например, 3 выхода по 30 минут. "
+      "Программа до 1,5 часов. Можно разбить время как будет комфортно, например, 3 выхода по 30 минут."
 
     ],
           
@@ -66,17 +69,22 @@
       "./images/artists/polina-band-03.webp",
       "./images/artists/polina-band-04.webp",
       "./images/artists/polina-band-05.webp",
-      "./images/artists/polina-band-06.webp",
-      "./images/artists/polina-band-07.webp",
-      "./images/artists/polina-band-08.webp"
+      "./images/artists/polina-band-06.webp"
     ],
-    "video": {
-      "src": "https://youtu.be/UC07jS05JvQ",
-      "title": "Кавер группа Polina Band - трио на свадьбу, корпоратив, Новый Год",
-      "duration": "2:43"
-    },
+    "videos": [
+      {
+        "src": "https://rutube.ru/video/519d238ee141366aa931fe03d12cd717/?r=wd",
+        "title": "Кавер группа Polina band промо 2025",
+        "duration": "1:58"
+      },
+      {
+        "src": "https://rutube.ru/video/9472f29d72c610e0aee642d26900f988/",
+        "title": "Кавер группа Polina Band - трио на свадьбу, корпоратив, Новый Год",
+        "duration": "4:43"
+      }
+    ],
      "rider": {
-      "url": "https://disk.yandex.ru/d/9ztLEhdHjzEtAA/%D0%A0%D0%B0%D0%B9%D0%B4%D0%B5%D1%80%D1%8B",
+      "url": "https://docs.google.com/document/d/1MeHTIZjEULjfdzxnPPoPCUD-b2GzZzkFuc4Xwv03zfo/edit?pli=1&tab=t.0#heading=h.n8ffyjj8qt9r",
       "download": "",
       "title": "Райдер и документы",
       "description": "Скачать технический и бытовой райдер"
@@ -86,7 +94,9 @@
       "youtube": "https://www.youtube.com/@PolinaMe",
       "website": "https://polina.me/#rec547720847"
     },
-    "price": ""
+    "phone": "+79262223022",
+    "priceNote": "+ 6% по безналичному расчету",
+    "price": "150 000 ₽"
   },
  {
     "id": "twixsound-cover-band",
@@ -104,11 +114,13 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "https://youtu.be/UTIDmW4SZnI",
-      "title": "КАВЕР ГРУППА TWIXOUND НА СВАДЬБЕ | МОСКВА",
-      "duration": "0:58"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/UTIDmW4SZnI",
+        "title": "КАВЕР ГРУППА TWIXOUND НА СВАДЬБЕ | МОСКВА",
+        "duration": "0:58"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -120,6 +132,7 @@
       "youtube": "https://www.youtube.com/@twixoundgruppa",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -140,11 +153,13 @@
       "./images/artists/ilhom-tagirov-02.webp"
       
     ],
-    "video": {
-      "src": "https://youtu.be/mWD7wYAEpRo",
-      "title": "Ильхом Тагиров. «Dream a Little Dream of Me» - Слепые прослушивания - Голос - Сезон 10",
-      "duration": "6:00"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/mWD7wYAEpRo",
+        "title": "Ильхом Тагиров. «Dream a Little Dream of Me» - Слепые прослушивания - Голос - Сезон 10",
+        "duration": "6:00"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -156,6 +171,7 @@
       "youtube": "https://www.youtube.com/@%D0%98%D0%BB%D1%8C%D1%85%D0%BE%D0%BC%D0%A2%D0%B0%D0%B3%D0%B8%D1%80%D0%BE%D0%B2",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -179,11 +195,13 @@
       "./images/artists/lera-papish-04.webp",
       "./images/artists/lera-papish-05.webp"
     ],
-    "video": {
-      "src": "https://youtu.be/S8RAMSJKScs",
-      "title": "Valery Papish | Валерия Папиш",
-      "duration": "0:25"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/S8RAMSJKScs",
+        "title": "Valery Papish | Валерия Папиш",
+        "duration": "0:25"
+      }
+    ],
      "rider": {
       "url": "http://www.lerapapish.ru/#raider",
       "download": "",
@@ -195,6 +213,7 @@
       "youtube": "",
       "website": "http://www.lerapapish.ru/"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -215,11 +234,13 @@
     "portfolio": [
       "./images/artists/pavel-elyseev-01.webp"
     ],
-    "video": {
-      "src": "https://youtu.be/rFt5vJNl8K8",
-      "title": "Павел Елисеев - Детство | Pavel Eliseev - Childhood",
-      "duration": "4:09"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/rFt5vJNl8K8",
+        "title": "Павел Елисеев - Детство | Pavel Eliseev - Childhood",
+        "duration": "4:09"
+      }
+    ],
      "rider": {
       "url": "https://docs.google.com/document/d/1zSsLjghcC8s9PoUTfKxKqYzY5TPCOmWB/edit",
       "download": "",
@@ -231,6 +252,7 @@
       "youtube": "http://www.youtube.com/@%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB%D0%95%D0%BB%D0%B8%D1%81%D0%B5%D0%B5%D0%B2-%D0%B76%D1%86",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -248,11 +270,13 @@
     "portfolio": [
       "./images/artists/lesya-polishchuk-01.webp"
     ],
-    "video": {
-      "src": "https://youtu.be/BU1pfk2mCrU",
-      "title": "Леся Полищук, Паша Панамо - Белая ночь (премьера MOOD VIDEO 2024)",
-      "duration": "3:15"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/BU1pfk2mCrU",
+        "title": "Леся Полищук, Паша Панамо - Белая ночь (премьера MOOD VIDEO 2024)",
+        "duration": "3:15"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -264,6 +288,7 @@
       "youtube": "http://www.youtube.com/@lesyapolish",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -283,11 +308,13 @@
     "portfolio": [
      
     ],
-    "video": {
-      "src": "https://youtu.be/o3jY_LAgI2U",
-      "title": "Sade - smooth operator | cover Kamila |",
-      "duration": "1:15"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/o3jY_LAgI2U",
+        "title": "Sade - smooth operator | cover Kamila |",
+        "duration": "1:15"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -299,6 +326,7 @@
       "youtube": "",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -322,11 +350,13 @@
       "./images/artists/elizaveta-yurgina-03.webp",
       "./images/artists/elizaveta-yurgina-04.webp"
     ],
-    "video": {
-      "src": "https://youtu.be/J7A7dWbr9Kg",
-      "title": "Eliza's Band - Cappuccino",
-      "duration": "4:02"
-    },
+    "videos": [
+      {
+        "src": "https://youtu.be/J7A7dWbr9Kg",
+        "title": "Eliza's Band - Cappuccino",
+        "duration": "4:02"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -338,6 +368,7 @@
       "youtube": "http://www.youtube.com/@elizayurgina7270",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -355,11 +386,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -371,6 +398,7 @@
       "youtube": "",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -388,11 +416,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -404,6 +428,7 @@
       "youtube": "",
       "website": "https://ivanschetchikov.ru/disk/31-12-2023-folio-rt7r6q"
     },
+    "priceNote": "",
     "price": 4000
   },
   {
@@ -421,11 +446,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -437,6 +458,7 @@
       "youtube": "",
       "website": "https://mihalevskiyart.gallery.photo/"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -456,11 +478,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -472,6 +490,7 @@
       "youtube": "",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -494,11 +513,13 @@
       "./images/artists/pavel-savchenko-03.webp",
       "./images/artists/pavel-savchenko-04.webp"
     ],
-    "video": {
-      "src": "https://rutube.ru/video/f9ab545fccbbb8208d440a4d2fe3f206/",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [
+      {
+        "src": "https://rutube.ru/video/f9ab545fccbbb8208d440a4d2fe3f206/",
+        "title": "",
+        "duration": ""
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -510,6 +531,7 @@
       "youtube": "",
       "website": "https://pavelsavchenko.com/korp"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -531,11 +553,13 @@
       "./images/artists/sergey-bondar-03.webp",
       "./images/artists/sergey-bondar-04.webp"
     ],
-    "video": {
-      "src": "https://www.youtube.com/watch?v=2HdoJqO_3Eo",
-      "title": "NEW PROMO | Ведущий Сергей Бондарь",
-      "duration": "0:58"
-    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=2HdoJqO_3Eo",
+        "title": "NEW PROMO | Ведущий Сергей Бондарь",
+        "duration": "0:58"
+      }
+    ],
      "rider": {
       "url": "",
       "download": "",
@@ -547,6 +571,7 @@
       "youtube": "https://www.youtube.com/@bondarevent",
       "website": "http://bondarevent.ru/"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -568,11 +593,7 @@
       "./images/artists/artur-shilov-02.webp",
       "./images/artists/artur-shilov-03.webp"
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -584,6 +605,7 @@
       "youtube": "https://www.youtube.com/@shilov_artur",
       "website": "https://arturshilov.tilda.ws/"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -601,11 +623,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -617,6 +635,7 @@
       "youtube": "",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -637,11 +656,7 @@
       "./images/artists/petr-mikitenko-03.webp",
       "./images/artists/petr-mikitenko-04.webp"
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -653,6 +668,7 @@
       "youtube": "https://www.youtube.com/user/petrparty",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -674,11 +690,7 @@
       "./images/artists/leonid-kiyashko-03.webp",
       "./images/artists/leonid-kiyashko-04.webp"
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -690,6 +702,7 @@
       "youtube": "",
       "website": "https://leonidkiyashko.ru/"
     },
+    "priceNote": "",
     "price": ""
   },
   {
@@ -707,11 +720,7 @@
     "portfolio": [
       
     ],
-    "video": {
-      "src": "",
-      "title": "",
-      "duration": ""
-    },
+    "videos": [],
      "rider": {
       "url": "",
       "download": "",
@@ -723,6 +732,7 @@
       "youtube": "",
       "website": ""
     },
+    "priceNote": "",
     "price": ""
   }
 ]

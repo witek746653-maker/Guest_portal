@@ -31,8 +31,109 @@ const setBgImage = (el, src) => {
   el.style.backgroundImage = `url('${src}')`;
 };
 
+// Превращаем обычную ссылку в ссылку для iframe-плеера
+// iframe — это "встроенное окошко" внутри страницы, где живёт плеер
+function toEmbedUrl(url) {
+  if (!url || typeof url !== 'string') return null;
+
+  let u;
+  try {
+    u = new URL(url);
+  } catch {
+    return null; // не похоже на URL
+  }
+
+  const host = u.hostname.replace(/^www\./, '').toLowerCase();
+
+  // YouTube
+  if (host === 'youtu.be') {
+    const id = u.pathname.replace('/', '').trim();
+    return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : null;
+  }
+  if (host === 'youtube.com' || host === 'm.youtube.com') {
+    // https://www.youtube.com/watch?v=ID
+    if (u.pathname === '/watch') {
+      const id = u.searchParams.get('v');
+      return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : null;
+    }
+    // https://www.youtube.com/embed/ID
+    if (u.pathname.startsWith('/embed/')) {
+      return url;
+    }
+    // https://www.youtube.com/shorts/ID
+    if (u.pathname.startsWith('/shorts/')) {
+      const id = u.pathname.split('/')[2];
+      return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : null;
+    }
+  }
+
+  // Rutube
+  if (host === 'rutube.ru') {
+    // Примеры:
+    // - https://rutube.ru/video/<id>/
+    // - https://rutube.ru/play/embed/<id>
+    if (u.pathname.startsWith('/play/embed/')) {
+      return url;
+    }
+    const parts = u.pathname.split('/').filter(Boolean);
+    const videoIdx = parts.indexOf('video');
+    const id = videoIdx >= 0 ? parts[videoIdx + 1] : null;
+    return id ? `https://rutube.ru/play/embed/${encodeURIComponent(id)}` : null;
+  }
+
+  return null;
+}
+
 // Форматирование чисел для цены
 const formatPrice = (price) => new Intl.NumberFormat('ru-RU').format(price);
+
+// Приводим телефон к формату tel: (оставляем только + и цифры)
+const toTelHref = (phone) => {
+  if (!phone) return '';
+  const cleaned = String(phone).trim().replace(/[^\d+]/g, '');
+  return cleaned ? `tel:${cleaned}` : '';
+};
+
+// Красиво форматируем +7XXXXXXXXXX → +7 (XXX) XXX-XX-XX
+const formatRuPhone = (phone) => {
+  const cleaned = String(phone || '').replace(/[^\d+]/g, '');
+  const m = cleaned.match(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/);
+  if (!m) return String(phone || '');
+  return `+7 (${m[1]}) ${m[2]}-${m[3]}-${m[4]}`;
+};
+
+// Разделяем цену и приписку (пример: "150 000 ₽ + 6% ..." → "150 000 ₽" и "+ 6% ...")
+function splitPriceAndNote(price, priceNote) {
+  const noteFromField = priceNote !== undefined && priceNote !== null ? String(priceNote).trim() : '';
+
+  // price может быть числом, строкой или пустым
+  if (typeof price === 'number') {
+    return {
+      amountText: `${formatPrice(price)} ₽`,
+      noteText: noteFromField,
+    };
+  }
+
+  const raw = price !== undefined && price !== null ? String(price).trim() : '';
+  if (!raw) {
+    return { amountText: 'По запросу', noteText: noteFromField };
+  }
+
+  // Если приписка отдельно задана — используем её, цену оставляем как есть
+  if (noteFromField) {
+    return { amountText: raw, noteText: noteFromField };
+  }
+
+  // Авто-сплит по "+" (для старых значений типа "150 000 ₽ + 6% ...")
+  const plusIdx = raw.indexOf('+');
+  if (plusIdx > 0) {
+    const left = raw.slice(0, plusIdx).trim();
+    const right = raw.slice(plusIdx).trim(); // начинается с "+"
+    return { amountText: left || raw, noteText: right };
+  }
+
+  return { amountText: raw, noteText: '' };
+}
 
 // Определяет страницу возврата на основе категории участника
 function getBackPageUrl(category) {
@@ -161,17 +262,67 @@ async function loadArtist() {
       setVisible(portfolioBlock, false);
     }
 
-    // Видео (ссылка + превью)
+    // Видео (1+ роликов во встроенном плеере)
     const videoBlock = document.getElementById('artist-video-block');
-    const videoWrapper = document.getElementById('artist-video');
-    const hasVideo = artist.video && (artist.video.src || artist.video.title || artist.video.duration);
-    if (videoBlock && videoWrapper && hasVideo) {
-      const preview = artist.video.preview || artist.coverImage || artist.cardImage || '';
-      setBgImage(videoWrapper.querySelector('.video-bg'), preview);
-      videoWrapper.href = artist.video.src || '#';
-      videoWrapper.querySelector('.video-title').textContent = artist.video.title || '';
-      videoWrapper.querySelector('.video-duration').textContent = artist.video.duration || '';
-      setVisible(videoBlock, Boolean(artist.video.src));
+    const videosContainer = document.getElementById('artist-videos');
+
+    // Данные: videos: [{ src, title, duration }]
+    // (Раньше было поле video, но теперь везде используем videos)
+    const videosRaw = Array.isArray(artist.videos) ? artist.videos : [];
+
+    // Оставляем только видео с реальной ссылкой
+    const videos = videosRaw.filter((v) => v && v.src);
+
+    if (videoBlock && videosContainer && videos.length) {
+      setVisible(videoBlock, true);
+      videosContainer.innerHTML = '';
+
+      videos.forEach((v) => {
+        const embedUrl = toEmbedUrl(v.src);
+        if (!embedUrl) return; // не можем встроить — пропускаем
+
+        const card = document.createElement('div');
+        card.className = 'flex flex-col gap-2';
+
+        // Важно: iframe должен быть "кликабельным", поэтому никаких оверлеев сверху
+        const frameWrap = document.createElement('div');
+        frameWrap.className =
+          'w-full aspect-video rounded-xl overflow-hidden bg-black/20 border border-white/5';
+
+        const iframe = document.createElement('iframe');
+        iframe.className = 'w-full h-full';
+        iframe.src = embedUrl;
+        iframe.title = v.title || '';
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+
+        frameWrap.appendChild(iframe);
+
+        const metaRow = document.createElement('div');
+        metaRow.className = 'flex items-start justify-between gap-3';
+
+        const titleEl = document.createElement('div');
+        titleEl.className = 'text-white/90 text-sm font-medium leading-snug';
+        titleEl.textContent = v.title || '';
+
+        const durationEl = document.createElement('div');
+        durationEl.className = 'text-gray-400 text-xs whitespace-nowrap';
+        durationEl.textContent = v.duration || '';
+
+        metaRow.appendChild(titleEl);
+        metaRow.appendChild(durationEl);
+
+        card.appendChild(frameWrap);
+        card.appendChild(metaRow);
+
+        videosContainer.appendChild(card);
+      });
+
+      // Если все видео "отфильтровались" (не смогли встроить) — скрываем блок
+      setVisible(videoBlock, videosContainer.childElementCount > 0);
     } else {
       setVisible(videoBlock, false);
     }
@@ -239,14 +390,44 @@ async function loadArtist() {
     }
     setVisible(socialWrapper, hasSocial);
 
-    // Стоимость / CTA
-    const priceBar = document.getElementById('artist-cta-bar');
-    const priceEl = document.getElementById('artist-price');
-    if (priceBar && priceEl && artist.price !== undefined && artist.price !== null && artist.price !== '') {
-      priceEl.textContent = `${formatPrice(artist.price)} руб.`;
-      setVisible(priceBar, true);
-    } else {
-      setVisible(priceBar, false);
+    // Гонорар + телефон (нижняя "плашка" как в индустрии)
+    const ctaBar = document.getElementById('artist-cta-bar');
+    const feeEl = document.getElementById('artist-fee');
+    const feeNoteInlineEl = document.getElementById('artist-fee-note-inline');
+    const feeNoteEl = document.getElementById('artist-fee-note');
+    const callBtn = document.getElementById('artist-call-btn');
+    const phoneLink = document.getElementById('artist-phone-link');
+
+    if (ctaBar && feeEl && feeNoteEl && feeNoteInlineEl && callBtn && phoneLink) {
+      const phone = artist.phone ? String(artist.phone).trim() : '';
+      const phoneHref = toTelHref(phone);
+
+      const { amountText, noteText } = splitPriceAndNote(artist.price, artist.priceNote);
+
+      feeEl.textContent = amountText;
+
+      // Приписку показываем компактно (рядом) если короткая, иначе — отдельной строкой
+      const note = noteText || '';
+      const isShort = note.length > 0 && note.length <= 28;
+
+      feeNoteInlineEl.textContent = isShort ? note : '';
+      feeNoteEl.textContent = isShort ? '' : note;
+
+      setVisible(feeNoteInlineEl, Boolean(feeNoteInlineEl.textContent));
+      setVisible(feeNoteEl, Boolean(feeNoteEl.textContent));
+
+      // Телефон
+      callBtn.href = phoneHref;
+      phoneLink.href = phoneHref;
+      phoneLink.textContent = formatRuPhone(phone);
+
+      const hasPhone = Boolean(phoneHref);
+      setVisible(callBtn, hasPhone);
+      setVisible(phoneLink, hasPhone);
+
+      setVisible(ctaBar, true);
+    } else if (ctaBar) {
+      setVisible(ctaBar, false);
     }
     
     // Устанавливаем правильный URL для кнопки "назад" на основе категории

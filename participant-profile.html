@@ -101,19 +101,8 @@
 <!-- Видео -->
 <div class="flex flex-col gap-4" id="artist-video-block">
 <h3 class="text-white text-xl font-bold">Примеры работ</h3>
-<a class="relative w-full aspect-video rounded-xl overflow-hidden group cursor-pointer block" href="" id="artist-video" rel="noopener" target="_blank">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 video-bg" data-alt=""></div>
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-<div class="size-16 rounded-full bg-primary/90 text-white flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-<span class="material-symbols-outlined text-[32px] fill-1 ml-1">play_arrow</span>
-</div>
-</div>
-<div class="absolute bottom-3 left-3 px-3 py-1 bg-black/60 backdrop-blur rounded text-white text-xs font-medium flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">open_in_new</span>
-<span class="video-duration"></span>
-</div>
-<div class="absolute bottom-3 right-3 px-3 py-1 bg-black/60 backdrop-blur rounded text-white text-xs font-medium video-title"></div>
-</a>
+<!-- Контейнер: сюда JS добавит 1+ видео-карточек -->
+<div class="flex flex-col gap-4" id="artist-videos"></div>
 </div>
 
 <!-- Райдер/документы -->
@@ -153,15 +142,29 @@
 </div>
 </div>
 <div class="fixed bottom-0 left-0 w-full z-40 px-4 py-3 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 pb-8 safe-area-pb" id="artist-cta-bar">
-<div class="flex items-center justify-center gap-4 max-w-md mx-auto">
-<div class="flex flex-col items-center">
-<span class="text-gray-400 text-xs font-medium">Ставка</span>
-<div class="flex items-end gap-1">
-<span class="text-white text-xl font-bold" id="artist-price"></span>
-<span class="text-gray-400 text-sm font-medium mb-1">/ час</span>
-</div>
-</div>
-</div>
+  <div class="max-w-md mx-auto flex items-center justify-between gap-4">
+    <div class="flex flex-col min-w-0">
+      <span class="text-gray-400 text-xs font-medium">Гонорар</span>
+      <div class="flex items-baseline gap-2 min-w-0">
+        <span class="text-white text-xl font-bold truncate" id="artist-fee"></span>
+        <span class="text-gray-300 text-xs font-medium whitespace-nowrap" id="artist-fee-note-inline"></span>
+      </div>
+      <span class="text-gray-400 text-xs font-normal leading-snug" id="artist-fee-note"></span>
+    </div>
+
+    <a
+      id="artist-call-btn"
+      href="tel:+79262223022"
+      class="shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-white font-bold shadow-[0_6px_24px_rgba(242,127,13,0.35)] active:scale-[0.98] transition-all"
+    >
+      <span class="material-symbols-outlined">call</span>
+      Позвонить
+    </a>
+  </div>
+
+  <div class="max-w-md mx-auto mt-2 text-center">
+    <a class="text-gray-300 text-xs font-medium hover:text-white transition-colors" href="tel:+79262223022" id="artist-phone-link"></a>
+  </div>
 </div>
 </div>
 </div>
