@@ -138,29 +138,29 @@ function splitPriceAndNote(price, priceNote) {
 // Определяет страницу возврата на основе категории участника
 function getBackPageUrl(category) {
   if (!category) return 'service-artists.html';
-  
+
   const categoryLower = category.toLowerCase();
-  
+
   // Фотограф → service-photography.html
   if (categoryLower.includes('фотограф')) {
     return 'service-photography.html';
   }
-  
+
   // Звукорежиссер → service-sound-engeneer.html
   if (categoryLower.includes('звукорежиссер')) {
     return 'service-sound-engeneer.html';
   }
-  
+
   // Флорист или Декоратор → service-decoration.html
   if (categoryLower.includes('флорист') || categoryLower.includes('декоратор')) {
     return 'service-decoration.html';
   }
-  
+
   // Техника или Оборудование → service-equipment.html
   if (categoryLower.includes('техника') || categoryLower.includes('оборудование')) {
     return 'service-equipment.html';
   }
-  
+
   // Все остальные → service-artists.html
   return 'service-artists.html';
 }
@@ -179,7 +179,7 @@ async function loadArtist() {
     const artists = await response.json();
     const artist = Array.isArray(artists) ? artists.find((item) => item.id === id) : null;
     if (!artist) return;
-    
+
     // Сохраняем данные участника для использования в кнопке "назад"
     currentArtist = artist;
 
@@ -279,27 +279,43 @@ async function loadArtist() {
 
       videos.forEach((v) => {
         const embedUrl = toEmbedUrl(v.src);
-        if (!embedUrl) return; // не можем встроить — пропускаем
 
         const card = document.createElement('div');
         card.className = 'flex flex-col gap-2';
 
-        // Важно: iframe должен быть "кликабельным", поэтому никаких оверлеев сверху
         const frameWrap = document.createElement('div');
-        frameWrap.className =
-          'w-full aspect-video rounded-xl overflow-hidden bg-black/20 border border-white/5';
+        frameWrap.className = 'w-full aspect-video rounded-xl overflow-hidden bg-black/20 border border-white/5 bg-cover bg-center';
 
-        const iframe = document.createElement('iframe');
-        iframe.className = 'w-full h-full';
-        iframe.src = embedUrl;
-        iframe.title = v.title || '';
-        iframe.loading = 'lazy';
-        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-        iframe.allow =
-          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-        iframe.allowFullscreen = true;
+        // Если есть постер — ставим его фоном (полезно для состояния загрузки)
+        if (v.poster) {
+          frameWrap.style.backgroundImage = `url('${v.poster}')`;
+        }
 
-        frameWrap.appendChild(iframe);
+        if (embedUrl) {
+          // Это Embed (YouTube, Rutube)
+          const iframe = document.createElement('iframe');
+          iframe.className = 'w-full h-full';
+          iframe.src = embedUrl;
+          iframe.title = v.title || '';
+          iframe.loading = 'lazy';
+          iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          iframe.allowFullscreen = true;
+          frameWrap.appendChild(iframe);
+        } else {
+          // Это локальное видео (mp4 и т.д.)
+          const video = document.createElement('video');
+          video.className = 'w-full h-full object-cover';
+          video.src = v.src;
+          // Если есть постер — ставим его и в атрибут, чтобы плеер знал о нем
+          if (v.poster) {
+            video.poster = v.poster;
+          }
+          video.controls = true;
+          video.playsInline = true;
+          video.preload = 'metadata'; // Экономим трафик, грузим только метаданные
+          frameWrap.appendChild(video);
+        }
 
         const metaRow = document.createElement('div');
         metaRow.className = 'flex items-start justify-between gap-3';
@@ -327,7 +343,7 @@ async function loadArtist() {
       setVisible(videoBlock, false);
     }
 
-   
+
     // Райдер и документы
     const riderBlock = document.getElementById('artist-rider-block');
     if (riderBlock) {
@@ -408,7 +424,7 @@ async function loadArtist() {
 
       // Приписку показываем компактно (рядом) если короткая, иначе — отдельной строкой
       const note = noteText || '';
-      const isShort = note.length > 0 && note.length <= 28;
+      const isShort = note.length > 0 && note.length <= 15;
 
       feeNoteInlineEl.textContent = isShort ? note : '';
       feeNoteEl.textContent = isShort ? '' : note;
@@ -429,13 +445,21 @@ async function loadArtist() {
     } else if (ctaBar) {
       setVisible(ctaBar, false);
     }
-    
+
     // Устанавливаем правильный URL для кнопки "назад" на основе категории
     const backButton = document.getElementById('back-button');
     if (backButton) {
       const backPageUrl = getBackPageUrl(artist.category);
-      backButton.onclick = () => {
-        window.location.href = backPageUrl;
+      backButton.onclick = (e) => {
+        e.preventDefault();
+        // Если в истории есть страницы, возвращаемся назад
+        // Это предотвращает создание бесконечных циклов в истории
+        if (window.history.length > 1 && document.referrer.includes(window.location.host)) {
+          window.history.back();
+        } else {
+          // Если истории нет (прямой заход), идем на страницу категории
+          window.location.href = backPageUrl;
+        }
       };
     }
   } catch (error) {

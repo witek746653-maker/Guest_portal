@@ -1,225 +1,237 @@
 <!DOCTYPE html>
-<html class="dark" lang="ru"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Дополнительные услуги</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#181411",
-                        "card-dark": "#27211b",
-                        "text-secondary": "#baab9c",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
+<html class="dark" lang="ru">
 
-  </head>
-<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col pb-4 page-shell mx-auto">
-<header class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md py-4 border-b border-white/5">
-  <a
-  href="index.html"
-  class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-  aria-label="Back"
->
-  <span class="material-symbols-outlined text-[24px]">
-    arrow_back_ios_new
-  </span>
-</a>
-<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Дополнительные услуги</h1>
-</header>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Дополнительные услуги</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "background-light": "#f8f7f5",
+            "background-dark": "#181411",
+            "card-dark": "#27211b",
+            "text-secondary": "#baab9c",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
 
-<div class="flex flex-col gap-3">
-<a href="service-decoration.html"
-   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
-  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
-    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-      <div class="h-full w-full bg-cover bg-center"
-           style='background-image: url("images/florist.webp");'>
-      </div>
-    </div>
+</head>
 
-    <div class="flex-1 min-w-0">
-      <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Декораторы и флористы</h3>
-      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-        <span class="flex items-center">
-          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
-          <span>Установка: 1 час</span>
+<body
+  class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+  <div class="relative flex min-h-screen w-full flex-col pb-4 page-shell mx-auto">
+    <header
+      class="sticky top-0 z-50 flex items-center justify-between bg-background-dark/95 backdrop-blur-md py-4 border-b border-white/5">
+      <a id="back-button" href="index.html"
+        class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        aria-label="Back">
+        <span class="material-symbols-outlined text-[24px]">
+          arrow_back_ios_new
         </span>
-      </div>
-    </div>
+      </a>
+      <h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Дополнительные услуги</h1>
+    </header>
 
-    <div class="flex flex-col items-end shrink-0 ml-2">
-      <span class="text-sm font-bold text-primary whitespace-nowrap">от ... ₽</span>
+    <div class="flex flex-col gap-3">
+      <a href="service-decoration.html"
+        class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+        <div
+          class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+          <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+            <div class="h-full w-full bg-cover bg-center" style='background-image: url("images/florist.webp");'>
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-white line-clamp-2 leading-tight">Декораторы и флористы</h3>
+            <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+              <span class="flex items-center">
+                <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+                <span>Установка: 1 час</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-end shrink-0 ml-2">
+            <span class="text-sm font-bold text-primary whitespace-nowrap"></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="service-artists.html"
+        class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+        <div
+          class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+          <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+            <div class="h-full w-full bg-cover bg-center" style='background-image: url("images/singer.webp");'>
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Артисты и ведущие</h3>
+            <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+              <span class="flex items-center">
+                <span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
+                <span>Длительность: 2-4 часа</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-end shrink-0 ml-2">
+            <span class="text-sm font-bold text-primary whitespace-nowrap"></span>
+          </div>
+        </div>
+
+      </a>
+      <a href="service-sound-engeneer.html"
+        class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+        <div
+          class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+          <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+            <div class="h-full w-full bg-cover bg-center" style='background-image: url("images/sound-engeneer.webp")'>
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Звукорежиссер</h3>
+            <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+              <span class="flex items-center">
+                <span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
+                <span>Длительность: 1 час</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-end shrink-0 ml-2">
+            <span class="text-sm font-bold text-primary whitespace-nowrap">3000 ₽</span>
+          </div>
+        </div>
+
+      </a>
+      <a href="service-equipment.html"
+        class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+        <div
+          class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+          <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+            <div class="h-full w-full bg-cover bg-center" style='background-image: url("images/equipment.webp");'>
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
+              Техника и оборудование
+            </h3>
+            <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+              <span class="flex items-center">
+                <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+                <span>Установка: 1 час</span>
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col items-end shrink-0 ml-2">
+            <span class="text-sm font-bold text-primary whitespace-nowrap"></span>
+          </div>
+        </div>
+
+      </a>
+      <a href="service-photography.html"
+        class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+
+        <div
+          class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
+          <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
+            <div class="h-full w-full bg-cover bg-center" style='background-image: url("images/photography.webp");'>
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
+              Фото и видео съемка
+            </h3>
+            <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
+              <span class="flex items-center">
+                <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
+                <span>Установка: 1 час </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-end shrink-0 ml-2">
+            <span class="text-sm font-bold text-primary whitespace-nowrap">
+
+            </span>
+          </div>
+        </div>
+
+      </a>
+
+      <nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2"
+        aria-label="Нижняя навигация">
+        <div class="flex items-center justify-between gap-2">
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="index.html">
+            <span class="material-symbols-outlined text-[24px]">home</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
+          </a>
+
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="event-packages.html">
+            <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
+          </a>
+
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="event-services.html"
+            aria-current="page">
+            <span class="material-symbols-outlined text-[24px]">event</span>
+            <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
+          </a>
+
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="contacts.html">
+            <span class="material-symbols-outlined text-[24px]">contacts</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
+          </a>
+        </div>
+      </nav>
+
     </div>
   </div>
-</a>
 
-<a href="service-artists.html"
-   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
+  <script defer src="assets/js/app.js"></script>
+</body>
 
-  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
-    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-      <div class="h-full w-full bg-cover bg-center"
-           style='background-image: url("images/singer.webp");'>
-      </div>
-    </div>
-
-    <div class="flex-1 min-w-0">
-      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Артисты и ведущие</h3>
-      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-        <span class="flex items-center">
-          <span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
-          <span>Длительность: 2-4 часа</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="flex flex-col items-end shrink-0 ml-2">
-      <span class="text-sm font-bold text-primary whitespace-nowrap">... ₽ / час</span>
-    </div>
-  </div>
-
-</a>
-<a href="service-sound-engeneer.html"
-   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
-
-  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
-    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-      <div class="h-full w-full bg-cover bg-center"
-           style='background-image: url("images/sound-engeneer.webp")'>
-      </div>
-    </div>
-
-    <div class="flex-1 min-w-0">
-      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">Звукорежиссер</h3>
-      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-        <span class="flex items-center">
-          <span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
-          <span>Длительность: 1 час</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="flex flex-col items-end shrink-0 ml-2">
-      <span class="text-sm font-bold text-primary whitespace-nowrap">3000 ₽</span>
-    </div>
-  </div>
-
-</a>
-<a href="service-equipment.html"
-   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
-
-  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
-    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-      <div class="h-full w-full bg-cover bg-center"
-           style='background-image: url("images/equipment.webp");'>
-      </div>
-    </div>
-
-    <div class="flex-1 min-w-0">
-      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
-        Техника и оборудование
-      </h3>
-      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-        <span class="flex items-center">
-          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
-          <span>Установка: 30 мин</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="flex flex-col items-end shrink-0 ml-2">
-      <span class="text-sm font-bold text-primary whitespace-nowrap">… ₽</span>
-    </div>
-  </div>
-
-</a>
-<a href="service-photography.html"
-   class="block w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/60">
-
-  <div class="flex items-center gap-3 bg-card-dark rounded-lg ring-1 ring-white/5 p-3 hover:ring-white/10 transition">
-    <div class="relative w-16 h-16 shrink-0 rounded-md overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-card-dark/60 to-transparent z-10"></div>
-      <div class="h-full w-full bg-cover bg-center"
-           style='background-image: url("images/photography.webp");'>
-      </div>
-    </div>
-
-    <div class="flex-1 min-w-0">
-      <h3 class="text-sm font-semibold text-white line-clamp-1 leading-tight">
-        Фото и видео съемка
-      </h3>
-      <div class="flex items-center text-xs text-text-secondary mt-1 gap-2">
-        <span class="flex items-center">
-          <span class="material-symbols-outlined text-[14px] mr-1">timer</span>
-          <span>Установка: 2 часа</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="flex flex-col items-end shrink-0 ml-2">
-      <span class="text-sm font-bold text-primary whitespace-nowrap">
-        ... ₽
-      </span>
-    </div>
-  </div>
-
-</a>
-
-<nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2" aria-label="Нижняя навигация">
-  <div class="flex items-center justify-between gap-2">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="index.html">
-      <span class="material-symbols-outlined text-[24px]">home</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
-    </a>
-
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="event-packages.html">
-      <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
-    </a>
-
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="event-services.html" aria-current="page">
-      <span class="material-symbols-outlined text-[24px]">event</span>
-      <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
-    </a>
-
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="contacts.html">
-      <span class="material-symbols-outlined text-[24px]">contacts</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
-    </a>
-  </div>
-</nav>
-
-</div>
-</div>
-
-<script defer src="assets/js/app.js"></script>
-</body></html>
+</html>

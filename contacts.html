@@ -1,216 +1,221 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="ru"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Контакты и бронирование</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
-                        "surface-dark": "#2c2219", // Slightly lighter for cards
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+<html class="dark" lang="ru">
 
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
-<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24 page-shell mx-auto">
-<!-- TopAppBar -->
-<div class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md py-4 justify-between border-b border-black/5 dark:border-white/5">
-<button
-  type="button"
-  onclick="history.back()"
-  class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-  aria-label="Back"
->
-  <span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
-</button>
-<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Контакты</h2>
-<div class="size-10 shrink-0"></div> <!-- Spacer for centering -->
-</div>
-<!-- HeaderImage (Hero) -->
-<div class="@container w-full">
-<div class="w-full h-[260px] relative overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Dark moody restaurant interior with warm orange lighting and elegant table setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHlfpr5DMtKILF484iMqh7kr2Lhj4SNjYitxpaDoN3dKwG4mTF06KXjMoeaNmdyoewMM8Es04w35wKkPOt_WyLWsgWciq01rB4HcWEtUruo-KgLewHG9a9NhZ4CsRAk11Qn0m44eoWjzdoh_cmLgH-tyyNJNKiZhHF7dxdFuLejQLohH7HdhIIra4SBUQqeSKlmyUcByz-dApTmYpbVJU3q64o4yNIyGf5iCtyH2sx08rx5uqNUi44ARL0SHmN05TC7kh74-zby0Nd");'>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
-<div class="absolute bottom-0 left-0 w-full p-6">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Контакты и бронирование</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "background-light": "#f8f7f5",
+            "background-dark": "#221910",
+            "surface-dark": "#2c2219", // Slightly lighter for cards
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
 
-<h1 class="text-white text-3xl font-bold leading-tight drop-shadow-sm">Ресторан "Sabor de la Vida"</h1>
-<p class="text-white/80 text-sm mt-1 font-medium">Премиальные банкеты и ужины</p>
-</div>
-</div>
-</div>
-<!-- Map Section -->
-<div class="py-6">
-  <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">
-    Как нас найти
-  </h3>
+</head>
 
-  <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-white/5">
-    <!-- Сам виджет карты -->
-    <iframe
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3A3d1916643c583d095f5737f96513cdbd99c25720bc6bc1cdaaae43f9cc7d78b8&amp;source=constructor" width="500" height="400" frameborder="0"
-      class="absolute inset-0 w-full h-full"
-      style="border:0;"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+  <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24 page-shell mx-auto">
+    <!-- TopAppBar -->
+    <div
+      class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md py-4 justify-between border-b border-black/5 dark:border-white/5">
+      <a id="back-button" href="index.html"
+        class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        aria-label="Back">
+        <span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+      </a>
+      <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
+        Контакты</h2>
+      <div class="size-10 shrink-0"></div> <!-- Spacer for centering -->
+    </div>
+    <!-- HeaderImage (Hero) -->
+    <div class="@container w-full">
+      <div class="w-full h-[260px] relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center"
+          data-alt="Dark moody restaurant interior with warm orange lighting and elegant table setting"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHlfpr5DMtKILF484iMqh7kr2Lhj4SNjYitxpaDoN3dKwG4mTF06KXjMoeaNmdyoewMM8Es04w35wKkPOt_WyLWsgWciq01rB4HcWEtUruo-KgLewHG9a9NhZ4CsRAk11Qn0m44eoWjzdoh_cmLgH-tyyNJNKiZhHF7dxdFuLejQLohH7HdhIIra4SBUQqeSKlmyUcByz-dApTmYpbVJU3q64o4yNIyGf5iCtyH2sx08rx5uqNUi44ARL0SHmN05TC7kh74-zby0Nd");'>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full p-6">
 
-    
+          <h1 class="text-white text-3xl font-bold leading-tight drop-shadow-sm">Ресторан "Sabor de la Vida"</h1>
+          <p class="text-white/80 text-sm mt-1 font-medium">Премиальные банкеты и ужины</p>
+        </div>
+      </div>
+    </div>
+    <!-- Map Section -->
+    <div class="py-6">
+      <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">
+        Как нас найти
+      </h3>
 
-  <!-- Подсказки как добраться -->
-  <div class="mt-4 space-y-2 text-sm text-slate-600 dark:text-white/70">
-    <p class="font-medium">Мы находимся в 5 минутах пешком от метро «Улица 1905 года».</p>
-    <p>Ориентир — бизнес‑центр рядом с ТТК, отдельный вход в ресторан с вывеской «Sabor de la Vida».</p>
-  </div>
-</div>
-<!-- конец Map Section -->
-<!-- Contact Info List -->
-<div class="space-y-3">
-<!-- Address -->
-<a
-  href="https://yandex.ru/maps/?rtext=~Москва,+ул.+1905+года,+10с1&rtt=auto"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm"
->
-  <div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
-    <span class="material-symbols-outlined">location_on</span>
-  </div>
-
-  <div class="flex flex-col items-start flex-1">
-    <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
-      ул. 1905 года, 10с1, Москва
-    </p>
-    <p id="distance-text" class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-2 text-left">
-      Нажмите, чтобы построить маршрут.
-    </p>
-  </div>
-
-  <div class="shrink-0 text-slate-400 dark:text-white/20">
-    <span class="material-symbols-outlined">chevron_right</span>
-  </div>
-</a>
-
-<!-- Phone -->
-<!-- Phone -->
-<a
-  href="tel:+79262223022"
-  class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm"
->
-  <div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
-    <span class="material-symbols-outlined">call</span>
-  </div>
-
-  <div class="flex flex-col items-start flex-1">
-    <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
-      +7 (926) 222-30-22
-    </p>
-    <p class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">
-      Ежедневно с 10:00 до 22:00
-    </p>
-  </div>
-
-  <div class="shrink-0 text-slate-400 dark:text-white/20">
-    <span class="material-symbols-outlined">chevron_right</span>
-  </div>
-</a>
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-white/5">
+        <!-- Сам виджет карты -->
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A3d1916643c583d095f5737f96513cdbd99c25720bc6bc1cdaaae43f9cc7d78b8&amp;source=constructor"
+          width="500" height="400" frameborder="0" class="absolute inset-0 w-full h-full" style="border:0;"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-<!-- Opening Hours -->
-<div class="py-8">
-<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Время работы</h3>
-<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-100 dark:border-white/5 p-5">
-<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-white/5">
-</div>
-<div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-white/5">
-<span class="text-slate-600 dark:text-white/70">Пн - Вс</span>
-<span class="font-medium dark:text-white">10:00 - 00:00</span>
-</div>
-<div class="flex justify-between items-center pt-3 text-primary">
 
-</div>
-</div>
-</div>
-<!-- Social Media -->
-<!-- Social Media -->
-<div class="pb-8">
-  <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Мы в соцсетях</h3>
+        <!-- Подсказки как добраться -->
+        <div class="mt-4 space-y-2 text-sm text-slate-600 dark:text-white/70">
+          <p class="font-medium">Мы находимся в 5 минутах пешком от метро «Улица 1905 года».</p>
+          <p>Ориентир — бизнес‑центр рядом с ТТК, отдельный вход в ресторан с вывеской «Sabor de la Vida».</p>
+        </div>
+      </div>
+      <!-- конец Map Section -->
+      <!-- Contact Info List -->
+      <div class="space-y-3">
+        <!-- Address -->
+        <a href="https://yandex.ru/maps/?rtext=~Москва,+ул.+1905+года,+10с1&rtt=auto" target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm">
+          <div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
 
-  <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
-    <a class="flex items-center gap-3 bg-white dark:bg-surface-dark px-5 py-3 rounded-full border border-slate-100 dark:border-white/5 whitespace-nowrap active:bg-primary/5 transition-colors"
-       href="https://sabordelavida.ru/">
-      <span class="material-symbols-outlined text-primary">public</span>
-      <span class="font-medium text-sm">Website</span>
-    </a>
+          <div class="flex flex-col items-start flex-1">
+            <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
+              ул. 1905 года, 10с1, Москва
+            </p>
+            <p id="distance-text"
+              class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-2 text-left">
+              Нажмите, чтобы построить маршрут.
+            </p>
+          </div>
 
-    <a class="flex items-center gap-3 bg-white dark:bg-surface-dark px-5 py-3 rounded-full border border-slate-100 dark:border-white/5 whitespace-nowrap active:bg-primary/5 transition-colors"
-       href="https://t.me/sabordelavidarestaurant">
-      <span class="material-symbols-outlined text-primary">near_me</span>
-      <span class="font-medium text-sm">Telegram</span>
-    </a>
-  </div>
-</div>
+          <div class="shrink-0 text-slate-400 dark:text-white/20">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </div>
+        </a>
 
-<!-- Sticky Bottom CTA -->
-<label
-  for="contact-modal"
-  class="w-full bg-primary hover:bg-primary/90 text-white
+        <!-- Phone -->
+        <!-- Phone -->
+        <a href="tel:+79262223022"
+          class="w-full flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-slate-100 dark:border-white/5 active:scale-[0.98] transition-all shadow-sm">
+          <div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+
+          <div class="flex flex-col items-start flex-1">
+            <p class="text-slate-900 dark:text-white text-base font-semibold leading-normal line-clamp-1 text-left">
+              +7 (926) 222-30-22
+            </p>
+            <p class="text-slate-500 dark:text-white/50 text-sm font-normal leading-normal line-clamp-1 text-left">
+              Ежедневно с 10:00 до 22:00
+            </p>
+          </div>
+
+          <div class="shrink-0 text-slate-400 dark:text-white/20">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </div>
+        </a>
+
+
+        <!-- Opening Hours -->
+        <div class="py-8">
+          <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Время работы</h3>
+          <div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-100 dark:border-white/5 p-5">
+            <div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-white/5">
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-100 dark:border-white/5">
+              <span class="text-slate-600 dark:text-white/70">Пн - Вс</span>
+              <span class="font-medium dark:text-white">10:00 - 00:00</span>
+            </div>
+            <div class="flex justify-between items-center pt-3 text-primary">
+
+            </div>
+          </div>
+        </div>
+        <!-- Social Media -->
+        <!-- Social Media -->
+        <div class="pb-8">
+          <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Мы в соцсетях</h3>
+
+          <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+            <a class="flex items-center gap-3 bg-white dark:bg-surface-dark px-5 py-3 rounded-full border border-slate-100 dark:border-white/5 whitespace-nowrap active:bg-primary/5 transition-colors"
+              href="https://sabordelavida.ru/">
+              <span class="material-symbols-outlined text-primary">public</span>
+              <span class="font-medium text-sm">Website</span>
+            </a>
+
+            <a class="flex items-center gap-3 bg-white dark:bg-surface-dark px-5 py-3 rounded-full border border-slate-100 dark:border-white/5 whitespace-nowrap active:bg-primary/5 transition-colors"
+              href="https://t.me/sabordelavidarestaurant">
+              <span class="material-symbols-outlined text-primary">near_me</span>
+              <span class="font-medium text-sm">Telegram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sticky Bottom CTA -->
+        <label for="contact-modal" class="w-full bg-primary hover:bg-primary/90 text-white
          font-bold text-lg py-4 rounded-xl
          shadow-[0_4px_20px_rgba(242,127,13,0.4)]
          active:scale-[0.98] transition-all
          flex items-center justify-center gap-2
-         cursor-pointer select-none"
->
-  <span class="material-symbols-outlined">calendar_month</span>
-  Связаться с нами
-</label>
-</div>
-<div id="modal-root"></div>
-<script defer src="assets/js/app.js"></script>
-<nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2" aria-label="Нижняя навигация">
-  <div class="flex items-center justify-between gap-2">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="index.html">
-      <span class="material-symbols-outlined text-[24px]">home</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
-    </a>
+         cursor-pointer select-none">
+          <span class="material-symbols-outlined">calendar_month</span>
+          Связаться с нами
+        </label>
+      </div>
+      <div id="modal-root"></div>
+      <script defer src="assets/js/app.js"></script>
+      <nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2"
+        aria-label="Нижняя навигация">
+        <div class="flex items-center justify-between gap-2">
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="index.html">
+            <span class="material-symbols-outlined text-[24px]">home</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
+          </a>
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="event-packages.html">
-      <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
-    </a>
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="event-packages.html">
+            <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
+          </a>
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="event-services.html" aria-current="page">
-      <span class="material-symbols-outlined text-[24px]">event</span>
-      <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
-    </a>
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="event-services.html" aria-current="page">
+            <span class="material-symbols-outlined text-[24px]">event</span>
+            <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
+          </a>
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="contacts.html">
-      <span class="material-symbols-outlined text-[24px]">contacts</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
-    </a>
-  </div>
-</nav>
-<script defer src="assets/js/app.js"></script>
-</body></html>
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="contacts.html">
+            <span class="material-symbols-outlined text-[24px]">contacts</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
+          </a>
+        </div>
+      </nav>
+      <script defer src="assets/js/app.js"></script>
+</body>
+
+</html>

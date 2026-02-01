@@ -1,100 +1,116 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="ru"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Пакеты мероприятий</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Theme Config -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
-                        "surface-dark": "#2c241b",
-                        "surface-light": "#ffffff",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+<html class="dark" lang="ru">
 
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col group/design-root mx-auto shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark page-shell">
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5 px-4 pt-12 pb-4">
-<div class="flex items-center justify-between">
-<button
-  onclick="history.length > 1 ? history.back() : window.location.href='index.html'"
-  class="flex size-10 items-center justify-center rounded-full bg-black/60"
->
-  <span class="material-symbols-outlined">arrow_back_ios_new</span>
-</button>
-<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Эксклюзивные мероприятия</h2>
-</div>
-</header>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Пакеты мероприятий</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Theme Config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "background-light": "#f8f7f5",
+            "background-dark": "#221910",
+            "surface-dark": "#2c241b",
+            "surface-light": "#ffffff",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
 
-<!-- Content Feed -->
-<main class="flex-1 p-4 flex flex-col gap-6 pb-24 @container">
-<div id="events-grid" class="flex flex-col gap-6"></div>
-</main>
-<!-- Floating Action Button -->
-<div class="fixed bottom-6 right-4 z-50">
+</head>
 
-    <nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2" aria-label="Нижняя навигация">
-  <div class="flex items-center justify-between gap-2">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="index.html">
-      <span class="material-symbols-outlined text-[24px]">home</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
-    </a>
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+  <div
+    class="relative flex min-h-screen w-full flex-col group/design-root mx-auto shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark page-shell">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5 px-4 pt-12 pb-4">
+      <div class="flex items-center justify-between">
+        <a id="back-button" href="index.html" class="flex size-10 items-center justify-center rounded-full bg-black/60">
+          <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        </a>
+        <h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Эксклюзивные мероприятия
+        </h2>
+      </div>
+    </header>
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="event-packages.html">
-      <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
-    </a>
+    <!-- Content Feed -->
+    <main class="flex-1 p-4 flex flex-col gap-6 pb-24 @container">
+      <div id="events-grid" class="flex flex-col gap-6"></div>
+    </main>
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-4 z-50">
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="event-services.html" aria-current="page">
-      <span class="material-symbols-outlined text-[24px]">event</span>
-      <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
-    </a>
+      <nav class="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-background-dark px-4 pb-6 pt-2"
+        aria-label="Нижняя навигация">
+        <div class="flex items-center justify-between gap-2">
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="index.html">
+            <span class="material-symbols-outlined text-[24px]">home</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Главная</p>
+          </a>
 
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white" href="contacts.html">
-      <span class="material-symbols-outlined text-[24px]">contacts</span>
-      <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
-    </a>
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="event-packages.html">
+            <span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Мероприятия</p>
+          </a>
+
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="event-services.html" aria-current="page">
+            <span class="material-symbols-outlined text-[24px]">event</span>
+            <p class="text-[10px] font-bold leading-normal tracking-wide">Услуги</p>
+          </a>
+
+          <a class="flex flex-1 flex-col items-center justify-end gap-1 text-white/50 transition-colors hover:text-white"
+            href="contacts.html">
+            <span class="material-symbols-outlined text-[24px]">contacts</span>
+            <p class="text-[10px] font-medium leading-normal tracking-wide">Контакты</p>
+          </a>
+        </div>
+      </nav>
+
+    </div>
   </div>
-</nav>
+  <script defer src="./assets/js/app.js"></script>
+  <script defer src="./assets/js/events.service.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (window.EventsService) {
+        await window.EventsService.renderEventsFeed('events-grid');
+      } else {
+        console.error('EventsService не загружен');
+      }
+    });
+  </script>
+</body>
 
-</div>
-</div>
-<script defer src="./assets/js/app.js"></script>
-<script defer src="./assets/js/events.service.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', async () => {
-  if (window.EventsService) {
-    await window.EventsService.renderEventsFeed('events-grid');
-  } else {
-    console.error('EventsService не загружен');
-  }
-});
-</script>
-</body></html>
+</html>

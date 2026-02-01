@@ -33,10 +33,10 @@ if ("serviceWorker" in navigator) {
     // Предотвращаем множественные обработки
     if (controllerChangeHandled) return;
     controllerChangeHandled = true;
-    
+
     // Показываем уведомление об обновлении
     showUpdateNotification();
-    
+
     // Перезагружаем страницу через небольшую задержку, чтобы пользователь увидел уведомление
     setTimeout(() => {
       window.location.reload();
@@ -104,24 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('gallery-modal');
   const closeBtn = document.getElementById('close-gallery');
   const triggers = document.querySelectorAll('.js-open-gallery');
-  if(modal && closeBtn) {
-      triggers.forEach(trigger => {
-          trigger.addEventListener('click', (e) => {
-              e.preventDefault();
-              modal.classList.remove('hidden');
-              document.body.style.overflow = 'hidden';
-          });
+  if (modal && closeBtn) {
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
       });
-      closeBtn.addEventListener('click', () => {
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-      });
-      modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-              modal.classList.add('hidden');
-              document.body.style.overflow = '';
-          }
-      });
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
   }
 });
 // Расчёт расстояния до ресторана и отображение "X км от вас"
@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(toRad(lat1)) *
-        Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+      Math.cos(toRad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
   }
@@ -200,4 +200,18 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
     alert('Шаринг не поддерживается в этом браузере');
   }
 });
-
+// Глобальный обработчик кнопки "Назад"
+const globalBackButton = document.getElementById('back-button');
+if (globalBackButton) {
+  globalBackButton.addEventListener('click', (e) => {
+    // Если на странице уже есть свой обработчик (как в профилях), 
+    // этот код может быть перекрыт или дополнен.
+    // Но для простых страниц (Услуги, Контакты) он сработает как база.
+    if (window.history.length > 1 && document.referrer.includes(window.location.host)) {
+      e.preventDefault();
+      window.history.back();
+    }
+    // Если истории нет, кнопка сработает как обычная ссылка (если это <a>) 
+    // или ничего не сделает (если это <button>), позволяя странице самой решить.
+  });
+}

@@ -1,117 +1,133 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="ru"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Карточка мероприятия</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Theme Config -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
-                        "surface-dark": "#393028", // Reusing chip color as surface
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                        "3xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
+<html class="dark" lang="ru">
 
-  </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-hidden h-screen flex flex-col selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col page-shell mx-auto">
-<!-- Scrollable Main Content -->
-<div class="flex-1 overflow-y-auto no-scrollbar relative w-full pb-32">
-<!-- Hero Image Section with Sticky Header Overlay -->
-<div class="relative w-full h-[45vh] min-h-[360px] shrink-0">
-<!-- Top Navigation Overlay -->
-<div class="absolute top-0 left-0 w-full z-20 p-4 pt-12 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent">
-<button
-  onclick="history.length > 1 ? history.back() : window.location.href='index.html'"
-  class="flex size-10 items-center justify-center rounded-full bg-black/60"
->
-  <span class="material-symbols-outlined">arrow_back_ios_new</span>
-</button>
-<button
-  id="shareBtn"
-  class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
-  <span class="material-symbols-outlined">share</span>
-</button>
-</div>
-<!-- Hero Image -->
-<div class="w-full h-full bg-gray-800 relative">
-<img id="event-hero-img" alt="Место для фото" class="w-full h-full object-cover" data-alt="Name of..." src=""/>
-<!-- Gradient Overlay at bottom of image for seamless transition -->
-<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-dark to-transparent opacity-90 dark:block hidden"></div>
-<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-light to-transparent opacity-90 dark:hidden block"></div>
-</div>
-</div>
-<!-- Main Content Card (Negative Margin to overlap) -->
-<div class="relative -mt-8 z-10 bg-background-light dark:bg-background-dark rounded-t-3xl px-5 pt-8 pb-4 flex flex-col gap-6 shadow-[-4px_0_20px_rgba(0,0,0,0.5)]">
-<!-- Header Block -->
-<div class="flex flex-col gap-2">
-<div class="flex items-start justify-between gap-4">
-<h1 id="event-title" class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Название</h1>
-<div class="shrink-0 pt-1">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">favorite</span>
-</div>
-</div>
-<div id="event-price-block" class="flex items-baseline gap-2 mt-1">
-<span id="event-price-value" class="text-primary text-2xl font-bold tracking-tight"></span>
-<span id="event-price-unit" class="text-slate-500 dark:text-gray-400 font-medium"></span>
-</div>
-</div>
-<!-- Chips Row -->
-<div id="event-chips-block" class="flex gap-3 overflow-x-auto no-scrollbar pb-1 -mx-5 px-5">
-    <div id="event-chips" class="flex gap-3"></div>
-</div>
-<!-- Description -->
-<div id="event-description-block" class="text-slate-600 dark:text-gray-300 leading-relaxed text-[15px]">
-<p id="event-description"></p>
-</div>
-<div class="w-full h-px bg-slate-200 dark:bg-white/10 my-1"></div>
-<!-- Included Services -->
-<div id="event-included-block" class="flex flex-col gap-4">
-<h3 class="text-lg font-bold text-slate-900 dark:text-white">Включено в стоимость</h3>
-<div id="event-included" class="flex flex-col gap-3"></div>
-</div>
-<!-- Paid Separately -->
-<div id="event-extras-block" class="flex flex-col gap-4 mt-2">
-<h3 class="text-lg font-bold text-slate-900 dark:text-white">Дополнительные услуги</h3>
-<div id="event-extras" class="flex flex-col gap-0 divide-y divide-slate-200 dark:divide-white/10"></div>
-</div>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Карточка мероприятия</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Theme Config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "background-light": "#f8f7f5",
+            "background-dark": "#221910",
+            "surface-dark": "#393028", // Reusing chip color as surface
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
 
-</div>
-</div>
+</head>
 
-</div>
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-hidden h-screen flex flex-col selection:bg-primary selection:text-white">
+  <div class="relative flex min-h-screen w-full flex-col page-shell mx-auto">
+    <!-- Scrollable Main Content -->
+    <div class="flex-1 overflow-y-auto no-scrollbar relative w-full pb-32">
+      <!-- Hero Image Section with Sticky Header Overlay -->
+      <div class="relative w-full h-[45vh] min-h-[360px] shrink-0">
+        <!-- Top Navigation Overlay -->
+        <div
+          class="absolute top-0 left-0 w-full z-20 p-4 pt-12 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent">
+          <button id="back-button" class="flex size-10 items-center justify-center rounded-full bg-black/60">
+            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+          </button>
+          <button id="shareBtn"
+            class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined">share</span>
+          </button>
+        </div>
+        <!-- Hero Image -->
+        <div class="w-full h-full bg-gray-800 relative">
+          <img id="event-hero-img" alt="Место для фото" class="w-full h-full object-cover" data-alt="Name of..."
+            src="" />
+          <!-- Gradient Overlay at bottom of image for seamless transition -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-dark to-transparent opacity-90 dark:block hidden">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-light to-transparent opacity-90 dark:hidden block">
+          </div>
+        </div>
+      </div>
+      <!-- Main Content Card (Negative Margin to overlap) -->
+      <div
+        class="relative -mt-8 z-10 bg-background-light dark:bg-background-dark rounded-t-3xl px-5 pt-8 pb-4 flex flex-col gap-6 shadow-[-4px_0_20px_rgba(0,0,0,0.5)]">
+        <!-- Header Block -->
+        <div class="flex flex-col gap-2">
+          <div class="flex items-start justify-between gap-4">
+            <h1 id="event-title" class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
+              Название</h1>
+            <div class="shrink-0 pt-1">
+              <span class="material-symbols-outlined text-primary"
+                style="font-variation-settings: 'FILL' 1">favorite</span>
+            </div>
+          </div>
+          <div id="event-price-block" class="flex items-baseline gap-2 mt-1">
+            <span id="event-price-value" class="text-primary text-2xl font-bold tracking-tight"></span>
+            <span id="event-price-unit" class="text-slate-500 dark:text-gray-400 font-medium"></span>
+          </div>
+        </div>
+        <!-- Chips Row -->
+        <div id="event-chips-block" class="flex gap-3 overflow-x-auto no-scrollbar pb-1 -mx-5 px-5">
+          <div id="event-chips" class="flex gap-3"></div>
+        </div>
+        <!-- Description -->
+        <div id="event-description-block" class="text-slate-600 dark:text-gray-300 leading-relaxed text-[15px]">
+          <p id="event-description"></p>
+        </div>
+        <div class="w-full h-px bg-slate-200 dark:bg-white/10 my-1"></div>
+        <!-- Included Services -->
+        <div id="event-included-block" class="flex flex-col gap-4">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Включено в стоимость</h3>
+          <div id="event-included" class="flex flex-col gap-3"></div>
+        </div>
+        <!-- Paid Separately -->
+        <div id="event-extras-block" class="flex flex-col gap-4 mt-2">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Дополнительные услуги</h3>
+          <div id="event-extras" class="flex flex-col gap-0 divide-y divide-slate-200 dark:divide-white/10"></div>
+        </div>
 
-<script defer src="assets/js/app.js"></script>
-<script defer src="assets/js/events.service.js"></script>
-<script defer src="assets/js/event-profile.js"></script>
-</body></html>
+      </div>
+    </div>
+
+  </div>
+
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/events.service.js"></script>
+  <script defer src="assets/js/event-profile.js"></script>
+</body>
+
+</html>

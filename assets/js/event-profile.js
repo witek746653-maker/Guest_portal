@@ -69,7 +69,7 @@ async function loadEvent() {
 
     const events = await window.EventsService.loadEventsData();
     const event = Array.isArray(events) ? events.find((item) => item.id === id) : null;
-    
+
     if (!event) {
       console.warn(`Мероприятие с ID "${id}" не найдено`);
       return;
@@ -89,26 +89,26 @@ async function loadEvent() {
     const priceBlock = document.getElementById('event-price-block');
     const priceValue = document.getElementById('event-price-value');
     const priceUnit = document.getElementById('event-price-unit');
-    
+
     if (event.price && priceValue && priceUnit) {
       if (event.price.value !== undefined && event.price.value !== null && event.price.value !== '') {
-        const value = typeof event.price.value === 'number' 
+        const value = typeof event.price.value === 'number'
           ? new Intl.NumberFormat('ru-RU').format(event.price.value)
           : String(event.price.value);
-        
+
         const prefix = event.price.prefix || '';
         const currency = event.price.currency || '₽';
         const suffix = event.price.suffix || '';
-        
+
         priceValue.textContent = `${prefix}${value} ${currency}${suffix}`;
-        
+
         if (event.price.unitLabel) {
           priceUnit.textContent = `/ ${event.price.unitLabel}`;
           setVisible(priceUnit, true);
         } else {
           setVisible(priceUnit, false);
         }
-        
+
         setVisible(priceBlock, true);
       } else {
         setVisible(priceBlock, false);
@@ -139,19 +139,19 @@ async function loadEvent() {
           if (chip && chip.text) {
             const chipEl = document.createElement('div');
             chipEl.className = 'flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-[#393028] border border-slate-200 dark:border-transparent px-4 shadow-sm';
-            
+
             if (chip.icon) {
               const icon = document.createElement('span');
               icon.className = 'material-symbols-outlined text-primary text-[18px]';
               icon.textContent = chip.icon;
               chipEl.appendChild(icon);
             }
-            
+
             const text = document.createElement('p');
             text.className = 'text-slate-700 dark:text-white text-sm font-medium';
             text.textContent = chip.text;
             chipEl.appendChild(text);
-            
+
             chipsContainer.appendChild(chipEl);
           }
         });
@@ -171,29 +171,29 @@ async function loadEvent() {
           if (item && item.title) {
             const itemEl = document.createElement('div');
             itemEl.className = 'flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-white/5 border border-slate-100 dark:border-transparent';
-            
+
             const iconWrapper = document.createElement('div');
             iconWrapper.className = 'flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary shrink-0';
             const icon = document.createElement('span');
             icon.className = 'material-symbols-outlined text-sm font-bold';
             icon.textContent = 'check';
             iconWrapper.appendChild(icon);
-            
+
             const content = document.createElement('div');
             content.className = 'flex flex-col';
-            
+
             const title = document.createElement('span');
             title.className = 'text-sm font-bold text-slate-900 dark:text-white';
             title.textContent = item.title;
             content.appendChild(title);
-            
+
             if (item.description) {
               const desc = document.createElement('span');
               desc.className = 'text-xs text-slate-500 dark:text-gray-400';
               desc.textContent = item.description;
               content.appendChild(desc);
             }
-            
+
             itemEl.appendChild(iconWrapper);
             itemEl.appendChild(content);
             includedContainer.appendChild(itemEl);
@@ -215,25 +215,25 @@ async function loadEvent() {
           if (extra && extra.title) {
             const itemEl = document.createElement('div');
             itemEl.className = 'flex items-center justify-between py-4';
-            
+
             const leftSection = document.createElement('div');
             leftSection.className = 'flex items-center gap-3';
-            
+
             const iconWrapper = document.createElement('div');
             iconWrapper.className = 'size-10 rounded-lg bg-slate-100 dark:bg-[#393028] flex items-center justify-center text-slate-500 dark:text-gray-400';
             const icon = document.createElement('span');
             icon.className = 'material-symbols-outlined';
             icon.textContent = extra.icon || 'add';
             iconWrapper.appendChild(icon);
-            
+
             const content = document.createElement('div');
             content.className = 'flex flex-col';
-            
+
             const title = document.createElement('span');
             title.className = 'text-sm font-medium text-slate-900 dark:text-white';
             title.textContent = extra.title;
             content.appendChild(title);
-            
+
             if (extra.price) {
               const priceText = window.EventsService.formatPrice(extra.price);
               if (priceText) {
@@ -243,11 +243,11 @@ async function loadEvent() {
                 content.appendChild(priceEl);
               }
             }
-            
+
             leftSection.appendChild(iconWrapper);
             leftSection.appendChild(content);
             itemEl.appendChild(leftSection);
-            
+
             extrasContainer.appendChild(itemEl);
           }
         });
@@ -255,6 +255,20 @@ async function loadEvent() {
       } else {
         setVisible(extrasBlock, false);
       }
+    }
+    // Настройка кнопки "Назад"
+    const backButton = document.getElementById('back-button');
+    if (backButton) {
+      backButton.onclick = (e) => {
+        e.preventDefault();
+        // Пытаемся вернуться назад по истории, если это наш сайт
+        if (window.history.length > 1 && document.referrer.includes(window.location.host)) {
+          window.history.back();
+        } else {
+          // Если истории нет, возвращаемся на главную
+          window.location.href = 'index.html';
+        }
+      };
     }
   } catch (error) {
     console.error('Не удалось загрузить данные мероприятия', error);

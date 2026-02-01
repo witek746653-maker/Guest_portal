@@ -1,173 +1,193 @@
 <!DOCTYPE html>
 <html class="dark" lang="ru">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Портфолио члена команды</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
-                        "surface-dark": "#2c241b",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Портфолио члена команды</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f27f0d",
+            "background-light": "#f8f7f5",
+            "background-dark": "#221910",
+            "surface-dark": "#2c241b",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
 
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased selection:bg-primary selection:text-white">
-<div class="relative flex min-h-screen w-full flex-col page-shell mx-auto">
-<div class="fixed inset-0 z-[100] bg-black/95 hidden flex flex-col justify-center transition-opacity duration-300" id="gallery-modal">
-<button class="absolute top-6 right-6 z-50 p-2 text-white bg-white/10 rounded-full hover:bg-white/20 transition-colors backdrop-blur-md" id="close-gallery">
-<span class="material-symbols-outlined text-3xl">close</span>
-</button>
-<div class="flex overflow-x-auto snap-x snap-mandatory h-full items-center gap-4 p-4 hide-scrollbar w-full">
-<div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
-<div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')"></div>
-</div>
-<div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
-<div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')"></div>
-</div>
-<div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
-<div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')"></div>
-</div>
-</div>
-</div>
-<div class="relative min-h-screen w-full flex flex-col pb-24">
-<div class="relative w-full h-[460px] shrink-0">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Musician cover" id="artist-cover"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
-<div class="absolute top-0 left-0 w-full flex items-center justify-between p-4 z-20 pt-12">
-<button
-    onclick="history.length > 1 ? history.back() : window.location.href='index.html'"
-    class="flex size-10 items-center justify-center rounded-full bg-black/60"
-  >
-    <span class="material-symbols-outlined">arrow_back_ios_new</span>
-</button>
-<button
-    id="shareBtn"
-    class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
-    <span class="material-symbols-outlined">share</span>
-</button>
+</head>
 
-
-</div>
-<div class="absolute bottom-0 left-0 w-full p-5 flex flex-col gap-2 z-10">
-<div class="flex items-center gap-2 mb-1">
-<div class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-lg shadow-primary/20" id="artist-category-pill">
-<span class="material-symbols-outlined text-[14px]">person</span>
-<span id="artist-category"></span>
-</div>
-<div class="flex items-center gap-1 px-3 py-1 rounded-full bg-black/30 backdrop-blur" id="artist-rating-block">
-<span class="material-symbols-outlined text-[18px] text-amber-300">grade</span>
-<span class="text-white font-semibold" id="artist-rating"></span>
-<span class="text-gray-300 text-sm" id="artist-reviews"></span>
-</div>
-</div>
-<h1 class="text-white text-4xl font-bold leading-tight tracking-tight" id="artist-name"></h1>
-<p class="text-gray-300 text-lg font-medium leading-normal" id="artist-tagline"></p>
-</div>
-</div>
-<div class="flex flex-col px-4 pt-6 gap-8">
-<!-- Теги из JSON -->
-<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1" id="artist-tags"></div>
-<!-- Блок описания -->
-<div class="flex flex-col gap-3" id="artist-about-block">
-<h3 class="text-white text-xl font-bold">Профиль</h3>
-<p class="text-gray-400 text-base font-normal leading-relaxed font-body" id="artist-about"></p>
-</div>
-<!-- Портфолио -->
-<div class="flex flex-col gap-4" id="artist-portfolio-block">
-<div class="flex justify-between items-end">
-<h3 class="text-white text-xl font-bold">Портфолио</h3>
-</div>
-<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4 snap-x" id="artist-portfolio"></div>
-</div>
-<!-- Видео -->
-<div class="flex flex-col gap-4" id="artist-video-block">
-<h3 class="text-white text-xl font-bold">Примеры работ</h3>
-<!-- Контейнер: сюда JS добавит 1+ видео-карточек -->
-<div class="flex flex-col gap-4" id="artist-videos"></div>
-</div>
-
-<!-- Райдер/документы -->
-<a class="flex items-center justify-between p-4 bg-surface-dark hover:bg-white/5 rounded-xl transition-colors cursor-pointer group" download="" href="#" id="artist-rider-block">
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-lg bg-background-dark flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">description</span>
-</div>
-<div class="flex flex-col">
-<span class="text-white font-semibold" id="artist-rider-title">Условия работы</span>
-<span class="text-gray-400 text-xs" id="artist-rider-description">Скачать райдер и требования</span>
-</div>
-</div>
-<span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors">download</span>
-</a>
-<!-- Соцсети -->
-<div class="flex justify-center gap-6 py-4 pb-8" id="artist-social-links">
-
-<a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-instagram" target="_blank" rel="noopener">
-<span class="sr-only">Instagram</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">photo_camera</span>
-</div>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-youtube" target="_blank" rel="noopener">
-<span class="sr-only">YouTube</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">smart_display</span>
-</div>
-</a>
-<a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-website" target="_blank" rel="noopener">
-<span class="sr-only">Website</span>
-<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
-<span class="material-symbols-outlined text-2xl">language</span>
-</div>
-</a>
-</div>
-</div>
-<div class="fixed bottom-0 left-0 w-full z-40 px-4 py-3 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 pb-8 safe-area-pb" id="artist-cta-bar">
-  <div class="max-w-md mx-auto flex items-center justify-between gap-4">
-    <div class="flex flex-col min-w-0">
-      <span class="text-gray-400 text-xs font-medium">Гонорар</span>
-      <div class="flex items-baseline gap-2 min-w-0">
-        <span class="text-white text-xl font-bold truncate" id="artist-fee"></span>
-        <span class="text-gray-300 text-xs font-medium whitespace-nowrap" id="artist-fee-note-inline"></span>
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+  <div class="relative flex min-h-screen w-full flex-col page-shell mx-auto">
+    <div class="fixed inset-0 z-[100] bg-black/95 hidden flex flex-col justify-center transition-opacity duration-300"
+      id="gallery-modal">
+      <button
+        class="absolute top-6 right-6 z-50 p-2 text-white bg-white/10 rounded-full hover:bg-white/20 transition-colors backdrop-blur-md"
+        id="close-gallery">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <div class="flex overflow-x-auto snap-x snap-mandatory h-full items-center gap-4 p-4 hide-scrollbar w-full">
+        <div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
+          <div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')">
+          </div>
+        </div>
+        <div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
+          <div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')">
+          </div>
+        </div>
+        <div class="snap-center shrink-0 w-full h-full flex items-center justify-center p-2">
+          <div class="w-full h-full bg-contain bg-center bg-no-repeat rounded-lg" style="background-image: url('')">
+          </div>
+        </div>
       </div>
-      <span class="text-gray-400 text-xs font-normal leading-snug" id="artist-fee-note"></span>
     </div>
+    <div class="relative min-h-screen w-full flex flex-col pb-24">
+      <div class="relative w-full h-[460px] shrink-0">
+        <div class="absolute inset-0 bg-cover bg-center" data-alt="Musician cover" id="artist-cover"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-4 z-20 pt-12">
+          <button id="back-button" class="flex size-10 items-center justify-center rounded-full bg-black/60">
+            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+          </button>
+          <button id="shareBtn"
+            class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined">share</span>
+          </button>
 
-    <a
-      id="artist-call-btn"
-      href="tel:+79262223022"
-      class="shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-white font-bold shadow-[0_6px_24px_rgba(242,127,13,0.35)] active:scale-[0.98] transition-all"
-    >
-      <span class="material-symbols-outlined">call</span>
-      Позвонить
-    </a>
-  </div>
 
-  <div class="max-w-md mx-auto mt-2 text-center">
-    <a class="text-gray-300 text-xs font-medium hover:text-white transition-colors" href="tel:+79262223022" id="artist-phone-link"></a>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full p-5 flex flex-col gap-2 z-10">
+          <div class="flex items-center gap-2 mb-1">
+            <div
+              class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-lg shadow-primary/20"
+              id="artist-category-pill">
+              <span class="material-symbols-outlined text-[14px]">person</span>
+              <span id="artist-category"></span>
+            </div>
+            <div class="flex items-center gap-1 px-3 py-1 rounded-full bg-black/30 backdrop-blur"
+              id="artist-rating-block">
+              <span class="material-symbols-outlined text-[18px] text-amber-300">grade</span>
+              <span class="text-white font-semibold" id="artist-rating"></span>
+              <span class="text-gray-300 text-sm" id="artist-reviews"></span>
+            </div>
+          </div>
+          <h1 class="text-white text-4xl font-bold leading-tight tracking-tight" id="artist-name"></h1>
+          <p class="text-gray-300 text-lg font-medium leading-normal" id="artist-tagline"></p>
+        </div>
+      </div>
+      <div class="flex flex-col px-4 pt-6 gap-8">
+        <!-- Теги из JSON -->
+        <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1" id="artist-tags"></div>
+        <!-- Блок описания -->
+        <div class="flex flex-col gap-3" id="artist-about-block">
+          <h3 class="text-white text-xl font-bold">Профиль</h3>
+          <p class="text-gray-400 text-base font-normal leading-relaxed font-body" id="artist-about"></p>
+        </div>
+        <!-- Портфолио -->
+        <div class="flex flex-col gap-4" id="artist-portfolio-block">
+          <div class="flex justify-between items-end">
+            <h3 class="text-white text-xl font-bold">Портфолио</h3>
+          </div>
+          <div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4 snap-x" id="artist-portfolio"></div>
+        </div>
+        <!-- Видео -->
+        <div class="flex flex-col gap-4" id="artist-video-block">
+          <h3 class="text-white text-xl font-bold">Примеры работ</h3>
+          <!-- Контейнер: сюда JS добавит 1+ видео-карточек -->
+          <div class="flex flex-col gap-4" id="artist-videos"></div>
+        </div>
+
+        <!-- Райдер/документы -->
+        <a class="flex items-center justify-between p-4 bg-surface-dark hover:bg-white/5 rounded-xl transition-colors cursor-pointer group"
+          download="" href="#" id="artist-rider-block">
+          <div class="flex items-center gap-3">
+            <div class="size-10 rounded-lg bg-background-dark flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">description</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-semibold" id="artist-rider-title">Условия работы</span>
+              <span class="text-gray-400 text-xs" id="artist-rider-description">Скачать райдер и требования</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors">download</span>
+        </a>
+        <!-- Соцсети -->
+        <div class="flex justify-center gap-6 py-4 pb-8" id="artist-social-links">
+
+          <a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-instagram" target="_blank"
+            rel="noopener">
+            <span class="sr-only">Instagram</span>
+            <div
+              class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-2xl">photo_camera</span>
+            </div>
+          </a>
+          <a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-youtube" target="_blank"
+            rel="noopener">
+            <span class="sr-only">YouTube</span>
+            <div
+              class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-2xl">smart_display</span>
+            </div>
+          </a>
+          <a class="text-gray-400 hover:text-white transition-colors" href="#" id="link-website" target="_blank"
+            rel="noopener">
+            <span class="sr-only">Website</span>
+            <div
+              class="size-12 rounded-full bg-surface-dark flex items-center justify-center hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-2xl">language</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="fixed bottom-0 left-0 w-full z-40 px-4 py-3 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 pb-8 safe-area-pb"
+        id="artist-cta-bar">
+        <div class="max-w-md mx-auto flex items-center justify-between gap-4">
+          <div class="flex flex-col min-w-0">
+            <span class="text-gray-400 text-xs font-medium">Гонорар</span>
+            <div class="flex items-baseline gap-2 min-w-0">
+              <span class="text-white text-xl font-bold whitespace-nowrap shrink-0" id="artist-fee"></span>
+              <span class="text-gray-300 text-xs font-medium truncate" id="artist-fee-note-inline"></span>
+            </div>
+            <span class="text-gray-400 text-xs font-normal leading-snug" id="artist-fee-note"></span>
+          </div>
+
+          <a id="artist-call-btn" href="tel:+79262223022"
+            class="shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-white font-bold shadow-[0_6px_24px_rgba(242,127,13,0.35)] active:scale-[0.98] transition-all">
+            <span class="material-symbols-outlined">call</span>
+            Позвонить
+          </a>
+        </div>
+
+        <div class="max-w-md mx-auto mt-2 text-center">
+          <a class="text-gray-300 text-xs font-medium hover:text-white transition-colors" href="tel:+79262223022"
+            id="artist-phone-link"></a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
-<script defer src="assets/js/app.js"></script>
-<script defer src="assets/js/participant-profile.js"></script>
-</body></html>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/participant-profile.js"></script>
+</body>
+
+</html>

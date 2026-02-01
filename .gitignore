@@ -1,0 +1,18 @@
+# System files
+thumbs.db
+.DS_Store
+
+# Node modules (если будешь использовать npm в будущем)
+node_modules/
+
+# Logs
+*.log
+
+# Large Media Files (видео лучше хранить на YouTube/Rutube)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Folders
+/videos/
